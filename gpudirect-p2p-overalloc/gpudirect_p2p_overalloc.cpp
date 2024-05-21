@@ -18,9 +18,10 @@
     }
 
 int main(int argc, char** argv) {
-    if (argc != 5) {
+    if (argc != 6) {
         std::cout << "Usage: gpudirect_p2p_overalloc <num_iterations> "
-                     "<p2p_size> <buffer_size> <overalloc_size>\n";
+                     "<num_sub_iterations> <p2p_size> <buffer_size> "
+		     "<overalloc_size>\n";
         std::terminate();
     }
 
@@ -34,9 +35,10 @@ int main(int argc, char** argv) {
     const auto rank_recv = comm_size - 1;
 
     std::size_t const num_iterations = std::stoul(argv[1]);
-    std::size_t const p2p_size = std::stoul(argv[2]);
-    std::size_t const buffer_size = std::stoul(argv[3]);
-    std::size_t const overalloc_size = std::stoul(argv[4]);
+    std::size_t const num_sub_iterations = std::stoul(argv[2]);
+    std::size_t const p2p_size = std::stoul(argv[3]);
+    std::size_t const buffer_size = std::stoul(argv[4]);
+    std::size_t const overalloc_size = std::stoul(argv[5]);
 
     if (comm_rank == 0) {
         std::cout << "p2p_size: " << p2p_size << '\n';
@@ -96,33 +98,38 @@ int main(int argc, char** argv) {
         }
 
         for (std::size_t i = 0; i < num_iterations; ++i) {
-            const std::chrono::time_point<std::chrono::steady_clock> start =
-                std::chrono::steady_clock::now();
-
+            char* mem = nullptr;
             if (comm_rank == 0) {
                 // Only send side is affected
-                char* mem = nullptr;
                 CHECK_CUDA(cudaMalloc(&mem, alloc_size));
-                CHECK_MPI(MPI_Send(mem, p2p_size, MPI_CHAR, rank_recv, 0,
-                                   MPI_COMM_WORLD));
-                CHECK_CUDA(cudaFree(mem));
             } else if (comm_rank == rank_recv) {
-                char* mem = nullptr;
                 CHECK_CUDA(cudaMalloc(&mem, p2p_size));
-                MPI_Status status;
-                CHECK_MPI(MPI_Recv(mem, p2p_size, MPI_CHAR, 0, 0,
-                                   MPI_COMM_WORLD, &status));
-                CHECK_CUDA(cudaFree(mem));
-            }
+	    }
 
-            CHECK_MPI(MPI_Barrier(MPI_COMM_WORLD));
+	    for (std::size_t j = 0; j < num_sub_iterations; ++j) {
+                const std::chrono::time_point<std::chrono::steady_clock> start =
+                    std::chrono::steady_clock::now();
 
-            auto const stop = std::chrono::steady_clock::now();
-            if (comm_rank == 0) {
-                std::cout << "[" << i << "] time: "
-                          << std::chrono::duration<double>(stop - start).count()
-                          << '\n';
-            }
+                if (comm_rank == 0) {
+                    CHECK_MPI(MPI_Send(mem, p2p_size, MPI_CHAR, rank_recv, 0,
+                                       MPI_COMM_WORLD));
+                } else if (comm_rank == rank_recv) {
+                    MPI_Status status;
+                    CHECK_MPI(MPI_Recv(mem, p2p_size, MPI_CHAR, 0, 0,
+                                       MPI_COMM_WORLD, &status));
+                }
+
+                CHECK_MPI(MPI_Barrier(MPI_COMM_WORLD));
+
+                auto const stop = std::chrono::steady_clock::now();
+                if (comm_rank == 0) {
+                    std::cout << "[" << i << ":" << j << "] time: "
+                              << std::chrono::duration<double>(stop - start).count()
+                              << '\n';
+                }
+	    }
+
+            CHECK_CUDA(cudaFree(mem));
         }
     };
 
