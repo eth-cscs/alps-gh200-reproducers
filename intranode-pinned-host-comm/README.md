@@ -9,13 +9,13 @@ With an environment which has `g++` and CUDA loaded (if GPU-aware MPI, include
 `mpi_gtl_cuda`, otherwise leave it out):
 
 ```bash
-g++ -O3 -lcudart -lmpi -lmpi_gtl_cuda internode_pinned_host_comm.cpp -o internode_pinned_host_comm
+g++ -O3 -lcudart -lmpi -lmpi_gtl_cuda intranode_pinned_host_comm.cpp -o intranode_pinned_host_comm
 ```
 
 ## Run
 
 ```bash
-srun -n 2 internode_pinned_host_comm <num_iterations> <num_sub_iterations> <mem_type> <p2p_size>
+srun -n 2 intranode_pinned_host_comm <num_iterations> <num_sub_iterations> <mem_type> <p2p_size>
 ```
 
 The test will do an `MPI_Send/Recv` from the first to the last rank of
@@ -32,7 +32,7 @@ to be almost identical between cma and xpmem.
 To communicate 128MiB of host-pinned memory within a node:
 
 ```bash
-srun -n 2 -N 1 --cpu-bind=sockets internode_pinned_host_comm 2 5 pinned_host $((1 << 27))
+srun -n 2 -N 1 --cpu-bind=sockets intranode_pinned_host_comm 2 5 pinned_host $((1 << 27))
 ```
 
 The program will likely output something like:
@@ -57,7 +57,7 @@ Doing MPI_Send/Recv from rank 0 to rank 1, of 134217728 bytes
 Communicating via the NIC within a node:
 
 ```bash
-MPIR_CVAR_NO_LOCAL=1 srun -n 2 -N 1 --cpu-bind=sockets internode_pinned_host_comm 2 5 pinned_host $((1 << 27))
+MPIR_CVAR_NO_LOCAL=1 srun -n 2 -N 1 --cpu-bind=sockets intranode_pinned_host_comm 2 5 pinned_host $((1 << 27))
 ```
 
 will likely result in something like:
@@ -92,7 +92,7 @@ times faster than when using CMA.
 Communicating via the NIC with ranks across nodes:
 
 ```bash
-srun -n 2 -N 2 --cpu-bind=sockets internode_pinned_host_comm 2 5 pinned_host $((1 << 27))
+srun -n 2 -N 2 --cpu-bind=sockets intranode_pinned_host_comm 2 5 pinned_host $((1 << 27))
 ```
 
 performs similarly to going over the NIC within a node:
@@ -117,7 +117,7 @@ Doing MPI_Send/Recv from rank 0 to rank 1, of 134217728 bytes
 Running the program without CPU binding:
 
 ```bash
-srun -n 2 -N 1 --cpu-bind=none internode_pinned_host_comm 2 5 host $((1 << 27))
+srun -n 2 -N 1 --cpu-bind=none intranode_pinned_host_comm 2 5 host $((1 << 27))
 ```
 
 performs better than the bound case, but not as well as the NIC case. CPU
@@ -143,7 +143,7 @@ Doing MPI_Send/Recv from rank 0 to rank 1, of 134217728 bytes
 Communicating from unpinned host memory, with or without the NIC:
 
 ```bash
-srun -n 2 -N 1 --cpu-bind=sockets internode_pinned_host_comm 2 5 host $((1 << 27))
+srun -n 2 -N 1 --cpu-bind=sockets intranode_pinned_host_comm 2 5 host $((1 << 27))
 ```
 
 performs better than all the cases above, but similarly to when using the NIC
