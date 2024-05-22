@@ -10,7 +10,7 @@ seems to be affected.
 With an environment which has `g++`, CUDA, and GPU-aware MPICH loaded:
 
 ```bash
-g++ -lcudart -lmpi -lmpi_gtl_cuda gpudirect_p2p_overalloc.cpp -o gpudirect_p2p_overalloc
+g++ -O3 -lcudart -lmpi -lmpi_gtl_cuda gpudirect_p2p_overalloc.cpp -o gpudirect_p2p_overalloc
 ```
 
 ## Run

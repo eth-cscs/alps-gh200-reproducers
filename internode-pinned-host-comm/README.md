@@ -9,7 +9,7 @@ With an environment which has `g++` and CUDA loaded (if GPU-aware MPI, include
 `mpi_gtl_cuda`, otherwise leave it out):
 
 ```bash
-g++ -lcudart -lmpi -lmpi_gtl_cuda internode_pinned_host_comm.cpp -o internode_pinned_host_comm
+g++ -O3 -lcudart -lmpi -lmpi_gtl_cuda internode_pinned_host_comm.cpp -o internode_pinned_host_comm
 ```
 
 ## Run
