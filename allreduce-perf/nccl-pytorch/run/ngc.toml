@@ -1,0 +1,16 @@
+image = "/bret/scratch/cscs/boeschf/alps-gh200-reproducers/allreduce-perf/nccl-pytorch/env/ngc.sqsh"
+
+mounts = [
+  "/bret:/bret",
+  "/mchstor2:/mchstor2",
+  "/etc/slurm:/etc/slurmi:ro"
+]
+
+writable = true
+
+workdir = "/bret/scratch/cscs/boeschf/alps-gh200-reproducers/allreduce-perf/nccl-pytorch/run"
+
+[annotations]
+com.hooks.aws_ofi_nccl.enabled = "true"
+com.hooks.aws_ofi_nccl.variant = "cuda12"
+
