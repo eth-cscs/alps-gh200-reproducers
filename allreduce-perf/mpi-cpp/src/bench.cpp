@@ -114,7 +114,7 @@ int main(int argc, char** argv) {
             auto const stop = std::chrono::steady_clock::now();
             auto const delta = std::chrono::duration<double>(stop - start).count();
 
-            const double algbw = (size*sizeof(type))/delta*10e-9;     //GB/s
+            const double algbw = (size*sizeof(type))/delta*1e-9;     //GB/s
             const double bw = algbw * data_transfers_per_rank;
             if (comm_rank == 0) {
                 std::cout << "[" << i << ":" << j << "] time: " << std::setw(12) << delta << "  bw: " << std::setw(12) << bw << '\n';
