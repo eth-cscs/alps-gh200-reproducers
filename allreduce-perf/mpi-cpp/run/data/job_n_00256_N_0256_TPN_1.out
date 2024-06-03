@@ -1,0 +1,1303 @@
+All nodes and tasks are healthy.
+All ranks passed the checks.
+loading the view [1;36mtest_mpi:default[0m  with activation script [1;33m/user-environment/env/default/activate.sh[0m
+Hostname: nid004760 Rank: 142, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004192 Rank: 37, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004074 Rank: 1, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004076 Rank: 2, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004096 Rank: 8, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004848 Rank: 170, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004236 Rank: 50, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004602 Rank: 92, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004684 Rank: 116, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004202 Rank: 39, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004082 Rank: 3, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004098 Rank: 9, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004148 Rank: 27, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004124 Rank: 18, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004156 Rank: 28, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004608 Rank: 95, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004112 Rank: 14, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004214 Rank: 44, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004862 Rank: 176, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004146 Rank: 26, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004814 Rank: 158, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004660 Rank: 110, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004890 Rank: 188, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004584 Rank: 86, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005050 Rank: 242, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004238 Rank: 51, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004130 Rank: 21, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004284 Rank: 69, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004216 Rank: 45, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005090 Rank: 255, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004604 Rank: 93, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004744 Rank: 135, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005052 Rank: 243, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004700 Rank: 123, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004318 Rank: 81, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004864 Rank: 177, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004140 Rank: 24, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004210 Rank: 42, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004092 Rank: 6, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004930 Rank: 204, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004258 Rank: 60, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004656 Rank: 108, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004808 Rank: 156, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004160 Rank: 30, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004232 Rank: 48, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004958 Rank: 210, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004874 Rank: 180, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004278 Rank: 66, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004988 Rank: 222, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004694 Rank: 121, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004126 Rank: 19, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004094 Rank: 7, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004144 Rank: 25, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004110 Rank: 13, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004876 Rank: 181, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004990 Rank: 223, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004212 Rank: 43, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004616 Rank: 97, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004786 Rank: 151, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004634 Rank: 103, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004600 Rank: 91, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004314 Rank: 79, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004720 Rank: 127, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004316 Rank: 80, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004168 Rank: 32, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004962 Rank: 212, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004992 Rank: 224, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004248 Rank: 56, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004618 Rank: 98, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004832 Rank: 164, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004128 Rank: 20, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004770 Rank: 146, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004878 Rank: 182, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004738 Rank: 134, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004978 Rank: 218, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004910 Rank: 194, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004302 Rank: 75, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004968 Rank: 213, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004980 Rank: 219, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004648 Rank: 105, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004272 Rank: 63, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004776 Rank: 147, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004944 Rank: 207, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004792 Rank: 153, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004880 Rank: 183, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005074 Rank: 249, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004834 Rank: 165, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004726 Rank: 129, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004116 Rank: 16, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004794 Rank: 154, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005018 Rank: 232, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004084 Rank: 4, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004624 Rank: 100, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004104 Rank: 10, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005076 Rank: 250, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004218 Rank: 46, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004304 Rank: 76, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004970 Rank: 214, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004840 Rank: 166, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004254 Rank: 58, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005038 Rank: 238, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004206 Rank: 40, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004106 Rank: 11, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004242 Rank: 53, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004086 Rank: 5, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004138 Rank: 23, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005006 Rank: 227, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004226 Rank: 47, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004884 Rank: 185, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004972 Rank: 215, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004732 Rank: 131, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004854 Rank: 173, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004178 Rank: 35, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004276 Rank: 65, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004886 Rank: 186, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004290 Rank: 72, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005026 Rank: 234, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004312 Rank: 78, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004828 Rank: 162, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004734 Rank: 132, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004918 Rank: 198, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004856 Rank: 174, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004328 Rank: 84, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004610 Rank: 96, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004782 Rank: 150, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004598 Rank: 90, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005044 Rank: 240, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005080 Rank: 252, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004860 Rank: 175, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004830 Rank: 163, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004682 Rank: 115, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004888 Rank: 187, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004960 Rank: 211, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005070 Rank: 247, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004330 Rank: 85, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004736 Rank: 133, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005012 Rank: 229, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004812 Rank: 157, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005084 Rank: 253, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004264 Rank: 61, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004280 Rank: 67, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004282 Rank: 68, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004270 Rank: 62, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004940 Rank: 206, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004698 Rank: 122, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005034 Rank: 236, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004922 Rank: 200, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004724 Rank: 128, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005036 Rank: 237, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005002 Rank: 225, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004686 Rank: 117, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004924 Rank: 201, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004730 Rank: 130, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004136 Rank: 22, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005054 Rank: 244, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004822 Rank: 160, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004240 Rank: 52, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004746 Rank: 136, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004286 Rank: 70, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004852 Rank: 172, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004882 Rank: 184, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005004 Rank: 226, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004914 Rank: 196, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004688 Rank: 118, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004926 Rank: 202, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004288 Rank: 71, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004122 Rank: 17, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004322 Rank: 83, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005056 Rank: 245, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005022 Rank: 233, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004256 Rank: 59, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004714 Rank: 125, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004654 Rank: 107, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004310 Rank: 77, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004748 Rank: 137, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004950 Rank: 209, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004842 Rank: 167, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004750 Rank: 138, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004844 Rank: 168, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004244 Rank: 54, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004904 Rank: 192, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004692 Rank: 120, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005008 Rank: 228, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004674 Rank: 114, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004764 Rank: 144, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004108 Rank: 12, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004296 Rank: 73, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004938 Rank: 205, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004846 Rank: 169, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004908 Rank: 193, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004234 Rank: 49, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004664 Rank: 112, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004866 Rank: 178, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004778 Rank: 148, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005078 Rank: 251, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004762 Rank: 143, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004824 Rank: 161, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005040 Rank: 239, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004628 Rank: 101, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004780 Rank: 149, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Slurm Job Hostlist: nid[004072,004074,004076,004082,004084,004086,004092,004094,004096,004098,004104,004106,004108,004110,004112,004114,004116,004122,004124,004126,004128,004130,004136,004138,004140,004144,004146,004148,004156,004158,004160,004162,004168,004174,004176,004178,004180,004192,004200,004202,004206,004208,004210,004212,004214,004216,004218,004226,004232,004234,004236,004238,004240,004242,004244,004246,004248,004252,004254,004256,004258,004264,004270,004272,004274,004276,004278,004280,004282,004284,004286,004288,004290,004296,004300,004302,004304,004310,004312,004314,004316,004318,004320,004322,004328,004330,004584,004586,004588,004592,004598,004600,004602,004604,004606,004608,004610,004616,004618,004622,004624,004628,004630,004634,004638,004648,004650,004654,004656,004658,004660,004662,004664,004666,004674,004682,004684,004686,004688,004690,004692,004694,004698,004700,004702,004714,004716,004720,004724,004726,004730,004732,004734,004736,004738,004744,004746,004748,004750,004752,004756,004758,004760Hostname: nid004180 Rank: 36, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004162 Rank: 31, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004246 Rank: 55, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004252 Rank: 57, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004662 Rank: 111, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004622 Rank: 99, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004756 Rank: 140, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004820 Rank: 159, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004916 Rank: 197, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004974 Rank: 216, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004588 Rank: 88, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004800 Rank: 155, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004702 Rank: 124, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+,004762,004764,004766,004770,004776,004778,004780,004782,004786,004788,004792,004794,004800,004808,004812,004814,004820,004822,004824,004828,004830,004832,004834,004840,004842,004844,004846,004848,004850,004852,004854,004856,004860,004862,004864,004866,004872,004874,004876,004878,004880,004882,004884,004886,004888,004890,004892,004896,004898,004904,004908,004910,004912,004914,004916,004918,004920,004922,004924,004926,004928,004930,004938,004940,004944,004948,004950,004958,004960,004962,004968,004970,004972,004974,004976,004978,004980,004982,004986,004988,004990,004992,005002,005004,005006,005008,005012,005014,005016,005018,005022,005026,005032,005034,005036,005038,005040,005044,005046,005050,005052,005054,005056,005068,005070,005072,005074,005076,005078,005080,005084,005086,005090]
+Hostname: nid004976 Rank: 217, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004892 Rank: 189, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004300 Rank: 74, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005072 Rank: 248, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004176 Rank: 34, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004896 Rank: 190, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004650 Rank: 106, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004114 Rank: 15, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005032 Rank: 235, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004606 Rank: 94, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004766 Rank: 145, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004072 Rank: 0, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004274 Rank: 64, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004638 Rank: 104, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005046 Rank: 241, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004630 Rank: 102, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004666 Rank: 113, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004752 Rank: 139, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004658 Rank: 109, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004872 Rank: 179, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004592 Rank: 89, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004758 Rank: 141, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004948 Rank: 208, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004788 Rank: 152, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004982 Rank: 220, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004586 Rank: 87, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004690 Rank: 119, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004716 Rank: 126, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004320 Rank: 82, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004986 Rank: 221, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004850 Rank: 171, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004174 Rank: 33, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004898 Rank: 191, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005014 Rank: 230, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004920 Rank: 199, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005086 Rank: 254, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004158 Rank: 29, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004208 Rank: 41, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004928 Rank: 203, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005068 Rank: 246, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004912 Rank: 195, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004200 Rank: 38, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005016 Rank: 231, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+mem_type:   device
+size:       1073741824
+padding:    0
+naive algo: 0
+
+[-1] time: 0.796547
+[0:0] time:     0.627596  bw:      13.6336
+[0:1] time:     0.613907  bw:      13.9376
+[0:2] time:     0.587998  bw:      14.5517
+[0:3] time:     0.576302  bw:      14.8471
+[0:4] time:     0.568177  bw:      15.0594
+[1:0] time:     0.600988  bw:      14.2372
+[1:1] time:      0.56367  bw:      15.1798
+[1:2] time:     0.562442  bw:      15.2129
+[1:3] time:      0.56351  bw:      15.1841
+[1:4] time:     0.562439  bw:       15.213
+[2:0] time:     0.600875  bw:      14.2399
+[2:1] time:     0.562034  bw:      15.2239
+[2:2] time:     0.561991  bw:      15.2251
+[2:3] time:     0.562089  bw:      15.2225
+[2:4] time:     0.561632  bw:      15.2348
+[3:0] time:      0.60018  bw:      14.2564
+[3:1] time:     0.561366  bw:      15.2421
+[3:2] time:     0.562622  bw:       15.208
+[3:3] time:     0.560694  bw:      15.2603
+[3:4] time:     0.561623  bw:      15.2351
+[4:0] time:     0.600334  bw:      14.2527
+[4:1] time:     0.560786  bw:      15.2578
+[4:2] time:      0.56182  bw:      15.2298
+[4:3] time:     0.561802  bw:      15.2302
+[4:4] time:     0.566383  bw:      15.1071
+[5:0] time:     0.603872  bw:      14.1692
+[5:1] time:     0.565397  bw:      15.1334
+[5:2] time:     0.562761  bw:      15.2043
+[5:3] time:     0.561596  bw:      15.2358
+[5:4] time:      0.56222  bw:      15.2189
+[6:0] time:     0.602409  bw:      14.2036
+[6:1] time:     0.563276  bw:      15.1904
+[6:2] time:     0.562935  bw:      15.1996
+[6:3] time:     0.562979  bw:      15.1984
+[6:4] time:     0.563318  bw:      15.1893
+[7:0] time:     0.600828  bw:       14.241
+[7:1] time:     0.562907  bw:      15.2003
+[7:2] time:     0.561572  bw:      15.2365
+[7:3] time:     0.563703  bw:      15.1789
+[7:4] time:     0.561663  bw:       15.234
+[8:0] time:     0.602416  bw:      14.2035
+[8:1] time:     0.562786  bw:      15.2036
+[8:2] time:     0.561753  bw:      15.2316
+[8:3] time:     0.566742  bw:      15.0975
+[8:4] time:     0.564751  bw:      15.1507
+[9:0] time:     0.605774  bw:      14.1247
+[9:1] time:     0.563437  bw:       15.186
+[9:2] time:     0.562667  bw:      15.2068
+[9:3] time:     0.562367  bw:      15.2149
+[9:4] time:      0.56169  bw:      15.2333
+
+=======================================
+type:        device
+size:    4294967296
+pad:              0
+naive:            0
+time:      0.565095
+time0:     0.604527
+bw:         15.1452
+bw0:        14.1562
+=======================================
+
+Hostname: nid004126 Rank: 19, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004200 Rank: 38, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004076 Rank: 2, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004124 Rank: 18, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004274 Rank: 64, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004322 Rank: 83, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004138 Rank: 23, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004602 Rank: 92, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004586 Rank: 87, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004302 Rank: 75, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004098 Rank: 9, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004606 Rank: 94, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004180 Rank: 36, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004218 Rank: 46, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004848 Rank: 170, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004202 Rank: 39, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004148 Rank: 27, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004112 Rank: 14, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004108 Rank: 12, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004092 Rank: 6, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004904 Rank: 192, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005080 Rank: 252, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004094 Rank: 7, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004960 Rank: 211, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004760 Rank: 142, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004254 Rank: 58, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004746 Rank: 136, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004226 Rank: 47, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004608 Rank: 95, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005006 Rank: 227, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004146 Rank: 26, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004316 Rank: 80, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004236 Rank: 50, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005050 Rank: 242, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004318 Rank: 81, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004700 Rank: 123, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004662 Rank: 111, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004874 Rank: 180, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004278 Rank: 66, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004976 Rank: 217, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004110 Rank: 13, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004314 Rank: 79, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004830 Rank: 163, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004084 Rank: 4, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004624 Rank: 100, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004702 Rank: 124, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004106 Rank: 11, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004158 Rank: 29, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004086 Rank: 5, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004824 Rank: 161, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005022 Rank: 233, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004310 Rank: 77, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004328 Rank: 84, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004860 Rank: 175, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004270 Rank: 62, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004096 Rank: 8, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004248 Rank: 56, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005072 Rank: 248, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004082 Rank: 3, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004174 Rank: 33, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004130 Rank: 21, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004288 Rank: 71, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004660 Rank: 110, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004648 Rank: 105, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004210 Rank: 42, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004930 Rank: 204, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004674 Rank: 114, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004144 Rank: 25, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004074 Rank: 1, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004212 Rank: 43, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004752 Rank: 139, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004600 Rank: 91, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004736 Rank: 133, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005032 Rank: 235, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004694 Rank: 121, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004156 Rank: 28, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004794 Rank: 154, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004778 Rank: 148, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004650 Rank: 106, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005018 Rank: 232, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004928 Rank: 203, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004950 Rank: 209, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004748 Rank: 137, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004732 Rank: 131, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004610 Rank: 96, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004988 Rank: 222, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005008 Rank: 228, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004258 Rank: 60, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004886 Rank: 186, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005044 Rank: 240, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004692 Rank: 120, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005068 Rank: 246, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004974 Rank: 216, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004140 Rank: 24, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004290 Rank: 72, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004656 Rank: 108, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004918 Rank: 198, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004990 Rank: 223, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005070 Rank: 247, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004264 Rank: 61, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004634 Rank: 103, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004280 Rank: 67, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004234 Rank: 49, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004938 Rank: 205, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004786 Rank: 151, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004682 Rank: 115, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004296 Rank: 73, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004788 Rank: 152, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004878 Rank: 182, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004168 Rank: 32, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004238 Rank: 51, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004744 Rank: 135, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004980 Rank: 219, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004622 Rank: 99, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004664 Rank: 112, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004866 Rank: 178, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005004 Rank: 226, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004304 Rank: 76, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004822 Rank: 160, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005054 Rank: 244, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004926 Rank: 202, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004882 Rank: 184, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004730 Rank: 130, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004896 Rank: 190, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004780 Rank: 149, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004884 Rank: 185, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004276 Rank: 65, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004256 Rank: 59, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004842 Rank: 167, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004986 Rank: 221, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004592 Rank: 89, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004690 Rank: 119, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004844 Rank: 168, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004750 Rank: 138, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004246 Rank: 55, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005086 Rank: 254, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005034 Rank: 236, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004584 Rank: 86, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004300 Rank: 74, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005014 Rank: 230, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004216 Rank: 45, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004864 Rank: 177, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004776 Rank: 147, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004924 Rank: 201, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004726 Rank: 129, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004272 Rank: 63, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004604 Rank: 93, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004968 Rank: 213, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004912 Rank: 195, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004686 Rank: 117, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004758 Rank: 141, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005026 Rank: 234, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004734 Rank: 132, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004312 Rank: 78, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004812 Rank: 157, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004852 Rank: 172, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004240 Rank: 52, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004846 Rank: 169, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004876 Rank: 181, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004766 Rank: 145, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005046 Rank: 241, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004770 Rank: 146, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004252 Rank: 57, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004914 Rank: 196, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004948 Rank: 208, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004970 Rank: 214, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004840 Rank: 166, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004628 Rank: 101, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004666 Rank: 113, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004872 Rank: 179, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004762 Rank: 143, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004898 Rank: 191, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004654 Rank: 107, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004782 Rank: 150, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004808 Rank: 156, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004958 Rank: 210, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004920 Rank: 199, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004658 Rank: 109, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004978 Rank: 218, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004992 Rank: 224, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004814 Rank: 158, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004940 Rank: 206, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004922 Rank: 200, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004962 Rank: 212, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004892 Rank: 189, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004114 Rank: 15, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005074 Rank: 249, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004688 Rank: 118, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005038 Rank: 238, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005076 Rank: 250, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004908 Rank: 193, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004282 Rank: 68, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004890 Rank: 188, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005036 Rank: 237, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004834 Rank: 165, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005002 Rank: 225, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005052 Rank: 243, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004178 Rank: 35, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004206 Rank: 40, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004122 Rank: 17, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004192 Rank: 37, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004616 Rank: 97, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005012 Rank: 229, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004214 Rank: 44, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004598 Rank: 90, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004828 Rank: 162, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004160 Rank: 30, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004104 Rank: 10, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005056 Rank: 245, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004854 Rank: 173, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005040 Rank: 239, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004832 Rank: 164, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004944 Rank: 207, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004916 Rank: 197, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004232 Rank: 48, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004982 Rank: 220, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005078 Rank: 251, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004630 Rank: 102, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004330 Rank: 85, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004888 Rank: 187, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004684 Rank: 116, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004880 Rank: 183, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004756 Rank: 140, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004116 Rank: 16, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004856 Rank: 174, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004800 Rank: 155, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004320 Rank: 82, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Slurm Job Hostlist: nid[004072,004074,004076,004082,004084,004086,004092,004094,004096,004098,004104,004106,004108,004110,004112,004114,004116,004122,004124,004126,004128,004130,004136,004138,004140,004144,004146,004148,004156,004158,004160,004162,004168,004174,004176,004178,004180,004192,004200,004202,004206,004208,004210,004212,004214,004216,004218,004226,004232,004234,004236,004238,004240,004242,004244,004246,004248,004252,004254,004256,004258,004264,004270,004272,004274,004276,004278,004280,004282,004284,004286,004288,004290,004296,004300,004302,004304,004310,004312,004314,004316,004318,004320,004322,004328,004330,004584,004586,004588,004592,004598,004600,004602,004604,004606,004608,004610,004616,004618,004622,004624,004628,004630,004634,004638,004648,004650,004654,004656,004658,004660,004662,004664,004666,004674,004682,004684,004686,004688,004690,004692,004694,004698,004700,004702,004714,004716,004720,004724,004726,004730,004732,004734,004736,004738,004744,004746,004748,004750,004752,004756,004758,004760,004762,004764,004766,004770,004776,004778,004780,004782,004786,004788,004792,004794,004800,004808,004812,004814,004820,004822,004824,004828,004830,004832,004834,004840,004842,004844,004846,004848,004850,004852,004854,004856,004860,004862,004864,004866,004872,004874,004876,004878,004880,004882,004884,004886,004888,004890,004892,004896,004898,004904,004908,004910,004912,004914,004916,004918,004920,004922,004924,004926,004928,004930,004938,004940,004944,004948,004950,004958,004960,004962,004968,004970,004972,004974,004976,004978,004980,004982,004986,004988,004990,004992,005002,005004,005006,005008,005012,005014,005016,005018,005022,005026,005032,005034,005036,005038,005040,005044,005046,005050,005052,005054,005056,005068,005070,005072,005074,005076,005078,005080,005084,005086,005090]
+Hostname: nid004072 Rank: 0, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004618 Rank: 98, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004738 Rank: 134, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004588 Rank: 88, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005084 Rank: 253, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004714 Rank: 125, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004244 Rank: 54, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004764 Rank: 144, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004242 Rank: 53, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004162 Rank: 31, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004862 Rank: 176, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004286 Rank: 70, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004136 Rank: 22, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005016 Rank: 231, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005090 Rank: 255, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004128 Rank: 20, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004972 Rank: 215, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004850 Rank: 171, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004176 Rank: 34, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004698 Rank: 122, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004724 Rank: 128, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004792 Rank: 153, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004720 Rank: 127, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004208 Rank: 41, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004820 Rank: 159, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004910 Rank: 194, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004638 Rank: 104, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004284 Rank: 69, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004716 Rank: 126, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+mem_type:   device
+size:       1073741824
+padding:    1
+naive algo: 0
+
+[-1] time: 1.74898
+[0:0] time:       1.7784  bw:      4.81128
+[0:1] time:      1.73091  bw:      4.94328
+[0:2] time:      1.70511  bw:      5.01809
+[0:3] time:      1.70569  bw:      5.01638
+[0:4] time:      1.70404  bw:      5.02123
+[1:0] time:      1.75407  bw:      4.87803
+[1:1] time:      1.70414  bw:      5.02092
+[1:2] time:      1.70442  bw:      5.02011
+[1:3] time:       1.7041  bw:      5.02104
+[1:4] time:      1.70319  bw:      5.02373
+[2:0] time:       1.7531  bw:      4.88071
+[2:1] time:      1.70602  bw:      5.01539
+[2:2] time:      1.70411  bw:      5.02104
+[2:3] time:      1.70437  bw:      5.02025
+[2:4] time:      1.70437  bw:      5.02026
+[3:0] time:      1.76096  bw:      4.85892
+[3:1] time:      1.70446  bw:      5.02001
+[3:2] time:      1.70352  bw:      5.02275
+[3:3] time:      1.70458  bw:      5.01965
+[3:4] time:      1.70351  bw:      5.02281
+[4:0] time:        1.759  bw:      4.86433
+[4:1] time:      1.70372  bw:      5.02218
+[4:2] time:      1.70359  bw:      5.02254
+[4:3] time:      1.70468  bw:      5.01935
+[4:4] time:      1.70464  bw:      5.01946
+[5:0] time:       1.7659  bw:      4.84535
+[5:1] time:      1.70327  bw:      5.02349
+[5:2] time:      1.70395  bw:       5.0215
+[5:3] time:        1.704  bw:      5.02134
+[5:4] time:      1.70362  bw:      5.02247
+[6:0] time:      1.76219  bw:      4.85554
+[6:1] time:      1.70664  bw:      5.01359
+[6:2] time:      1.70614  bw:      5.01506
+[6:3] time:       1.7062  bw:      5.01489
+[6:4] time:      1.70474  bw:      5.01916
+[7:0] time:      1.76915  bw:      4.83645
+[7:1] time:      1.70669  bw:      5.01344
+[7:2] time:      1.70496  bw:      5.01853
+[7:3] time:      1.70416  bw:      5.02087
+[7:4] time:      1.70457  bw:      5.01968
+[8:0] time:      1.76501  bw:      4.84779
+[8:1] time:      1.70435  bw:      5.02033
+[8:2] time:      1.70506  bw:      5.01824
+[8:3] time:      1.70395  bw:      5.02151
+[8:4] time:      1.70339  bw:      5.02314
+[9:0] time:      1.77053  bw:      4.83268
+[9:1] time:      1.70433  bw:      5.02039
+[9:2] time:       1.7042  bw:      5.02075
+[9:3] time:      1.70535  bw:      5.01738
+[9:4] time:       1.7048  bw:      5.01898
+
+=======================================
+type:        device
+size:    4294967296
+pad:              4
+naive:            0
+time:       1.70519
+time0:      1.76383
+bw:         5.01788
+bw0:        4.85111
+=======================================
+
+Slurm Job Hostlist: nid[004072,004074,004076,004082,004084,004086,004092,004094,004096,004098,004104,004106,004108,004110,004112,004114,004116,004122,004124,004126,004128,004130,004136,004138,004140,004144,004146,004148,004156,004158,004160,004162,004168,004174,004176,004178,004180,004192,004200,004202,004206,004208,004210,004212,004214,004216,004218,004226,004232,004234,004236,004238,004240,004242,004244,004246,004248,004252,004254,004256,004258,004264,004270,004272,004274,004276,004278,004280,004282,004284,004286,004288,004290,004296,004300,004302,004304,004310,004312,004314,004316,004318,004320,004322,004328,004330,004584,004586,004588,004592,004598,004600,004602,004604,004606,004608,004610,004616,004618,004622,004624,004628,004630,004634,004638,004648,004650,004654,004656,004658,004660,004662,004664,004666,004674,004682,004684,004686,004688,004690,004692,004694,004698,004700,004702,004714,004716,004720,004724,004726,004730,004732,004734,004736,004738,004744,004746,004748,004750,004752,004756,004758,004760,004762,004764,004766,004770,004776,004778,004780,004782,004786,004788,004792,004794,004800,004808,004812,004814,004820,004822,004824,004828,004830,004832,004834,004840,004842,004844,004846,004848,004850,004852,004854,004856,004860,004862,004864,004866,004872,004874,004876,004878,004880,004882,004884,004886,004888,004890,004892,004896,004898,004904,004908,004910,004912,004914,004916,004918,004920,004922,004924,004926,004928,004930,004938,004940,004944,004948,004950,004958,004960,004962,004968,004970,004972,004974,004976,004978,004980,004982,004986,004988,004990,004992,005002,005004,005006,005008,005012,005014,005016,005018,005022,005026,005032,005034,005036,005038,005040,005044,005046,005050,005052,005054,005056,005068,005070,005072,005074,005076,005078,005080,005084,005086,005090]
+Hostname: nid004254 Rank: 58, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004302 Rank: 75, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004202 Rank: 39, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004148 Rank: 27, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004072 Rank: 0, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004286 Rank: 70, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004664 Rank: 112, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004098 Rank: 9, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004884 Rank: 185, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004138 Rank: 23, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004654 Rank: 107, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004124 Rank: 18, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004076 Rank: 2, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004312 Rank: 78, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005068 Rank: 246, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004310 Rank: 77, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004276 Rank: 65, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005080 Rank: 252, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004876 Rank: 181, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004330 Rank: 85, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004234 Rank: 49, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004212 Rank: 43, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004960 Rank: 211, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005070 Rank: 247, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004846 Rank: 169, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004110 Rank: 13, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004296 Rank: 73, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004860 Rank: 175, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004638 Rank: 104, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004146 Rank: 26, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004168 Rank: 32, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004200 Rank: 38, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005072 Rank: 248, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004602 Rank: 92, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005090 Rank: 255, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004318 Rank: 81, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004586 Rank: 87, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004700 Rank: 123, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004156 Rank: 28, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005076 Rank: 250, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004760 Rank: 142, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004274 Rank: 64, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005054 Rank: 244, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004608 Rank: 95, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004208 Rank: 41, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004930 Rank: 204, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005008 Rank: 228, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004630 Rank: 102, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004210 Rank: 42, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004844 Rank: 168, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004108 Rank: 12, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004092 Rank: 6, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005032 Rank: 235, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004314 Rank: 79, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004128 Rank: 20, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004236 Rank: 50, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004622 Rank: 99, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004082 Rank: 3, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004834 Rank: 165, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004980 Rank: 219, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004648 Rank: 105, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004662 Rank: 111, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004822 Rank: 160, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004136 Rank: 22, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004624 Rank: 100, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004688 Rank: 118, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004206 Rank: 40, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004828 Rank: 162, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004976 Rank: 217, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004126 Rank: 19, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004242 Rank: 53, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004322 Rank: 83, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004950 Rank: 209, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004824 Rank: 161, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004972 Rank: 215, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004218 Rank: 46, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004610 Rank: 96, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004782 Rank: 150, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004094 Rank: 7, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004878 Rank: 182, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004618 Rank: 98, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004300 Rank: 74, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004940 Rank: 206, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004252 Rank: 57, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004174 Rank: 33, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004880 Rank: 183, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004272 Rank: 63, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004084 Rank: 4, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004104 Rank: 10, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005018 Rank: 232, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004606 Rank: 94, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004974 Rank: 216, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004674 Rank: 114, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004886 Rank: 186, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004904 Rank: 192, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004918 Rank: 198, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004750 Rank: 138, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004328 Rank: 84, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004856 Rank: 174, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004692 Rank: 120, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004920 Rank: 199, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004246 Rank: 55, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004682 Rank: 115, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004786 Rank: 151, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005084 Rank: 253, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004830 Rank: 163, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004910 Rank: 194, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004270 Rank: 62, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004978 Rank: 218, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004814 Rank: 158, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004890 Rank: 188, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005086 Rank: 254, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004684 Rank: 116, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004848 Rank: 170, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004758 Rank: 141, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005036 Rank: 237, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004238 Rank: 51, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004912 Rank: 195, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004840 Rank: 166, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004702 Rank: 124, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004970 Rank: 214, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004320 Rank: 82, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005038 Rank: 238, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004896 Rank: 190, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004746 Rank: 136, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004106 Rank: 11, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004928 Rank: 203, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004732 Rank: 131, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004748 Rank: 137, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004158 Rank: 29, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004916 Rank: 197, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004986 Rank: 221, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004762 Rank: 143, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004690 Rank: 119, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005056 Rank: 245, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004842 Rank: 167, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005022 Rank: 233, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005078 Rank: 251, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004854 Rank: 173, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005006 Rank: 227, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004592 Rank: 89, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004716 Rank: 126, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004258 Rank: 60, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004144 Rank: 25, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004752 Rank: 139, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004908 Rank: 193, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004736 Rank: 133, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004962 Rank: 212, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004282 Rank: 68, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004248 Rank: 56, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004788 Rank: 152, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004744 Rank: 135, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004864 Rank: 177, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004686 Rank: 117, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004914 Rank: 196, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004730 Rank: 130, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004948 Rank: 208, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004778 Rank: 148, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004982 Rank: 220, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004280 Rank: 67, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004584 Rank: 86, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004666 Rank: 113, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004714 Rank: 125, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005040 Rank: 239, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004140 Rank: 24, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004290 Rank: 72, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004278 Rank: 66, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004922 Rank: 200, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004832 Rank: 164, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004944 Rank: 207, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004852 Rank: 172, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004764 Rank: 144, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004658 Rank: 109, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004888 Rank: 187, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004112 Rank: 14, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004770 Rank: 146, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004924 Rank: 201, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004866 Rank: 178, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004898 Rank: 191, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004288 Rank: 71, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004988 Rank: 222, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004724 Rank: 128, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004800 Rank: 155, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004256 Rank: 59, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005046 Rank: 241, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004792 Rank: 153, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004780 Rank: 149, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004226 Rank: 47, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004598 Rank: 90, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005034 Rank: 236, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004214 Rank: 44, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004660 Rank: 110, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004926 Rank: 202, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004116 Rank: 16, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004938 Rank: 205, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004616 Rank: 97, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004074 Rank: 1, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005016 Rank: 231, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005002 Rank: 225, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004990 Rank: 223, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004316 Rank: 80, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004656 Rank: 108, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004600 Rank: 91, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004232 Rank: 48, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004874 Rank: 180, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005012 Rank: 229, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004726 Rank: 129, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004698 Rank: 122, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004114 Rank: 15, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004244 Rank: 54, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004734 Rank: 132, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004176 Rank: 34, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005050 Rank: 242, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004958 Rank: 210, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004264 Rank: 61, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004756 Rank: 140, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004720 Rank: 127, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004628 Rank: 101, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004304 Rank: 76, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004766 Rank: 145, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004776 Rank: 147, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004968 Rank: 213, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005052 Rank: 243, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004794 Rank: 154, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004882 Rank: 184, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004872 Rank: 179, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004588 Rank: 88, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004096 Rank: 8, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004604 Rank: 93, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004130 Rank: 21, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004650 Rank: 106, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004812 Rank: 157, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004820 Rank: 159, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004694 Rank: 121, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004862 Rank: 176, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004634 Rank: 103, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004178 Rank: 35, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004162 Rank: 31, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004192 Rank: 37, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004240 Rank: 52, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004216 Rank: 45, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005014 Rank: 230, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004850 Rank: 171, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004284 Rank: 69, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005074 Rank: 249, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004086 Rank: 5, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004892 Rank: 189, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005026 Rank: 234, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005044 Rank: 240, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004180 Rank: 36, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005004 Rank: 226, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004122 Rank: 17, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004992 Rank: 224, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004738 Rank: 134, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004160 Rank: 30, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004808 Rank: 156, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+mem_type:   device
+size:       1073741824
+padding:    0
+naive algo: 1
+
+[-1] time: 1.13626
+[0:0] time:      1.04262  bw:      8.20661
+[0:1] time:      1.03877  bw:      8.23702
+[0:2] time:      1.03879  bw:      8.23684
+[0:3] time:      1.03879  bw:      8.23687
+[0:4] time:      1.03882  bw:      8.23665
+[1:0] time:      1.03984  bw:      8.22859
+[1:1] time:      1.03908  bw:      8.23461
+[1:2] time:      1.03875  bw:      8.23722
+[1:3] time:      1.03852  bw:      8.23905
+[1:4] time:      1.03843  bw:       8.2397
+[2:0] time:      1.04285  bw:      8.20478
+[2:1] time:      1.03876  bw:       8.2371
+[2:2] time:      1.03884  bw:      8.23648
+[2:3] time:      1.03876  bw:      8.23709
+[2:4] time:      1.03935  bw:      8.23242
+[3:0] time:      1.04611  bw:      8.17922
+[3:1] time:       1.0435  bw:      8.19969
+[3:2] time:      1.04532  bw:      8.18541
+[3:3] time:      1.03846  bw:      8.23952
+[3:4] time:      1.03845  bw:      8.23955
+[4:0] time:      1.03935  bw:      8.23242
+[4:1] time:      1.03872  bw:      8.23742
+[4:2] time:      1.03877  bw:      8.23702
+[4:3] time:      1.03876  bw:      8.23708
+[4:4] time:      1.03876  bw:      8.23715
+[5:0] time:      1.04024  bw:      8.22541
+[5:1] time:      1.03847  bw:      8.23942
+[5:2] time:      1.03879  bw:      8.23687
+[5:3] time:      1.03851  bw:      8.23907
+[5:4] time:      1.03849  bw:      8.23926
+[6:0] time:      1.03951  bw:      8.23114
+[6:1] time:      1.03877  bw:        8.237
+[6:2] time:      1.03874  bw:       8.2373
+[6:3] time:      1.03871  bw:       8.2375
+[6:4] time:      1.03873  bw:      8.23738
+[7:0] time:      1.03913  bw:      8.23421
+[7:1] time:      1.03849  bw:      8.23924
+[7:2] time:      1.03855  bw:      8.23881
+[7:3] time:      1.03853  bw:      8.23897
+[7:4] time:      1.03859  bw:      8.23847
+[8:0] time:      1.04172  bw:      8.21372
+[8:1] time:      1.03873  bw:      8.23733
+[8:2] time:      1.03884  bw:      8.23645
+[8:3] time:      1.03874  bw:      8.23724
+[8:4] time:       1.0387  bw:      8.23757
+[9:0] time:      1.03926  bw:      8.23315
+[9:1] time:      1.03867  bw:      8.23782
+[9:2] time:      1.03842  bw:      8.23979
+[9:3] time:      1.03854  bw:      8.23887
+[9:4] time:      1.03859  bw:      8.23846
+
+=======================================
+type:        device
+size:    4294967296
+pad:              0
+naive:            1
+time:       1.03897
+time0:      1.04106
+bw:         8.23542
+bw0:        8.21893
+=======================================
+
+Hostname: nid004202 Rank: 39, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004074 Rank: 1, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004108 Rank: 12, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004210 Rank: 42, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004176 Rank: 34, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004112 Rank: 14, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004076 Rank: 2, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004586 Rank: 87, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004684 Rank: 116, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004146 Rank: 26, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004232 Rank: 48, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004094 Rank: 7, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004682 Rank: 115, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004662 Rank: 111, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004148 Rank: 27, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004700 Rank: 123, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005026 Rank: 234, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004200 Rank: 38, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005050 Rank: 242, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004660 Rank: 110, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004218 Rank: 46, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004156 Rank: 28, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004664 Rank: 112, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004274 Rank: 64, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004608 Rank: 95, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004252 Rank: 57, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005090 Rank: 255, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004098 Rank: 9, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004272 Rank: 63, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004648 Rank: 105, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004238 Rank: 51, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004944 Rank: 207, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004130 Rank: 21, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004630 Rank: 102, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004258 Rank: 60, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004828 Rank: 162, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004290 Rank: 72, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004692 Rank: 120, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004598 Rank: 90, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004904 Rank: 192, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004092 Rank: 6, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005080 Rank: 252, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004126 Rank: 19, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004766 Rank: 145, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004212 Rank: 43, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004860 Rank: 175, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004296 Rank: 73, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004960 Rank: 211, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004214 Rank: 44, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004270 Rank: 62, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004316 Rank: 80, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004168 Rank: 32, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004848 Rank: 170, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004128 Rank: 20, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004236 Rank: 50, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004248 Rank: 56, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004300 Rank: 74, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004206 Rank: 40, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005018 Rank: 232, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004116 Rank: 16, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004778 Rank: 148, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004948 Rank: 208, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004794 Rank: 154, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005076 Rank: 250, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004760 Rank: 142, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004624 Rank: 100, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004106 Rank: 11, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004122 Rank: 17, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004086 Rank: 5, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004972 Rank: 215, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004780 Rank: 149, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005084 Rank: 253, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004602 Rank: 92, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005054 Rank: 244, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004746 Rank: 136, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004808 Rank: 156, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004856 Rank: 174, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005008 Rank: 228, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004938 Rank: 205, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004280 Rank: 67, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004812 Rank: 157, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004616 Rank: 97, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004110 Rank: 13, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004814 Rank: 158, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004584 Rank: 86, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004320 Rank: 82, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004854 Rank: 173, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004628 Rank: 101, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004208 Rank: 41, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004874 Rank: 180, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004918 Rank: 198, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004246 Rank: 55, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004846 Rank: 169, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004786 Rank: 151, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004978 Rank: 218, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004096 Rank: 8, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004890 Rank: 188, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004850 Rank: 171, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004726 Rank: 129, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004834 Rank: 165, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004284 Rank: 69, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004114 Rank: 15, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004758 Rank: 141, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004744 Rank: 135, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004174 Rank: 33, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004896 Rank: 190, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004730 Rank: 130, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004688 Rank: 118, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004286 Rank: 70, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005038 Rank: 238, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005022 Rank: 233, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005056 Rank: 245, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004592 Rank: 89, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004842 Rank: 167, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005006 Rank: 227, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004288 Rank: 71, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004302 Rank: 75, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004880 Rank: 183, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004610 Rank: 96, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004920 Rank: 199, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004732 Rank: 131, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004958 Rank: 210, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004716 Rank: 126, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004974 Rank: 216, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004782 Rank: 150, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005068 Rank: 246, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004674 Rank: 114, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004988 Rank: 222, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004990 Rank: 223, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004694 Rank: 121, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005046 Rank: 241, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004752 Rank: 139, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004720 Rank: 127, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004162 Rank: 31, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004992 Rank: 224, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004282 Rank: 68, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005086 Rank: 254, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005072 Rank: 248, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004698 Rank: 122, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004738 Rank: 134, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004788 Rank: 152, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004832 Rank: 164, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004756 Rank: 140, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004864 Rank: 177, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004982 Rank: 220, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004606 Rank: 94, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004852 Rank: 172, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004866 Rank: 178, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004914 Rank: 196, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004970 Rank: 214, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004882 Rank: 184, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004800 Rank: 155, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004824 Rank: 161, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004884 Rank: 185, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004654 Rank: 107, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004748 Rank: 137, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004690 Rank: 119, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005002 Rank: 225, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005074 Rank: 249, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004714 Rank: 125, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005078 Rank: 251, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004762 Rank: 143, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004082 Rank: 3, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004930 Rank: 204, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004192 Rank: 37, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004330 Rank: 85, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004862 Rank: 176, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004322 Rank: 83, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004310 Rank: 77, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004256 Rank: 59, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004178 Rank: 35, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004734 Rank: 132, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005044 Rank: 240, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004908 Rank: 193, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004878 Rank: 182, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004924 Rank: 201, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004912 Rank: 195, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004968 Rank: 213, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005004 Rank: 226, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004986 Rank: 221, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005014 Rank: 230, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004724 Rank: 128, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004776 Rank: 147, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004916 Rank: 197, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004898 Rank: 191, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004144 Rank: 25, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004314 Rank: 79, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005012 Rank: 229, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005052 Rank: 243, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004622 Rank: 99, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004240 Rank: 52, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004136 Rank: 22, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004328 Rank: 84, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004940 Rank: 206, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005034 Rank: 236, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004138 Rank: 23, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004312 Rank: 78, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004160 Rank: 30, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004180 Rank: 36, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004830 Rank: 163, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004770 Rank: 146, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004892 Rank: 189, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004702 Rank: 124, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004950 Rank: 209, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005040 Rank: 239, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004844 Rank: 168, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004980 Rank: 219, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004104 Rank: 10, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004650 Rank: 106, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004886 Rank: 186, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004124 Rank: 18, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004634 Rank: 103, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004736 Rank: 133, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004926 Rank: 202, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004876 Rank: 181, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004910 Rank: 194, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Slurm Job Hostlist: nid[004072,004074,004076,004082,004084,004086,004092,004094,004096,004098,004104,004106,004108,004110,004112,004114,004116,004122,004124,004126,004128,004130,004136,004138,004140,004144,004146,004148,004156,004158,004160,004162,004168,004174,004176,004178,004180,004192,004200,004202,004206,004208,004210,004212,004214,004216,004218,004226,004232,004234,004236,004238,004240,004242,004244,004246,004248,004252,004254,004256,004258,004264,004270,004272,004274,004276,004278,004280,004282,004284,004286,004288,004290,004296,004300,004302,004304,004310,004312,004314,004316,004318,004320,004322,004328,004330,004584,004586,004588,004592,004598,004600,004602,004604,004606,004608,004610,004616,004618,004622,004624,004628,004630,004634,004638,004648,004650,004654,004656,004658,004660,004662,004664,004666,004674,004682,004684,004686,004688,004690,004692,004694,004698,004700,004702,004714,004716,004720,004724,004726,004730,004732,004734,004736,004738,004744,004746,004748,004750,004752,004756,004758,004760,004762,004764,004766,004770,004776,004778,004780,004782,004786,004788,004792,004794,004800,004808,004812,004814,004820,004822,004824,004828,004830,004832,004834,004840,004842,004844,004846,004848,004850,004852,004854,004856,004860,004862,004864,004866,004872,004874,004876,004878,004880,004882,004884,004886,004888,004890,004892,004896,004898,004904,004908,004910,004912,004914,004916,004918,004920,004922,004924,004926,004928,004930,004938,004940,004944,004948,004950,004958,004960,004962,004968,004970,004972,004974,004976,004978,004980,004982,004986,004988,004990,004992,005002,005004,005006,005008,005012,005014,005016,005018,005022,005026,005032,005034,005036,005038,005040,005044,005046,005050,005052,005054,005056,005068,005070,005072,005074,005076,005078,005080,005084,005086,005090]
+Hostname: nid004072 Rank: 0, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004686 Rank: 117, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004888 Rank: 187, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004084 Rank: 4, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004820 Rank: 159, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005070 Rank: 247, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004666 Rank: 113, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004588 Rank: 88, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005036 Rank: 237, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004600 Rank: 91, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004216 Rank: 45, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004254 Rank: 58, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005016 Rank: 231, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004226 Rank: 47, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004304 Rank: 76, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004318 Rank: 81, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004278 Rank: 66, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004928 Rank: 203, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004604 Rank: 93, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004822 Rank: 160, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid005032 Rank: 235, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004792 Rank: 153, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004962 Rank: 212, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004276 Rank: 65, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004140 Rank: 24, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004242 Rank: 53, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004656 Rank: 108, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004976 Rank: 217, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004618 Rank: 98, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004840 Rank: 166, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004234 Rank: 49, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004764 Rank: 144, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004638 Rank: 104, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004872 Rank: 179, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004658 Rank: 109, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004264 Rank: 61, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004244 Rank: 54, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004158 Rank: 29, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004750 Rank: 138, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid004922 Rank: 200, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+mem_type:   device
+size:       1073741824
+padding:    1
+naive algo: 1
+
+[-1] time: 1.19075
+[0:0] time:      1.08147  bw:      7.91177
+[0:1] time:      1.08162  bw:      7.91067
+[0:2] time:      1.07902  bw:      7.92979
+[0:3] time:       1.0727  bw:      7.97651
+[0:4] time:       1.0727  bw:      7.97648
+[1:0] time:      1.07312  bw:      7.97337
+[1:1] time:      1.07286  bw:      7.97531
+[1:2] time:       1.0729  bw:      7.97503
+[1:3] time:      1.07288  bw:      7.97512
+[1:4] time:      1.07288  bw:      7.97511
+[2:0] time:      1.07338  bw:      7.97144
+[2:1] time:      1.07269  bw:      7.97659
+[2:2] time:      1.07263  bw:      7.97701
+[2:3] time:       1.0727  bw:       7.9765
+[2:4] time:      1.07274  bw:      7.97618
+[3:0] time:      1.07323  bw:      7.97257
+[3:1] time:      1.07295  bw:      7.97466
+[3:2] time:      1.07295  bw:      7.97465
+[3:3] time:      1.07309  bw:      7.97356
+[3:4] time:      1.07296  bw:      7.97457
+[4:0] time:      1.07348  bw:      7.97068
+[4:1] time:      1.07279  bw:      7.97585
+[4:2] time:      1.07277  bw:      7.97598
+[4:3] time:      1.07289  bw:      7.97509
+[4:4] time:      1.07263  bw:      7.97704
+[5:0] time:      1.07332  bw:      7.97192
+[5:1] time:      1.07283  bw:      7.97551
+[5:2] time:      1.07319  bw:      7.97284
+[5:3] time:      1.07285  bw:       7.9754
+[5:4] time:      1.07294  bw:      7.97471
+[6:0] time:      1.07295  bw:      7.97461
+[6:1] time:      1.07268  bw:      7.97662
+[6:2] time:      1.07266  bw:      7.97682
+[6:3] time:      1.07273  bw:      7.97627
+[6:4] time:      1.07273  bw:      7.97627
+[7:0] time:      1.07338  bw:      7.97146
+[7:1] time:      1.07301  bw:      7.97415
+[7:2] time:      1.07294  bw:      7.97471
+[7:3] time:      1.07292  bw:      7.97482
+[7:4] time:      1.07289  bw:      7.97511
+[8:0] time:      1.07297  bw:      7.97451
+[8:1] time:      1.07272  bw:      7.97631
+[8:2] time:      1.07273  bw:       7.9763
+[8:3] time:      1.07271  bw:      7.97645
+[8:4] time:      1.07266  bw:      7.97682
+[9:0] time:      1.07311  bw:      7.97341
+[9:1] time:      1.07287  bw:      7.97521
+[9:2] time:      1.07291  bw:      7.97496
+[9:3] time:      1.07291  bw:      7.97495
+[9:4] time:      1.07285  bw:      7.97535
+
+=======================================
+type:        device
+size:    4294967296
+pad:              4
+naive:            1
+time:        1.0732
+time0:      1.07404
+bw:         7.97278
+bw0:        7.96657
+=======================================
+
