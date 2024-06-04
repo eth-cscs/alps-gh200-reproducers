@@ -1,8 +1,9 @@
 #include "memory.hpp" 
 #include "allreduce.hpp"
 
-#include <iomanip>
 #include <chrono>
+#include <iomanip>
+#include <limits>
 #include <string>
 #include <string_view>
 #include <vector>
@@ -49,7 +50,29 @@ int main(int argc, char** argv) {
     std::size_t const padding = std::stoul(argv[5]);
     bool const naive = std::stoul(argv[6]);
 
-    CHECK_CUDA(cudaDeviceSynchronize());
+    if (size > (std::size_t)std::numeric_limits<int>::max()) {
+        std::cout << "buffer is too large" << std::endl;
+        exit(1);
+    }
+
+    if (t == test::mem_type::device) {
+        int dev_count, local_rank, local_size;
+        CHECK_CUDA(cudaGetDeviceCount(&dev_count))
+
+        MPI_Comm local_comm;
+        CHECK_MPI(MPI_Comm_split_type(MPI_COMM_WORLD, MPI_COMM_TYPE_SHARED, comm_rank, MPI_INFO_NULL, &local_comm));
+        CHECK_MPI(MPI_Comm_rank(local_comm, &local_rank));
+        CHECK_MPI(MPI_Comm_size(local_comm, &local_size));
+        auto did = local_rank % dev_count;
+        std::cout << "Found " << dev_count << " devices for local rank " << local_rank << " (" << local_size << ") -> setting device = " << did << std::endl;
+
+        CHECK_CUDA(cudaSetDevice(did));
+        CHECK_CUDA(cudaDeviceSynchronize());
+
+        CHECK_MPI(MPI_Comm_free(&local_comm));
+        CHECK_MPI(MPI_Barrier(MPI_COMM_WORLD));
+    }
+
     if (comm_rank == 0) {
         std::cout << "mem_type:   " << argv[3] << '\n';
         std::cout << "size:       " << size << '\n';
@@ -71,6 +94,7 @@ int main(int argc, char** argv) {
     for (auto& v : times) v.resize(num_sub_iterations-1);
     for (auto& v : bws) v.resize(num_sub_iterations-1);
 
+    CHECK_MPI(MPI_Barrier(MPI_COMM_WORLD));
     // Warmup
     {
         const std::chrono::time_point<std::chrono::steady_clock> start =
@@ -82,7 +106,11 @@ int main(int argc, char** argv) {
             if (!naive)
                 test::all_reduce(buffer, mpi_type);
             else
-                test::all_reduce_naive_ring(buffer);
+                test::all_reduce_naive_ring(buffer, mpi_type);
+
+            //if (!check(buffer, (type)comm_size)) {
+            //    std::exit(1);
+            //}
 
         }
 
@@ -98,16 +126,16 @@ int main(int argc, char** argv) {
 
     for (std::size_t i = 0; i < num_iterations; ++i) {
         auto buffer = test::buffer<type>(t, size, padding);
-        test::fill(buffer, (type)1);
 
         for (std::size_t j = 0; j < num_sub_iterations; ++j) {
+            test::fill(buffer, (type)1);
             const std::chrono::time_point<std::chrono::steady_clock> start =
                 std::chrono::steady_clock::now();
 
             if (!naive)
                 test::all_reduce(buffer, mpi_type);
             else
-                test::all_reduce_naive_ring(buffer);
+                test::all_reduce_naive_ring(buffer, mpi_type);
 
             CHECK_MPI(MPI_Barrier(MPI_COMM_WORLD));
 

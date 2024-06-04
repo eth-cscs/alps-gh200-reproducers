@@ -29,19 +29,39 @@ void sum(buffer<T>& dest, buffer<T> const & src) {
 
 template<typename T>
 void copy(buffer<T>& dest, buffer<T> const & src) {
-    switch (dest.type()) {
-        case mem_type::device:
+    if (dest.type() == mem_type::device) {
+        if (src.type() == mem_type::device) {
             CHECK_CUDA(cudaMemcpy(dest.data(), src.data(), dest.size()*sizeof(T), cudaMemcpyDeviceToDevice));
-            CHECK_CUDA(cudaDeviceSynchronize());
-            break;
-
-        default:
-            std::memcpy(dest.data(), src.data(), dest.size()*sizeof(T));
+        }
+        else {
+            CHECK_CUDA(cudaMemcpy(dest.data(), src.data(), dest.size()*sizeof(T), cudaMemcpyHostToDevice));
+        }
+        CHECK_CUDA(cudaDeviceSynchronize());
+    }
+    else if (src.type() == mem_type::device) {
+        CHECK_CUDA(cudaMemcpy(dest.data(), src.data(), dest.size()*sizeof(T), cudaMemcpyDeviceToHost));
+        CHECK_CUDA(cudaDeviceSynchronize());
+    }
+    else {
+        std::memcpy(dest.data(), src.data(), dest.size()*sizeof(T));
     }
 }
 
 template<typename T>
-void all_reduce_naive_ring(buffer<T>& b) {
+bool check(const buffer<T>& b, T expected) {
+    buffer<T> c(mem_type::host, b.size(), 0);
+    copy(c, b);
+    for (std::size_t i=0; i<b.size(); ++i) {
+        if (c.data()[i] != expected) {
+            std::cout << "Allreduce went wrong at index = " << i << ": expexted " << expected << " got " << c.data()[i] << '\n';
+            return false;
+        }
+    }
+    return true;
+}
+
+template<typename T>
+void all_reduce_naive_ring(buffer<T>& b, MPI_Datatype mpi_type) {
     static thread_local std::unique_ptr<buffer<T>> recv_buffer_ptr;
     if (!recv_buffer_ptr || 
         (recv_buffer_ptr->size() < b.size()) || 
@@ -76,8 +96,8 @@ void all_reduce_naive_ring(buffer<T>& b) {
 
     for (int i=0; i<comm_size-1; ++i) {
         CHECK_MPI(MPI_Sendrecv(
-            s->data(), s->size()*sizeof(T), MPI_BYTE, send_rank, 0,
-            r->data(), s->size()*sizeof(T), MPI_BYTE, recv_rank, 0,
+            s->data(), s->size(), mpi_type, send_rank, 0,
+            r->data(), s->size(), mpi_type, recv_rank, 0,
             MPI_COMM_WORLD, MPI_STATUS_IGNORE));
         sum(b, *r);
         std::swap(s, r);
