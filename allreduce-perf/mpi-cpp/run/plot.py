@@ -28,7 +28,7 @@ output_dir = "plots"
 # Function to parse integers from the filename
 def parse_filename(file_path):
     filename = os.path.basename(file_path)
-    pattern = re.compile(r"job_n_(\d+)_N_(\d+)_TPN_(\d+)\.out")
+    pattern = re.compile(r".*?_n_(\d+)_N_(\d+)_TPN_(\d+)\.out")
     match = pattern.match(filename)
     if match:
         n = int(match.group(1))
@@ -136,12 +136,12 @@ def plot_data_2(grouped_lines, base_name, ns, tpn, pad, bw0, combined=False):
     idx = 0
     l = 0
     for small_block_name, data in grouped_lines.items():
-        if combined or (
+        if (not "naive" in small_block_name) and (combined or (
             data["tpn"] == tpn
             and (
                 (pad and ("pad" in small_block_name))
                 or (not pad and (not "pad" in small_block_name))
-            )
+            ))
         ):
             color = colors[idx % len(colors)]
             marker = markers[idx % len(markers)]
@@ -190,24 +190,9 @@ def plot_data_2(grouped_lines, base_name, ns, tpn, pad, bw0, combined=False):
             )
         idx = idx + 1
 
-        if combined or tpn == 1:
-            n_nccl = [4, 16, 32, 64, 128, 256]
-            bw_nccl = [22.84, 22.87, 22.89, 22.90, 22.90, 22.92]
-            plt.plot(
-                n_nccl,
-                bw_nccl,
-                color=colors[idx % len(colors)],
-                marker=markers[idx % len(markers)],
-                linestyle=line_styles[idx % len(line_styles)],
-                label=f"NCCL/uenv (ranks/node=1)",
-                alpha=alpha,
-                markersize=markersize,
-            )
-        idx = idx + 1
-
         if combined or tpn == 4:
-            n_nccl = [4, 16, 32, 64]
-            bw_nccl = [343.360, 91.740, 91.673, 91.646]
+            n_nccl = [4, 16, 32, 64, 128, 256, 512, 1024]
+            bw_nccl = [343.360, 91.740, 91.673, 91.646, 91.442, 91.464, 91.449, 91.449]
             plt.plot(
                 n_nccl,
                 bw_nccl,
@@ -234,6 +219,22 @@ def plot_data_2(grouped_lines, base_name, ns, tpn, pad, bw0, combined=False):
                 markersize=markersize,
             )
         idx = idx + 1
+
+        if combined or tpn == 1:
+            n_nccl = [4, 16, 32, 64, 128, 256]
+            bw_nccl = [22.84, 22.87, 22.89, 22.90, 22.90, 22.92]
+            plt.plot(
+                n_nccl,
+                bw_nccl,
+                color=colors[idx % len(colors)],
+                marker=markers[idx % len(markers)],
+                linestyle=line_styles[idx % len(line_styles)],
+                label=f"NCCL/uenv (ranks/node=1)",
+                alpha=alpha,
+                markersize=markersize,
+            )
+        idx = idx + 1
+
 
     # Add custom legend entries
     handles, labels = plt.gca().get_legend_handles_labels()
