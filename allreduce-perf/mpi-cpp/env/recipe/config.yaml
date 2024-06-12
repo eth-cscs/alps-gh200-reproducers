@@ -1,0 +1,7 @@
+name: test_mpi
+spack:
+  commit: origin/develop
+  repo: https://github.com/spack/spack.git
+store: /user-environment
+description: Test MPI in CMake
+
