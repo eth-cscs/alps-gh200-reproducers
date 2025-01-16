@@ -2,12 +2,12 @@
 
 Jobs run on the ML Platform vCluster Clariden were observed to hang when the
 slurm job time limit expired or the job was cancelled.  Slurm would report the
-ndoes stuck in the COMPLETING state.  
+nodes stuck in the COMPLETING state.  
 
 A python tokenizing script was observed to consistently cause this problem.
-Further investigation has found that writes from Python are buffered. The
+Further investigation found that writes from Python are buffered. The
 buffer size is a multiple of what python thinks is the block size of the file
-system and does appear to grow in response to the size of data written at once.
+system and appears to grow in response to the size of data written at once.
 
 As of 16-Jan-2025 on capstor and iopsstor this value is
 
@@ -17,7 +17,7 @@ $ python3 -c "import os; print(os.stat('tmpfile.txt').st_blksize)"
 4194304
 ```
 
-However, lfs and stat report different values
+However, `lfs` and `stat` report different values
 
 ```bash
 $ lfs getstripe tmpfile.txt
@@ -54,6 +54,9 @@ simple block sizes which are a power-of-two. Only the odd size has been
 observed to cause at least one of the tasks to hang. Using more than one task
 is more likely to generate a problem, although the issue has been observed with
 a single task.
+
+Once the process has hung the job will timeout (or if cancelled via scancel) and
+slurm will remain in the COMPLETING state.
 
 ## Run
 
