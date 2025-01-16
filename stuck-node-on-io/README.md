@@ -45,10 +45,15 @@ This demo uses both buffered and unbuffered mode.
 strace python3 python-io-demo.py 2>&1 | grep -e write -e Writing
 ```
 
+The case that fails was when 100\*1024\*8=819200 bytes were written
+continuously. Python packs 5 of these (4096000 bytes) into one buffer
+(presumably because 6 would be too big) before issuing a single system call to
+write the buffer.
+
 ## The Reproducer
 
 To reproduce the issue, the submission script runs `dd` with a block size of
-4096000, which is not exactly the buffer size python uses and not a
+4096000, which is not exactly the full buffer size python uses and not a
 power-of-two multiple of the lustre block size. The script also tests other
 simple block sizes which are a power-of-two. Only the odd size has been
 observed to cause at least one of the tasks to hang. Using more than one task
@@ -57,6 +62,41 @@ a single task.
 
 Once the process has hung the job will timeout (or if cancelled via scancel) and
 slurm will remain in the COMPLETING state.
+
+The following messages from `dmesg -T` started at the time of the hang endlessly repeat:
+
+```
+[Wed Jan 15 17:19:05 2025] LNetError: 4069:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.43@tcp, match 1820705849269056 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:22:28 2025] Lustre: 128727:0:(client.c:2310:ptlrpc_expire_one_request()) @@@ Request sent has timed out for slow reply: [sent 1736957925/real 1736957925]  req@000000005ab3b574 x1820705849269056/t0(0) o4->capstor-OST003a-osc-ffff3000ef06c000@172.28.1.43@tcp:6/4 lens 488/448 e 2 to 1 dl 1736958128 ref>
+[Wed Jan 15 17:22:28 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection to capstor-OST003a (at 172.28.1.43@tcp) was lost; in progress operations using this service will wait for recovery to complete
+[Wed Jan 15 17:22:28 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection restored to  (at 172.28.1.43@tcp)
+[Wed Jan 15 17:22:28 2025] LNetError: 4108:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.43@tcp, match 1820705849565760 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:22:28 2025] LNetError: 4108:0:(lib-ptl.c:189:lnet_try_match_md()) Skipped 1 previous similar message
+[Wed Jan 15 17:22:30 2025] Lustre: 128781:0:(client.c:2310:ptlrpc_expire_one_request()) @@@ Request sent has timed out for slow reply: [sent 1736957926/real 1736957926]  req@00000000ceb3e0bd x1820705849272448/t0(0) o4->capstor-OST005a-osc-ffff3000ef06c000@172.28.1.59@tcp:6/4 lens 488/448 e 2 to 1 dl 1736958131 ref>
+[Wed Jan 15 17:22:30 2025] Lustre: capstor-OST005a-osc-ffff3000ef06c000: Connection to capstor-OST005a (at 172.28.1.59@tcp) was lost; in progress operations using this service will wait for recovery to complete
+[Wed Jan 15 17:22:30 2025] Lustre: capstor-OST005a-osc-ffff3000ef06c000: Connection restored to  (at 172.28.1.59@tcp)
+[Wed Jan 15 17:22:30 2025] LNetError: 4091:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.59@tcp, match 1820705849572736 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:25:51 2025] Lustre: 128727:0:(client.c:2310:ptlrpc_expire_one_request()) @@@ Request sent has timed out for slow reply: [sent 1736958128/real 1736958128]  req@000000005ab3b574 x1820705849269056/t0(0) o4->capstor-OST003a-osc-ffff3000ef06c000@172.28.1.43@tcp:6/4 lens 488/448 e 2 to 1 dl 1736958331 ref>
+[Wed Jan 15 17:25:51 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection to capstor-OST003a (at 172.28.1.43@tcp) was lost; in progress operations using this service will wait for recovery to complete
+[Wed Jan 15 17:25:51 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection restored to  (at 172.28.1.43@tcp)
+[Wed Jan 15 17:25:51 2025] LNetError: 4099:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.43@tcp, match 1820705849854848 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:25:55 2025] Lustre: 128781:0:(client.c:2310:ptlrpc_expire_one_request()) @@@ Request sent has timed out for slow reply: [sent 1736958131/real 1736958131]  req@00000000ceb3e0bd x1820705849272448/t0(0) o4->capstor-OST005a-osc-ffff3000ef06c000@172.28.1.59@tcp:6/4 lens 488/448 e 2 to 1 dl 1736958336 ref>
+[Wed Jan 15 17:25:55 2025] Lustre: capstor-OST005a-osc-ffff3000ef06c000: Connection to capstor-OST005a (at 172.28.1.59@tcp) was lost; in progress operations using this service will wait for recovery to complete
+[Wed Jan 15 17:25:55 2025] Lustre: capstor-OST005a-osc-ffff3000ef06c000: Connection restored to  (at 172.28.1.59@tcp)
+[Wed Jan 15 17:25:55 2025] LNetError: 4071:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.59@tcp, match 1820705849857152 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:29:13 2025] Lustre: 128727:0:(client.c:2310:ptlrpc_expire_one_request()) @@@ Request sent has timed out for slow reply: [sent 1736958331/real 1736958331]  req@000000005ab3b574 x1820705849269056/t0(0) o4->capstor-OST003a-osc-ffff3000ef06c000@172.28.1.43@tcp:6/4 lens 488/448 e 2 to 1 dl 1736958534 ref>
+[Wed Jan 15 17:29:14 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection to capstor-OST003a (at 172.28.1.43@tcp) was lost; in progress operations using this service will wait for recovery to complete
+[Wed Jan 15 17:29:14 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection restored to  (at 172.28.1.43@tcp)
+[Wed Jan 15 17:29:14 2025] LNetError: 4107:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.43@tcp, match 1820705850136256 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:32:36 2025] Lustre: 128727:0:(client.c:2310:ptlrpc_expire_one_request()) @@@ Request sent has timed out for slow reply: [sent 1736958534/real 1736958534]  req@000000005ab3b574 x1820705849269056/t0(0) o4->capstor-OST003a-osc-ffff3000ef06c000@172.28.1.43@tcp:6/4 lens 488/448 e 2 to 1 dl 1736958737 ref>
+[Wed Jan 15 17:32:36 2025] Lustre: 128727:0:(client.c:2310:ptlrpc_expire_one_request()) Skipped 1 previous similar message
+[Wed Jan 15 17:32:36 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection to capstor-OST003a (at 172.28.1.43@tcp) was lost; in progress operations using this service will wait for recovery to complete
+[Wed Jan 15 17:32:36 2025] Lustre: Skipped 1 previous similar message
+[Wed Jan 15 17:32:36 2025] Lustre: capstor-OST003a-osc-ffff3000ef06c000: Connection restored to  (at 172.28.1.43@tcp)
+[Wed Jan 15 17:32:36 2025] Lustre: Skipped 1 previous similar message
+[Wed Jan 15 17:32:36 2025] LNetError: 4070:0:(lib-ptl.c:189:lnet_try_match_md()) Matching packet from 12345-172.28.1.43@tcp, match 1820705850437120 length 1048576 too big: 1015808 left, 1015808 allowed
+[Wed Jan 15 17:32:36 2025] LNetError: 4070:0:(lib-ptl.c:189:lnet_try_match_md()) Skipped 1 previous similar message
+```
 
 ## Run
 
