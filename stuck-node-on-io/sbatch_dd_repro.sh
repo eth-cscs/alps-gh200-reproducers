@@ -28,4 +28,7 @@ for ntasks in 1 2; do
 	done
 done
 
+echo
+echo "SUCCESS"
+echo
 

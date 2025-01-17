@@ -100,7 +100,7 @@ The following messages from `dmesg -T` started at the time of the hang endlessly
 
 ## Run
 
-The following submission script is configured to use 1 node with 2 tasks.
+The following submission script is configured to use 1 node with up to 2 tasks.
 
 ```bash
 sbatch sbatch_dd_repro.sh
