@@ -1,3 +1,11 @@
+# Updates
+
+- 18-Jan-2025
+    - The hanging behavior is clearly associated with the LNetError that appears in the output of dmesg as it shows up precisely when the process hangs.
+    - The error won't *always* appear, even for the same block size, but after at most a few attempts it will hang. Two tasks are more likely to reproduce the problem, but one task has been enough.
+    - The precise block size isn't the critical factor, as I have found a number of other (smaller) block sizes that also cause a hang.
+    - This seems to be very specific to capstor. I haven't been able to reproduce the problem on iopsstor.
+
 # Particular block sizes cause task to hang when writing to lustre file system
 
 Jobs run on the ML Platform vCluster Clariden were observed to hang when the
