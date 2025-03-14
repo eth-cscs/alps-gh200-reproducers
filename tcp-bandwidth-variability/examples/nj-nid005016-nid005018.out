@@ -1,0 +1,582 @@
+server: nid005016 x1100c1s1b0n0
+client: nid005018 x1100c1s2b0n0
+2025-03-14T15:59:23	Connecting to host nid005016, port 5201
+2025-03-14T15:59:23	[  5] local 172.28.11.80 port 39568 connected to 172.28.11.72 port 5201
+2025-03-14T15:59:24	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T15:59:24	[  5]   0.00-1.00   sec   139 MBytes  1.16 Gbits/sec  509    228 KBytes       
+2025-03-14T15:59:25	[  5]   1.00-2.00   sec  35.5 MBytes   298 Mbits/sec  146    210 KBytes       
+2025-03-14T15:59:26	[  5]   2.00-3.00   sec  68.4 MBytes   574 Mbits/sec  234    219 KBytes       
+2025-03-14T15:59:27	[  5]   3.00-4.00   sec  96.4 MBytes   808 Mbits/sec  342    245 KBytes       
+2025-03-14T15:59:28	[  5]   4.00-5.00   sec  19.2 MBytes   161 Mbits/sec   89    219 KBytes       
+2025-03-14T15:59:29	[  5]   5.00-6.00   sec   128 MBytes  1.07 Gbits/sec  421    201 KBytes       
+2025-03-14T15:59:30	[  5]   6.00-7.00   sec  65.5 MBytes   549 Mbits/sec  240    236 KBytes       
+2025-03-14T15:59:31	[  5]   7.00-8.00   sec  81.4 MBytes   683 Mbits/sec  233    158 KBytes       
+2025-03-14T15:59:32	[  5]   8.00-9.00   sec  60.5 MBytes   508 Mbits/sec  162    271 KBytes       
+2025-03-14T15:59:33	[  5]   9.00-10.00  sec  80.1 MBytes   672 Mbits/sec  261    201 KBytes       
+2025-03-14T15:59:34	[  5]  10.00-11.00  sec  96.5 MBytes   810 Mbits/sec  323    140 KBytes       
+2025-03-14T15:59:35	[  5]  11.00-12.00  sec   109 MBytes   914 Mbits/sec  332    236 KBytes       
+2025-03-14T15:59:36	[  5]  12.00-13.00  sec  51.6 MBytes   433 Mbits/sec  187    210 KBytes       
+2025-03-14T15:59:37	[  5]  13.00-14.00  sec  77.5 MBytes   650 Mbits/sec  227   87.5 KBytes       
+2025-03-14T15:59:38	[  5]  14.00-15.00  sec  26.0 MBytes   218 Mbits/sec  119    131 KBytes       
+2025-03-14T15:59:39	[  5]  15.00-16.00  sec   105 MBytes   883 Mbits/sec  376    184 KBytes       
+2025-03-14T15:59:40	[  5]  16.00-17.00  sec   113 MBytes   945 Mbits/sec  339    158 KBytes       
+2025-03-14T15:59:41	[  5]  17.00-18.00  sec  86.8 MBytes   728 Mbits/sec  281    219 KBytes       
+2025-03-14T15:59:42	[  5]  18.00-19.00  sec   149 MBytes  1.25 Gbits/sec  412    201 KBytes       
+2025-03-14T15:59:43	[  5]  19.00-20.00  sec   110 MBytes   918 Mbits/sec  361    245 KBytes       
+2025-03-14T15:59:43	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T15:59:43	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T15:59:43	[  5]   0.00-20.00  sec  1.66 GBytes   712 Mbits/sec  5594            sender
+2025-03-14T15:59:43	[  5]   0.00-20.00  sec  1.66 GBytes   711 Mbits/sec                  receiver
+2025-03-14T15:59:43	
+2025-03-14T15:59:43	iperf Done.
+2025-03-14T15:59:45	Connecting to host nid005016, port 5201
+2025-03-14T15:59:45	[  5] local 172.28.11.80 port 55884 connected to 172.28.11.72 port 5201
+2025-03-14T15:59:46	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T15:59:46	[  5]   0.00-1.00   sec   148 MBytes  1.24 Gbits/sec  527    184 KBytes       
+2025-03-14T15:59:47	[  5]   1.00-2.00   sec   211 MBytes  1.77 Gbits/sec  567    280 KBytes       
+2025-03-14T15:59:48	[  5]   2.00-3.00   sec  25.6 MBytes   215 Mbits/sec  107    201 KBytes       
+2025-03-14T15:59:49	[  5]   3.00-4.00   sec   123 MBytes  1.03 Gbits/sec  414    192 KBytes       
+2025-03-14T15:59:50	[  5]   4.00-5.00   sec   127 MBytes  1.07 Gbits/sec  446    219 KBytes       
+2025-03-14T15:59:51	[  5]   5.00-6.00   sec  85.5 MBytes   717 Mbits/sec  261    210 KBytes       
+2025-03-14T15:59:52	[  5]   6.00-7.00   sec  31.4 MBytes   263 Mbits/sec  105    219 KBytes       
+2025-03-14T15:59:53	[  5]   7.00-8.00   sec  54.1 MBytes   454 Mbits/sec  199    245 KBytes       
+2025-03-14T15:59:54	[  5]   8.00-9.00   sec  29.4 MBytes   246 Mbits/sec  121    201 KBytes       
+2025-03-14T15:59:55	[  5]   9.00-10.00  sec   100 MBytes   841 Mbits/sec  351    262 KBytes       
+2025-03-14T15:59:56	[  5]  10.00-11.00  sec   104 MBytes   875 Mbits/sec  332    158 KBytes       
+2025-03-14T15:59:57	[  5]  11.00-12.00  sec  46.1 MBytes   387 Mbits/sec  179    158 KBytes       
+2025-03-14T15:59:58	[  5]  12.00-13.00  sec  77.9 MBytes   653 Mbits/sec  239    192 KBytes       
+2025-03-14T15:59:59	[  5]  13.00-14.00  sec  37.2 MBytes   312 Mbits/sec  167    122 KBytes       
+2025-03-14T16:00:00	[  5]  14.00-15.00  sec  67.8 MBytes   568 Mbits/sec  193    210 KBytes       
+2025-03-14T16:00:01	[  5]  15.00-16.00  sec  61.9 MBytes   519 Mbits/sec  248    228 KBytes       
+2025-03-14T16:00:02	[  5]  16.00-17.00  sec  36.9 MBytes   309 Mbits/sec  109    219 KBytes       
+2025-03-14T16:00:03	[  5]  17.00-18.00  sec   138 MBytes  1.15 Gbits/sec  396    210 KBytes       
+2025-03-14T16:00:04	[  5]  18.00-19.00  sec  50.1 MBytes   420 Mbits/sec  170    254 KBytes       
+2025-03-14T16:00:05	[  5]  19.00-20.00  sec  61.0 MBytes   512 Mbits/sec  251    228 KBytes       
+2025-03-14T16:00:05	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:00:05	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:00:05	[  5]   0.00-20.00  sec  1.58 GBytes   678 Mbits/sec  5382            sender
+2025-03-14T16:00:05	[  5]   0.00-20.00  sec  1.58 GBytes   677 Mbits/sec                  receiver
+2025-03-14T16:00:05	
+2025-03-14T16:00:05	iperf Done.
+2025-03-14T16:00:07	Connecting to host nid005016, port 5201
+2025-03-14T16:00:07	[  5] local 172.28.11.80 port 55058 connected to 172.28.11.72 port 5201
+2025-03-14T16:00:08	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:00:08	[  5]   0.00-1.00   sec   584 MBytes  4.89 Gbits/sec  1387    315 KBytes       
+2025-03-14T16:00:09	[  5]   1.00-2.00   sec   466 MBytes  3.91 Gbits/sec  1068    201 KBytes       
+2025-03-14T16:00:10	[  5]   2.00-3.00   sec   474 MBytes  3.98 Gbits/sec  1139    289 KBytes       
+2025-03-14T16:00:11	[  5]   3.00-4.00   sec   399 MBytes  3.34 Gbits/sec  933    280 KBytes       
+2025-03-14T16:00:12	[  5]   4.00-5.00   sec   635 MBytes  5.33 Gbits/sec  1748    245 KBytes       
+2025-03-14T16:00:13	[  5]   5.00-6.00   sec   618 MBytes  5.18 Gbits/sec  1611    245 KBytes       
+2025-03-14T16:00:14	[  5]   6.00-7.00   sec   639 MBytes  5.36 Gbits/sec  1414    184 KBytes       
+2025-03-14T16:00:15	[  5]   7.00-8.00   sec   415 MBytes  3.48 Gbits/sec  1256    166 KBytes       
+2025-03-14T16:00:16	[  5]   8.00-9.00   sec   861 MBytes  7.22 Gbits/sec  2106    219 KBytes       
+2025-03-14T16:00:17	[  5]   9.00-10.00  sec   217 MBytes  1.82 Gbits/sec  587    262 KBytes       
+2025-03-14T16:00:18	[  5]  10.00-11.00  sec   454 MBytes  3.80 Gbits/sec  1077    228 KBytes       
+2025-03-14T16:00:19	[  5]  11.00-12.00  sec   568 MBytes  4.77 Gbits/sec  1333    254 KBytes       
+2025-03-14T16:00:20	[  5]  12.00-13.00  sec   536 MBytes  4.50 Gbits/sec  1265    201 KBytes       
+2025-03-14T16:00:21	[  5]  13.00-14.00  sec   716 MBytes  6.01 Gbits/sec  1841    192 KBytes       
+2025-03-14T16:00:22	[  5]  14.00-15.00  sec   268 MBytes  2.25 Gbits/sec  683    271 KBytes       
+2025-03-14T16:00:23	[  5]  15.00-16.00  sec   341 MBytes  2.86 Gbits/sec  747    166 KBytes       
+2025-03-14T16:00:24	[  5]  16.00-17.00  sec   482 MBytes  4.04 Gbits/sec  1004    306 KBytes       
+2025-03-14T16:00:25	[  5]  17.00-18.00  sec   116 MBytes   969 Mbits/sec  375    219 KBytes       
+2025-03-14T16:00:26	[  5]  18.00-19.00  sec   297 MBytes  2.49 Gbits/sec  652    236 KBytes       
+2025-03-14T16:00:27	[  5]  19.00-20.00  sec   165 MBytes  1.38 Gbits/sec  449    245 KBytes       
+2025-03-14T16:00:27	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:00:27	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:00:27	[  5]   0.00-20.00  sec  9.03 GBytes  3.88 Gbits/sec  22675            sender
+2025-03-14T16:00:27	[  5]   0.00-20.00  sec  9.03 GBytes  3.88 Gbits/sec                  receiver
+2025-03-14T16:00:27	
+2025-03-14T16:00:27	iperf Done.
+2025-03-14T16:00:28	Connecting to host nid005016, port 5201
+2025-03-14T16:00:28	[  5] local 172.28.11.80 port 35950 connected to 172.28.11.72 port 5201
+2025-03-14T16:00:29	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:00:29	[  5]   0.00-1.00   sec  1.48 GBytes  12.7 Gbits/sec  2026    359 KBytes       
+2025-03-14T16:00:30	[  5]   1.00-2.00   sec  1.00 GBytes  8.61 Gbits/sec  1238    472 KBytes       
+2025-03-14T16:00:31	[  5]   2.00-3.00   sec  1.22 GBytes  10.5 Gbits/sec  1532    201 KBytes       
+2025-03-14T16:00:32	[  5]   3.00-4.00   sec   642 MBytes  5.39 Gbits/sec  960    219 KBytes       
+2025-03-14T16:00:33	[  5]   4.00-5.00   sec   502 MBytes  4.22 Gbits/sec  672    315 KBytes       
+2025-03-14T16:00:34	[  5]   5.00-6.00   sec   586 MBytes  4.92 Gbits/sec  842    341 KBytes       
+2025-03-14T16:00:35	[  5]   6.00-7.00   sec  1.32 GBytes  11.3 Gbits/sec  1717    324 KBytes       
+2025-03-14T16:00:36	[  5]   7.00-8.00   sec   851 MBytes  7.14 Gbits/sec  942    280 KBytes       
+2025-03-14T16:00:37	[  5]   8.00-9.00   sec  1.66 GBytes  14.3 Gbits/sec  2271    368 KBytes       
+2025-03-14T16:00:38	[  5]   9.00-10.00  sec  1.06 GBytes  9.14 Gbits/sec  1347    341 KBytes       
+2025-03-14T16:00:39	[  5]  10.00-11.00  sec   835 MBytes  7.00 Gbits/sec  1113    341 KBytes       
+2025-03-14T16:00:40	[  5]  11.00-12.00  sec   948 MBytes  7.95 Gbits/sec  1320    219 KBytes       
+2025-03-14T16:00:41	[  5]  12.00-13.00  sec  1.12 GBytes  9.64 Gbits/sec  1539    368 KBytes       
+2025-03-14T16:00:42	[  5]  13.00-14.00  sec  1.57 GBytes  13.5 Gbits/sec  2073    245 KBytes       
+2025-03-14T16:00:43	[  5]  14.00-15.00  sec   738 MBytes  6.19 Gbits/sec  1059    306 KBytes       
+2025-03-14T16:00:44	[  5]  15.00-16.00  sec   472 MBytes  3.96 Gbits/sec  694    341 KBytes       
+2025-03-14T16:00:45	[  5]  16.00-17.00  sec   938 MBytes  7.87 Gbits/sec  1367    324 KBytes       
+2025-03-14T16:00:46	[  5]  17.00-18.00  sec   834 MBytes  7.00 Gbits/sec  1025    376 KBytes       
+2025-03-14T16:00:47	[  5]  18.00-19.00  sec   499 MBytes  4.19 Gbits/sec  591    201 KBytes       
+2025-03-14T16:00:48	[  5]  19.00-20.00  sec   918 MBytes  7.70 Gbits/sec  1204    262 KBytes       
+2025-03-14T16:00:48	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:00:48	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:00:48	[  5]   0.00-20.00  sec  19.0 GBytes  8.16 Gbits/sec  25532            sender
+2025-03-14T16:00:48	[  5]   0.00-20.00  sec  19.0 GBytes  8.16 Gbits/sec                  receiver
+2025-03-14T16:00:48	
+2025-03-14T16:00:48	iperf Done.
+2025-03-14T16:00:49	Connecting to host nid005016, port 5201
+2025-03-14T16:00:50	[  5] local 172.28.11.80 port 36178 connected to 172.28.11.72 port 5201
+2025-03-14T16:00:51	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:00:51	[  5]   0.00-1.00   sec   330 MBytes  2.76 Gbits/sec  1008    175 KBytes       
+2025-03-14T16:00:52	[  5]   1.00-2.00   sec   142 MBytes  1.20 Gbits/sec  407    245 KBytes       
+2025-03-14T16:00:53	[  5]   2.00-3.00   sec   167 MBytes  1.40 Gbits/sec  525    210 KBytes       
+2025-03-14T16:00:54	[  5]   3.00-4.00   sec   149 MBytes  1.25 Gbits/sec  445    149 KBytes       
+2025-03-14T16:00:55	[  5]   4.00-5.00   sec   466 MBytes  3.91 Gbits/sec  1363   96.2 KBytes       
+2025-03-14T16:00:56	[  5]   5.00-6.00   sec   144 MBytes  1.21 Gbits/sec  449   70.0 KBytes       
+2025-03-14T16:00:57	[  5]   6.00-7.00   sec   667 MBytes  5.59 Gbits/sec  1713    201 KBytes       
+2025-03-14T16:00:58	[  5]   7.00-8.00   sec   158 MBytes  1.32 Gbits/sec  463    219 KBytes       
+2025-03-14T16:00:58	[  5]   8.00-9.00   sec   405 MBytes  3.39 Gbits/sec  1199    280 KBytes       
+2025-03-14T16:00:59	[  5]   9.00-10.00  sec   536 MBytes  4.49 Gbits/sec  1342    306 KBytes       
+2025-03-14T16:01:00	[  5]  10.00-11.00  sec   236 MBytes  1.98 Gbits/sec  708    228 KBytes       
+2025-03-14T16:01:01	[  5]  11.00-12.00  sec  98.5 MBytes   826 Mbits/sec  314    184 KBytes       
+2025-03-14T16:01:02	[  5]  12.00-13.00  sec   482 MBytes  4.04 Gbits/sec  1232    306 KBytes       
+2025-03-14T16:01:03	[  5]  13.00-14.00  sec   220 MBytes  1.85 Gbits/sec  580    262 KBytes       
+2025-03-14T16:01:04	[  5]  14.00-15.00  sec   508 MBytes  4.26 Gbits/sec  1322    210 KBytes       
+2025-03-14T16:01:05	[  5]  15.00-16.00  sec   268 MBytes  2.24 Gbits/sec  781    245 KBytes       
+2025-03-14T16:01:06	[  5]  16.00-17.00  sec   132 MBytes  1.11 Gbits/sec  382    175 KBytes       
+2025-03-14T16:01:07	[  5]  17.00-18.00  sec   484 MBytes  4.06 Gbits/sec  1146    262 KBytes       
+2025-03-14T16:01:08	[  5]  18.00-19.00  sec   301 MBytes  2.53 Gbits/sec  865    254 KBytes       
+2025-03-14T16:01:09	[  5]  19.00-20.00  sec   288 MBytes  2.42 Gbits/sec  860    236 KBytes       
+2025-03-14T16:01:09	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:01:09	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:01:09	[  5]   0.00-20.00  sec  6.04 GBytes  2.59 Gbits/sec  17104            sender
+2025-03-14T16:01:09	[  5]   0.00-20.00  sec  6.03 GBytes  2.59 Gbits/sec                  receiver
+2025-03-14T16:01:09	
+2025-03-14T16:01:09	iperf Done.
+2025-03-14T16:01:11	Connecting to host nid005016, port 5201
+2025-03-14T16:01:11	[  5] local 172.28.11.80 port 51366 connected to 172.28.11.72 port 5201
+2025-03-14T16:01:12	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:01:12	[  5]   0.00-1.00   sec  1.41 GBytes  12.1 Gbits/sec  2306    219 KBytes       
+2025-03-14T16:01:13	[  5]   1.00-2.00   sec   991 MBytes  8.31 Gbits/sec  1737    411 KBytes       
+2025-03-14T16:01:14	[  5]   2.00-3.00   sec  1.02 GBytes  8.79 Gbits/sec  1774    315 KBytes       
+2025-03-14T16:01:15	[  5]   3.00-4.00   sec   611 MBytes  5.13 Gbits/sec  1035    192 KBytes       
+2025-03-14T16:01:16	[  5]   4.00-5.00   sec   291 MBytes  2.44 Gbits/sec  592    306 KBytes       
+2025-03-14T16:01:17	[  5]   5.00-6.00   sec   316 MBytes  2.65 Gbits/sec  612    306 KBytes       
+2025-03-14T16:01:18	[  5]   6.00-7.00   sec   606 MBytes  5.09 Gbits/sec  1311    254 KBytes       
+2025-03-14T16:01:19	[  5]   7.00-8.00   sec   790 MBytes  6.63 Gbits/sec  1392    324 KBytes       
+2025-03-14T16:01:20	[  5]   8.00-9.00   sec   284 MBytes  2.39 Gbits/sec  607    332 KBytes       
+2025-03-14T16:01:21	[  5]   9.00-10.00  sec  1.17 GBytes  10.0 Gbits/sec  2127    359 KBytes       
+2025-03-14T16:01:22	[  5]  10.00-11.00  sec   638 MBytes  5.35 Gbits/sec  1156    376 KBytes       
+2025-03-14T16:01:23	[  5]  11.00-12.00  sec   834 MBytes  6.99 Gbits/sec  1451    289 KBytes       
+2025-03-14T16:01:24	[  5]  12.00-13.00  sec   599 MBytes  5.02 Gbits/sec  1181    438 KBytes       
+2025-03-14T16:01:25	[  5]  13.00-14.00  sec   559 MBytes  4.69 Gbits/sec  844    385 KBytes       
+2025-03-14T16:01:26	[  5]  14.00-15.00  sec  1.11 GBytes  9.52 Gbits/sec  1986    280 KBytes       
+2025-03-14T16:01:27	[  5]  15.00-16.00  sec   270 MBytes  2.26 Gbits/sec  452    236 KBytes       
+2025-03-14T16:01:28	[  5]  16.00-17.00  sec   314 MBytes  2.64 Gbits/sec  570    455 KBytes       
+2025-03-14T16:01:29	[  5]  17.00-18.00  sec   374 MBytes  3.14 Gbits/sec  660    262 KBytes       
+2025-03-14T16:01:30	[  5]  18.00-19.00  sec   730 MBytes  6.12 Gbits/sec  1205    219 KBytes       
+2025-03-14T16:01:31	[  5]  19.00-20.00  sec   576 MBytes  4.83 Gbits/sec  1156    236 KBytes       
+2025-03-14T16:01:31	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:01:31	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:01:31	[  5]   0.00-20.00  sec  13.3 GBytes  5.70 Gbits/sec  24154            sender
+2025-03-14T16:01:31	[  5]   0.00-20.00  sec  13.3 GBytes  5.70 Gbits/sec                  receiver
+2025-03-14T16:01:31	
+2025-03-14T16:01:31	iperf Done.
+2025-03-14T16:01:32	Connecting to host nid005016, port 5201
+2025-03-14T16:01:32	[  5] local 172.28.11.80 port 44198 connected to 172.28.11.72 port 5201
+2025-03-14T16:01:33	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:01:33	[  5]   0.00-1.00   sec   181 MBytes  1.51 Gbits/sec  782    166 KBytes       
+2025-03-14T16:01:34	[  5]   1.00-2.00   sec   112 MBytes   937 Mbits/sec  396    201 KBytes       
+2025-03-14T16:01:35	[  5]   2.00-3.00   sec  34.0 MBytes   285 Mbits/sec  122    184 KBytes       
+2025-03-14T16:01:36	[  5]   3.00-4.00   sec   116 MBytes   969 Mbits/sec  395    201 KBytes       
+2025-03-14T16:01:37	[  5]   4.00-5.00   sec  94.6 MBytes   794 Mbits/sec  344    201 KBytes       
+2025-03-14T16:01:38	[  5]   5.00-6.00   sec   107 MBytes   901 Mbits/sec  348    184 KBytes       
+2025-03-14T16:01:39	[  5]   6.00-7.00   sec  76.9 MBytes   645 Mbits/sec  364    219 KBytes       
+2025-03-14T16:01:40	[  5]   7.00-8.00   sec  67.9 MBytes   569 Mbits/sec  347   96.2 KBytes       
+2025-03-14T16:01:41	[  5]   8.00-9.00   sec  61.2 MBytes   514 Mbits/sec  273    140 KBytes       
+2025-03-14T16:01:42	[  5]   9.00-10.00  sec   116 MBytes   971 Mbits/sec  384    210 KBytes       
+2025-03-14T16:01:43	[  5]  10.00-11.00  sec  25.1 MBytes   211 Mbits/sec  108    219 KBytes       
+2025-03-14T16:01:44	[  5]  11.00-12.00  sec  52.6 MBytes   441 Mbits/sec  239    149 KBytes       
+2025-03-14T16:01:45	[  5]  12.00-13.00  sec  66.5 MBytes   558 Mbits/sec  259    140 KBytes       
+2025-03-14T16:01:46	[  5]  13.00-14.00  sec  58.6 MBytes   492 Mbits/sec  209    262 KBytes       
+2025-03-14T16:01:47	[  5]  14.00-15.00  sec  84.1 MBytes   706 Mbits/sec  304    254 KBytes       
+2025-03-14T16:01:48	[  5]  15.00-16.00  sec  67.1 MBytes   563 Mbits/sec  341    158 KBytes       
+2025-03-14T16:01:49	[  5]  16.00-17.00  sec  94.5 MBytes   793 Mbits/sec  230    368 KBytes       
+2025-03-14T16:01:50	[  5]  17.00-18.00  sec  61.1 MBytes   513 Mbits/sec  261    122 KBytes       
+2025-03-14T16:01:51	[  5]  18.00-19.00  sec  69.4 MBytes   582 Mbits/sec  266    210 KBytes       
+2025-03-14T16:01:52	[  5]  19.00-20.00  sec  31.8 MBytes   266 Mbits/sec  124    184 KBytes       
+2025-03-14T16:01:52	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:01:52	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:01:52	[  5]   0.00-20.00  sec  1.54 GBytes   661 Mbits/sec  6096            sender
+2025-03-14T16:01:52	[  5]   0.00-20.00  sec  1.54 GBytes   660 Mbits/sec                  receiver
+2025-03-14T16:01:52	
+2025-03-14T16:01:52	iperf Done.
+2025-03-14T16:01:54	Connecting to host nid005016, port 5201
+2025-03-14T16:01:54	[  5] local 172.28.11.80 port 41100 connected to 172.28.11.72 port 5201
+2025-03-14T16:01:55	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:01:55	[  5]   0.00-1.00   sec  1.32 GBytes  11.3 Gbits/sec  2053    332 KBytes       
+2025-03-14T16:01:56	[  5]   1.00-2.00   sec  1.31 GBytes  11.3 Gbits/sec  2070    368 KBytes       
+2025-03-14T16:01:57	[  5]   2.00-3.00   sec   572 MBytes  4.80 Gbits/sec  846    289 KBytes       
+2025-03-14T16:01:58	[  5]   3.00-4.00   sec   367 MBytes  3.08 Gbits/sec  496    254 KBytes       
+2025-03-14T16:01:59	[  5]   4.00-5.00   sec   427 MBytes  3.58 Gbits/sec  760    324 KBytes       
+2025-03-14T16:02:00	[  5]   5.00-6.00   sec  1.23 GBytes  10.6 Gbits/sec  2050    175 KBytes       
+2025-03-14T16:02:01	[  5]   6.00-7.00   sec   925 MBytes  7.76 Gbits/sec  1558    324 KBytes       
+2025-03-14T16:02:02	[  5]   7.00-8.00   sec   583 MBytes  4.89 Gbits/sec  987    315 KBytes       
+2025-03-14T16:02:03	[  5]   8.00-9.00   sec   918 MBytes  7.70 Gbits/sec  1650    376 KBytes       
+2025-03-14T16:02:04	[  5]   9.00-10.00  sec  1.03 GBytes  8.83 Gbits/sec  1768    455 KBytes       
+2025-03-14T16:02:05	[  5]  10.00-11.00  sec   324 MBytes  2.72 Gbits/sec  602    376 KBytes       
+2025-03-14T16:02:06	[  5]  11.00-12.00  sec   251 MBytes  2.11 Gbits/sec  368    298 KBytes       
+2025-03-14T16:02:07	[  5]  12.00-13.00  sec   477 MBytes  4.00 Gbits/sec  837    350 KBytes       
+2025-03-14T16:02:08	[  5]  13.00-14.00  sec   766 MBytes  6.42 Gbits/sec  1186    315 KBytes       
+2025-03-14T16:02:09	[  5]  14.00-15.00  sec   680 MBytes  5.70 Gbits/sec  1140   8.75 KBytes       
+2025-03-14T16:02:10	[  5]  15.00-16.00  sec   679 MBytes  5.69 Gbits/sec  1050    306 KBytes       
+2025-03-14T16:02:11	[  5]  16.00-17.00  sec   341 MBytes  2.86 Gbits/sec  530    402 KBytes       
+2025-03-14T16:02:12	[  5]  17.00-18.00  sec   528 MBytes  4.43 Gbits/sec  822    306 KBytes       
+2025-03-14T16:02:13	[  5]  18.00-19.00  sec   868 MBytes  7.28 Gbits/sec  1420    394 KBytes       
+2025-03-14T16:02:14	[  5]  19.00-20.00  sec   956 MBytes  8.02 Gbits/sec  1361    298 KBytes       
+2025-03-14T16:02:14	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:02:14	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:02:14	[  5]   0.00-20.00  sec  14.3 GBytes  6.16 Gbits/sec  23554            sender
+2025-03-14T16:02:14	[  5]   0.00-20.00  sec  14.3 GBytes  6.15 Gbits/sec                  receiver
+2025-03-14T16:02:14	
+2025-03-14T16:02:14	iperf Done.
+2025-03-14T16:02:15	Connecting to host nid005016, port 5201
+2025-03-14T16:02:15	[  5] local 172.28.11.80 port 48548 connected to 172.28.11.72 port 5201
+2025-03-14T16:02:16	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:02:16	[  5]   0.00-1.00   sec  3.65 GBytes  31.3 Gbits/sec   48    481 KBytes       
+2025-03-14T16:02:17	[  5]   1.00-2.00   sec  3.65 GBytes  31.3 Gbits/sec   37    464 KBytes       
+2025-03-14T16:02:18	[  5]   2.00-3.00   sec  3.66 GBytes  31.5 Gbits/sec   47    332 KBytes       
+2025-03-14T16:02:19	[  5]   3.00-4.00   sec  3.65 GBytes  31.4 Gbits/sec   23    534 KBytes       
+2025-03-14T16:02:20	[  5]   4.00-5.00   sec  3.66 GBytes  31.4 Gbits/sec   20    542 KBytes       
+2025-03-14T16:02:21	[  5]   5.00-6.00   sec  3.66 GBytes  31.4 Gbits/sec   17    534 KBytes       
+2025-03-14T16:02:22	[  5]   6.00-7.00   sec  3.64 GBytes  31.2 Gbits/sec   17    665 KBytes       
+2025-03-14T16:02:23	[  5]   7.00-8.00   sec  3.63 GBytes  31.2 Gbits/sec    4    525 KBytes       
+2025-03-14T16:02:24	[  5]   8.00-9.00   sec  3.61 GBytes  31.0 Gbits/sec    6    569 KBytes       
+2025-03-14T16:02:25	[  5]   9.00-10.00  sec  3.63 GBytes  31.2 Gbits/sec   23    665 KBytes       
+2025-03-14T16:02:26	[  5]  10.00-11.00  sec  3.63 GBytes  31.2 Gbits/sec    7    525 KBytes       
+2025-03-14T16:02:27	[  5]  11.00-12.00  sec  3.62 GBytes  31.1 Gbits/sec    8    542 KBytes       
+2025-03-14T16:02:28	[  5]  12.00-13.00  sec  3.62 GBytes  31.1 Gbits/sec    0    542 KBytes       
+2025-03-14T16:02:29	[  5]  13.00-14.00  sec  3.62 GBytes  31.1 Gbits/sec   21    525 KBytes       
+2025-03-14T16:02:30	[  5]  14.00-15.00  sec  3.63 GBytes  31.2 Gbits/sec   14    516 KBytes       
+2025-03-14T16:02:31	[  5]  15.00-16.00  sec  3.63 GBytes  31.2 Gbits/sec    7    516 KBytes       
+2025-03-14T16:02:32	[  5]  16.00-17.00  sec  3.63 GBytes  31.2 Gbits/sec    7    472 KBytes       
+2025-03-14T16:02:33	[  5]  17.00-18.00  sec  3.63 GBytes  31.1 Gbits/sec   28    648 KBytes       
+2025-03-14T16:02:34	[  5]  18.00-19.00  sec  2.84 GBytes  24.4 Gbits/sec    9    630 KBytes       
+2025-03-14T16:02:35	[  5]  19.00-20.00  sec  3.61 GBytes  31.0 Gbits/sec    4    534 KBytes       
+2025-03-14T16:02:35	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:02:35	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:02:35	[  5]   0.00-20.00  sec  71.9 GBytes  30.9 Gbits/sec  347            sender
+2025-03-14T16:02:35	[  5]   0.00-20.00  sec  71.9 GBytes  30.9 Gbits/sec                  receiver
+2025-03-14T16:02:35	
+2025-03-14T16:02:35	iperf Done.
+2025-03-14T16:02:37	Connecting to host nid005016, port 5201
+2025-03-14T16:02:37	[  5] local 172.28.11.80 port 35508 connected to 172.28.11.72 port 5201
+2025-03-14T16:02:38	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:02:38	[  5]   0.00-1.00   sec   513 MBytes  4.30 Gbits/sec  1488    271 KBytes       
+2025-03-14T16:02:39	[  5]   1.00-2.00   sec   110 MBytes   921 Mbits/sec  317    201 KBytes       
+2025-03-14T16:02:40	[  5]   2.00-3.00   sec   429 MBytes  3.60 Gbits/sec  1214    236 KBytes       
+2025-03-14T16:02:41	[  5]   3.00-4.00   sec   302 MBytes  2.53 Gbits/sec  874    245 KBytes       
+2025-03-14T16:02:42	[  5]   4.00-5.00   sec   288 MBytes  2.41 Gbits/sec  766    201 KBytes       
+2025-03-14T16:02:43	[  5]   5.00-6.00   sec   247 MBytes  2.07 Gbits/sec  625    219 KBytes       
+2025-03-14T16:02:44	[  5]   6.00-7.00   sec  60.8 MBytes   510 Mbits/sec  188    245 KBytes       
+2025-03-14T16:02:45	[  5]   7.00-8.00   sec   267 MBytes  2.24 Gbits/sec  787    262 KBytes       
+2025-03-14T16:02:46	[  5]   8.00-9.00   sec   174 MBytes  1.46 Gbits/sec  551    158 KBytes       
+2025-03-14T16:02:47	[  5]   9.00-10.00  sec   280 MBytes  2.35 Gbits/sec  764    280 KBytes       
+2025-03-14T16:02:48	[  5]  10.00-11.00  sec   255 MBytes  2.14 Gbits/sec  829    245 KBytes       
+2025-03-14T16:02:49	[  5]  11.00-12.00  sec   199 MBytes  1.67 Gbits/sec  485    245 KBytes       
+2025-03-14T16:02:50	[  5]  12.00-13.00  sec   211 MBytes  1.77 Gbits/sec  685    236 KBytes       
+2025-03-14T16:02:51	[  5]  13.00-14.00  sec   284 MBytes  2.38 Gbits/sec  727    254 KBytes       
+2025-03-14T16:02:52	[  5]  14.00-15.00  sec   246 MBytes  2.06 Gbits/sec  790    245 KBytes       
+2025-03-14T16:02:53	[  5]  15.00-16.00  sec   210 MBytes  1.76 Gbits/sec  628    254 KBytes       
+2025-03-14T16:02:54	[  5]  16.00-17.00  sec   222 MBytes  1.86 Gbits/sec  707    158 KBytes       
+2025-03-14T16:02:55	[  5]  17.00-18.00  sec   121 MBytes  1.01 Gbits/sec  376    166 KBytes       
+2025-03-14T16:02:56	[  5]  18.00-19.00  sec   378 MBytes  3.17 Gbits/sec  1017    254 KBytes       
+2025-03-14T16:02:57	[  5]  19.00-20.00  sec   615 MBytes  5.16 Gbits/sec  1596    262 KBytes       
+2025-03-14T16:02:57	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:02:57	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:02:57	[  5]   0.00-20.00  sec  5.28 GBytes  2.27 Gbits/sec  15414            sender
+2025-03-14T16:02:57	[  5]   0.00-20.00  sec  5.28 GBytes  2.27 Gbits/sec                  receiver
+2025-03-14T16:02:57	
+2025-03-14T16:02:57	iperf Done.
+2025-03-14T16:02:58	Connecting to host nid005016, port 5201
+2025-03-14T16:02:58	[  5] local 172.28.11.80 port 46696 connected to 172.28.11.72 port 5201
+2025-03-14T16:02:59	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:02:59	[  5]   0.00-1.00   sec   167 MBytes  1.40 Gbits/sec  498    219 KBytes       
+2025-03-14T16:03:00	[  5]   1.00-2.00   sec   228 MBytes  1.91 Gbits/sec  580    201 KBytes       
+2025-03-14T16:03:01	[  5]   2.00-3.00   sec   311 MBytes  2.61 Gbits/sec  723    245 KBytes       
+2025-03-14T16:03:02	[  5]   3.00-4.00   sec   278 MBytes  2.34 Gbits/sec  735    315 KBytes       
+2025-03-14T16:03:03	[  5]   4.00-5.00   sec  74.2 MBytes   623 Mbits/sec  257    245 KBytes       
+2025-03-14T16:03:04	[  5]   5.00-6.00   sec   379 MBytes  3.18 Gbits/sec  822    131 KBytes       
+2025-03-14T16:03:05	[  5]   6.00-7.00   sec   118 MBytes   990 Mbits/sec  364    201 KBytes       
+2025-03-14T16:03:06	[  5]   7.00-8.00   sec   218 MBytes  1.82 Gbits/sec  571    236 KBytes       
+2025-03-14T16:03:07	[  5]   8.00-9.00   sec   131 MBytes  1.10 Gbits/sec  301    184 KBytes       
+2025-03-14T16:03:08	[  5]   9.00-10.00  sec   162 MBytes  1.36 Gbits/sec  404    228 KBytes       
+2025-03-14T16:03:09	[  5]  10.00-11.00  sec   540 MBytes  4.53 Gbits/sec  1336    219 KBytes       
+2025-03-14T16:03:10	[  5]  11.00-12.00  sec  95.1 MBytes   798 Mbits/sec  308    245 KBytes       
+2025-03-14T16:03:11	[  5]  12.00-13.00  sec   302 MBytes  2.54 Gbits/sec  757    254 KBytes       
+2025-03-14T16:03:12	[  5]  13.00-14.00  sec   285 MBytes  2.39 Gbits/sec  681    210 KBytes       
+2025-03-14T16:03:13	[  5]  14.00-15.00  sec   206 MBytes  1.72 Gbits/sec  547    210 KBytes       
+2025-03-14T16:03:14	[  5]  15.00-16.00  sec   428 MBytes  3.59 Gbits/sec  1075   96.2 KBytes       
+2025-03-14T16:03:15	[  5]  16.00-17.00  sec   106 MBytes   885 Mbits/sec  274    245 KBytes       
+2025-03-14T16:03:16	[  5]  17.00-18.00  sec   294 MBytes  2.47 Gbits/sec  823    219 KBytes       
+2025-03-14T16:03:17	[  5]  18.00-19.00  sec  95.1 MBytes   798 Mbits/sec  214    350 KBytes       
+2025-03-14T16:03:18	[  5]  19.00-20.00  sec   327 MBytes  2.74 Gbits/sec  885    271 KBytes       
+2025-03-14T16:03:18	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:03:18	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:03:18	[  5]   0.00-20.00  sec  4.63 GBytes  1.99 Gbits/sec  12155            sender
+2025-03-14T16:03:18	[  5]   0.00-20.00  sec  4.63 GBytes  1.99 Gbits/sec                  receiver
+2025-03-14T16:03:18	
+2025-03-14T16:03:18	iperf Done.
+2025-03-14T16:03:19	Connecting to host nid005016, port 5201
+2025-03-14T16:03:19	[  5] local 172.28.11.80 port 37824 connected to 172.28.11.72 port 5201
+2025-03-14T16:03:20	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:03:20	[  5]   0.00-1.00   sec   599 MBytes  5.02 Gbits/sec  1400    245 KBytes       
+2025-03-14T16:03:21	[  5]   1.00-2.00   sec   305 MBytes  2.56 Gbits/sec  653    262 KBytes       
+2025-03-14T16:03:22	[  5]   2.00-3.00   sec   639 MBytes  5.36 Gbits/sec  1490    210 KBytes       
+2025-03-14T16:03:23	[  5]   3.00-4.00   sec   374 MBytes  3.14 Gbits/sec  967    131 KBytes       
+2025-03-14T16:03:24	[  5]   4.00-5.00   sec   338 MBytes  2.84 Gbits/sec  803    262 KBytes       
+2025-03-14T16:03:25	[  5]   5.00-6.00   sec   276 MBytes  2.32 Gbits/sec  743    219 KBytes       
+2025-03-14T16:03:26	[  5]   6.00-7.00   sec   647 MBytes  5.43 Gbits/sec  1500    298 KBytes       
+2025-03-14T16:03:27	[  5]   7.00-8.00   sec   161 MBytes  1.35 Gbits/sec  415    262 KBytes       
+2025-03-14T16:03:28	[  5]   8.00-9.00   sec   112 MBytes   944 Mbits/sec  275    201 KBytes       
+2025-03-14T16:03:29	[  5]   9.00-10.00  sec   367 MBytes  3.08 Gbits/sec  848    280 KBytes       
+2025-03-14T16:03:30	[  5]  10.00-11.00  sec   214 MBytes  1.80 Gbits/sec  512    245 KBytes       
+2025-03-14T16:03:31	[  5]  11.00-12.00  sec  71.0 MBytes   596 Mbits/sec  193    280 KBytes       
+2025-03-14T16:03:32	[  5]  12.00-13.00  sec   366 MBytes  3.07 Gbits/sec  844    192 KBytes       
+2025-03-14T16:03:33	[  5]  13.00-14.00  sec   345 MBytes  2.89 Gbits/sec  856    228 KBytes       
+2025-03-14T16:03:34	[  5]  14.00-15.00  sec   294 MBytes  2.47 Gbits/sec  696    280 KBytes       
+2025-03-14T16:03:35	[  5]  15.00-16.00  sec   489 MBytes  4.10 Gbits/sec  1194    166 KBytes       
+2025-03-14T16:03:36	[  5]  16.00-17.00  sec  46.0 MBytes   386 Mbits/sec  131    262 KBytes       
+2025-03-14T16:03:37	[  5]  17.00-18.00  sec   309 MBytes  2.59 Gbits/sec  621    306 KBytes       
+2025-03-14T16:03:38	[  5]  18.00-19.00  sec   414 MBytes  3.47 Gbits/sec  1012    262 KBytes       
+2025-03-14T16:03:39	[  5]  19.00-20.00  sec   370 MBytes  3.11 Gbits/sec  952    245 KBytes       
+2025-03-14T16:03:39	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:03:39	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:03:39	[  5]   0.00-20.00  sec  6.58 GBytes  2.83 Gbits/sec  16105            sender
+2025-03-14T16:03:39	[  5]   0.00-20.00  sec  6.58 GBytes  2.82 Gbits/sec                  receiver
+2025-03-14T16:03:39	
+2025-03-14T16:03:39	iperf Done.
+2025-03-14T16:03:40	Connecting to host nid005016, port 5201
+2025-03-14T16:03:40	[  5] local 172.28.11.80 port 48574 connected to 172.28.11.72 port 5201
+2025-03-14T16:03:41	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:03:41	[  5]   0.00-1.00   sec   280 MBytes  2.35 Gbits/sec  807    219 KBytes       
+2025-03-14T16:03:42	[  5]   1.00-2.00   sec  84.4 MBytes   708 Mbits/sec  279    219 KBytes       
+2025-03-14T16:03:43	[  5]   2.00-3.00   sec   108 MBytes   903 Mbits/sec  345    245 KBytes       
+2025-03-14T16:03:44	[  5]   3.00-4.00   sec   160 MBytes  1.35 Gbits/sec  526    228 KBytes       
+2025-03-14T16:03:45	[  5]   4.00-5.00   sec  96.1 MBytes   806 Mbits/sec  340    219 KBytes       
+2025-03-14T16:03:46	[  5]   5.00-6.00   sec   105 MBytes   880 Mbits/sec  375    245 KBytes       
+2025-03-14T16:03:47	[  5]   6.00-7.00   sec  72.0 MBytes   604 Mbits/sec  206    210 KBytes       
+2025-03-14T16:03:48	[  5]   7.00-8.00   sec   145 MBytes  1.21 Gbits/sec  523    245 KBytes       
+2025-03-14T16:03:49	[  5]   8.00-9.00   sec  80.9 MBytes   678 Mbits/sec  274    228 KBytes       
+2025-03-14T16:03:50	[  5]   9.00-10.00  sec  24.5 MBytes   206 Mbits/sec  100    254 KBytes       
+2025-03-14T16:03:51	[  5]  10.00-11.00  sec  40.0 MBytes   336 Mbits/sec  169    254 KBytes       
+2025-03-14T16:03:52	[  5]  11.00-12.00  sec  91.2 MBytes   765 Mbits/sec  273    158 KBytes       
+2025-03-14T16:03:53	[  5]  12.00-13.00  sec   133 MBytes  1.12 Gbits/sec  348    210 KBytes       
+2025-03-14T16:03:54	[  5]  13.00-14.00  sec  63.2 MBytes   531 Mbits/sec  236    158 KBytes       
+2025-03-14T16:03:55	[  5]  14.00-15.00  sec   130 MBytes  1.09 Gbits/sec  442    385 KBytes       
+2025-03-14T16:03:56	[  5]  15.00-16.00  sec   216 MBytes  1.82 Gbits/sec  714    192 KBytes       
+2025-03-14T16:03:57	[  5]  16.00-17.00  sec   113 MBytes   946 Mbits/sec  358    228 KBytes       
+2025-03-14T16:03:58	[  5]  17.00-18.00  sec   155 MBytes  1.30 Gbits/sec  368    245 KBytes       
+2025-03-14T16:03:59	[  5]  18.00-19.00  sec   179 MBytes  1.50 Gbits/sec  521    280 KBytes       
+2025-03-14T16:04:00	[  5]  19.00-20.00  sec  73.2 MBytes   614 Mbits/sec  222    298 KBytes       
+2025-03-14T16:04:00	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:04:00	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:04:00	[  5]   0.00-20.00  sec  2.30 GBytes   986 Mbits/sec  7426            sender
+2025-03-14T16:04:00	[  5]   0.00-20.00  sec  2.29 GBytes   985 Mbits/sec                  receiver
+2025-03-14T16:04:00	
+2025-03-14T16:04:00	iperf Done.
+2025-03-14T16:04:02	Connecting to host nid005016, port 5201
+2025-03-14T16:04:02	[  5] local 172.28.11.80 port 35380 connected to 172.28.11.72 port 5201
+2025-03-14T16:04:03	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:04:03	[  5]   0.00-1.00   sec  3.17 GBytes  27.2 Gbits/sec   54    639 KBytes       
+2025-03-14T16:04:04	[  5]   1.00-2.00   sec  3.18 GBytes  27.3 Gbits/sec   23    359 KBytes       
+2025-03-14T16:04:05	[  5]   2.00-3.00   sec  3.18 GBytes  27.4 Gbits/sec   31    402 KBytes       
+2025-03-14T16:04:06	[  5]   3.00-4.00   sec  3.17 GBytes  27.3 Gbits/sec    0    525 KBytes       
+2025-03-14T16:04:07	[  5]   4.00-5.00   sec  3.19 GBytes  27.4 Gbits/sec    1    621 KBytes       
+2025-03-14T16:04:08	[  5]   5.00-6.00   sec  3.14 GBytes  27.0 Gbits/sec   24    534 KBytes       
+2025-03-14T16:04:09	[  5]   6.00-7.00   sec  3.18 GBytes  27.3 Gbits/sec    1    516 KBytes       
+2025-03-14T16:04:10	[  5]   7.00-8.00   sec  3.17 GBytes  27.3 Gbits/sec    2    525 KBytes       
+2025-03-14T16:04:11	[  5]   8.00-9.00   sec  3.19 GBytes  27.4 Gbits/sec    1    560 KBytes       
+2025-03-14T16:04:12	[  5]   9.00-10.00  sec  3.18 GBytes  27.3 Gbits/sec    3    534 KBytes       
+2025-03-14T16:04:13	[  5]  10.00-11.00  sec  3.21 GBytes  27.5 Gbits/sec    8    429 KBytes       
+2025-03-14T16:04:14	[  5]  11.00-12.00  sec  3.19 GBytes  27.4 Gbits/sec    2    534 KBytes       
+2025-03-14T16:04:15	[  5]  12.00-13.00  sec  3.18 GBytes  27.3 Gbits/sec    0    560 KBytes       
+2025-03-14T16:04:16	[  5]  13.00-14.00  sec  3.19 GBytes  27.4 Gbits/sec    0    604 KBytes       
+2025-03-14T16:04:17	[  5]  14.00-15.00  sec  3.18 GBytes  27.3 Gbits/sec    1    560 KBytes       
+2025-03-14T16:04:18	[  5]  15.00-16.00  sec  3.20 GBytes  27.5 Gbits/sec    1    542 KBytes       
+2025-03-14T16:04:19	[  5]  16.00-17.00  sec  3.19 GBytes  27.4 Gbits/sec   16    542 KBytes       
+2025-03-14T16:04:20	[  5]  17.00-18.00  sec  3.18 GBytes  27.3 Gbits/sec    4    525 KBytes       
+2025-03-14T16:04:21	[  5]  18.00-19.00  sec  3.21 GBytes  27.5 Gbits/sec    0    630 KBytes       
+2025-03-14T16:04:22	[  5]  19.00-20.00  sec  3.19 GBytes  27.4 Gbits/sec    9    551 KBytes       
+2025-03-14T16:04:22	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:04:22	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:04:22	[  5]   0.00-20.00  sec  63.7 GBytes  27.4 Gbits/sec  181            sender
+2025-03-14T16:04:22	[  5]   0.00-20.00  sec  63.7 GBytes  27.4 Gbits/sec                  receiver
+2025-03-14T16:04:22	
+2025-03-14T16:04:22	iperf Done.
+2025-03-14T16:04:23	Connecting to host nid005016, port 5201
+2025-03-14T16:04:23	[  5] local 172.28.11.80 port 42592 connected to 172.28.11.72 port 5201
+2025-03-14T16:04:24	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:04:24	[  5]   0.00-1.00   sec  3.04 GBytes  26.1 Gbits/sec   46    508 KBytes       
+2025-03-14T16:04:25	[  5]   1.00-2.00   sec  3.07 GBytes  26.3 Gbits/sec    0    534 KBytes       
+2025-03-14T16:04:26	[  5]   2.00-3.00   sec  3.07 GBytes  26.4 Gbits/sec    0    534 KBytes       
+2025-03-14T16:04:27	[  5]   3.00-4.00   sec  3.06 GBytes  26.3 Gbits/sec    0    534 KBytes       
+2025-03-14T16:04:28	[  5]   4.00-5.00   sec  3.00 GBytes  25.8 Gbits/sec    0    595 KBytes       
+2025-03-14T16:04:29	[  5]   5.00-6.00   sec  3.01 GBytes  25.9 Gbits/sec    0    595 KBytes       
+2025-03-14T16:04:30	[  5]   6.00-7.00   sec  3.07 GBytes  26.3 Gbits/sec    0    595 KBytes       
+2025-03-14T16:04:31	[  5]   7.00-8.00   sec  3.09 GBytes  26.6 Gbits/sec    2    534 KBytes       
+2025-03-14T16:04:32	[  5]   8.00-9.00   sec  3.07 GBytes  26.4 Gbits/sec   12    508 KBytes       
+2025-03-14T16:04:33	[  5]   9.00-10.00  sec  3.07 GBytes  26.4 Gbits/sec    0    656 KBytes       
+2025-03-14T16:04:34	[  5]  10.00-11.00  sec  3.08 GBytes  26.4 Gbits/sec    0    656 KBytes       
+2025-03-14T16:04:35	[  5]  11.00-12.00  sec  3.09 GBytes  26.5 Gbits/sec    0    656 KBytes       
+2025-03-14T16:04:36	[  5]  12.00-13.00  sec  3.06 GBytes  26.3 Gbits/sec    0    656 KBytes       
+2025-03-14T16:04:37	[  5]  13.00-14.00  sec  3.08 GBytes  26.5 Gbits/sec    0    656 KBytes       
+2025-03-14T16:04:38	[  5]  14.00-15.00  sec  3.09 GBytes  26.5 Gbits/sec    0    656 KBytes       
+2025-03-14T16:04:39	[  5]  15.00-16.00  sec  3.08 GBytes  26.4 Gbits/sec    2    586 KBytes       
+2025-03-14T16:04:40	[  5]  16.00-17.00  sec  3.10 GBytes  26.6 Gbits/sec    0    586 KBytes       
+2025-03-14T16:04:41	[  5]  17.00-18.00  sec  3.10 GBytes  26.6 Gbits/sec    1    630 KBytes       
+2025-03-14T16:04:42	[  5]  18.00-19.00  sec  3.10 GBytes  26.6 Gbits/sec    1    560 KBytes       
+2025-03-14T16:04:43	[  5]  19.00-20.00  sec  3.10 GBytes  26.6 Gbits/sec    0    560 KBytes       
+2025-03-14T16:04:43	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:04:43	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:04:43	[  5]   0.00-20.00  sec  61.4 GBytes  26.4 Gbits/sec   64            sender
+2025-03-14T16:04:43	[  5]   0.00-20.00  sec  61.4 GBytes  26.4 Gbits/sec                  receiver
+2025-03-14T16:04:43	
+2025-03-14T16:04:43	iperf Done.
+2025-03-14T16:04:44	Connecting to host nid005016, port 5201
+2025-03-14T16:04:44	[  5] local 172.28.11.80 port 40664 connected to 172.28.11.72 port 5201
+2025-03-14T16:04:45	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:04:45	[  5]   0.00-1.00   sec   220 MBytes  1.85 Gbits/sec  652    228 KBytes       
+2025-03-14T16:04:46	[  5]   1.00-2.00   sec   139 MBytes  1.16 Gbits/sec  440    175 KBytes       
+2025-03-14T16:04:47	[  5]   2.00-3.00   sec   199 MBytes  1.67 Gbits/sec  585    219 KBytes       
+2025-03-14T16:04:48	[  5]   3.00-4.00   sec  70.9 MBytes   595 Mbits/sec  194    254 KBytes       
+2025-03-14T16:04:49	[  5]   4.00-5.00   sec  96.0 MBytes   805 Mbits/sec  268    140 KBytes       
+2025-03-14T16:04:50	[  5]   5.00-6.00   sec   130 MBytes  1.09 Gbits/sec  372    271 KBytes       
+2025-03-14T16:04:51	[  5]   6.00-7.00   sec   137 MBytes  1.15 Gbits/sec  386    402 KBytes       
+2025-03-14T16:04:52	[  5]   7.00-8.00   sec   192 MBytes  1.61 Gbits/sec  540    210 KBytes       
+2025-03-14T16:04:53	[  5]   8.00-9.00   sec   174 MBytes  1.46 Gbits/sec  467    219 KBytes       
+2025-03-14T16:04:54	[  5]   9.00-10.00  sec  77.2 MBytes   648 Mbits/sec  236    122 KBytes       
+2025-03-14T16:04:55	[  5]  10.00-11.00  sec   248 MBytes  2.08 Gbits/sec  727    184 KBytes       
+2025-03-14T16:04:56	[  5]  11.00-12.00  sec   331 MBytes  2.77 Gbits/sec  812    306 KBytes       
+2025-03-14T16:04:57	[  5]  12.00-13.00  sec   119 MBytes   997 Mbits/sec  338    219 KBytes       
+2025-03-14T16:04:58	[  5]  13.00-14.00  sec   122 MBytes  1.02 Gbits/sec  237    455 KBytes       
+2025-03-14T16:04:59	[  5]  14.00-15.00  sec   137 MBytes  1.15 Gbits/sec  502    201 KBytes       
+2025-03-14T16:05:00	[  5]  15.00-16.00  sec   147 MBytes  1.23 Gbits/sec  312    236 KBytes       
+2025-03-14T16:05:01	[  5]  16.00-17.00  sec   195 MBytes  1.63 Gbits/sec  494   87.5 KBytes       
+2025-03-14T16:05:02	[  5]  17.00-18.00  sec  47.4 MBytes   397 Mbits/sec  154    228 KBytes       
+2025-03-14T16:05:03	[  5]  18.00-19.00  sec   172 MBytes  1.44 Gbits/sec  506    245 KBytes       
+2025-03-14T16:05:04	[  5]  19.00-20.00  sec   118 MBytes   989 Mbits/sec  375    192 KBytes       
+2025-03-14T16:05:04	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:05:04	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:05:04	[  5]   0.00-20.00  sec  3.00 GBytes  1.29 Gbits/sec  8597            sender
+2025-03-14T16:05:04	[  5]   0.00-20.00  sec  3.00 GBytes  1.29 Gbits/sec                  receiver
+2025-03-14T16:05:04	
+2025-03-14T16:05:04	iperf Done.
+2025-03-14T16:05:05	Connecting to host nid005016, port 5201
+2025-03-14T16:05:05	[  5] local 172.28.11.80 port 36060 connected to 172.28.11.72 port 5201
+2025-03-14T16:05:06	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:05:06	[  5]   0.00-1.00   sec   221 MBytes  1.85 Gbits/sec  656    219 KBytes       
+2025-03-14T16:05:07	[  5]   1.00-2.00   sec   126 MBytes  1.06 Gbits/sec  344    210 KBytes       
+2025-03-14T16:05:08	[  5]   2.00-3.00   sec  71.0 MBytes   596 Mbits/sec  208    289 KBytes       
+2025-03-14T16:05:09	[  5]   3.00-4.00   sec  34.0 MBytes   285 Mbits/sec  113    219 KBytes       
+2025-03-14T16:05:10	[  5]   4.00-5.00   sec   152 MBytes  1.28 Gbits/sec  391    271 KBytes       
+2025-03-14T16:05:11	[  5]   5.00-6.00   sec   112 MBytes   937 Mbits/sec  341    262 KBytes       
+2025-03-14T16:05:12	[  5]   6.00-7.00   sec   210 MBytes  1.76 Gbits/sec  644    280 KBytes       
+2025-03-14T16:05:13	[  5]   7.00-8.00   sec  84.6 MBytes   710 Mbits/sec  272    166 KBytes       
+2025-03-14T16:05:14	[  5]   8.00-9.00   sec   147 MBytes  1.24 Gbits/sec  508    158 KBytes       
+2025-03-14T16:05:15	[  5]   9.00-10.00  sec   209 MBytes  1.76 Gbits/sec  623    219 KBytes       
+2025-03-14T16:05:16	[  5]  10.00-11.00  sec   158 MBytes  1.33 Gbits/sec  509    201 KBytes       
+2025-03-14T16:05:17	[  5]  11.00-12.00  sec  36.2 MBytes   304 Mbits/sec  117    245 KBytes       
+2025-03-14T16:05:18	[  5]  12.00-13.00  sec   111 MBytes   930 Mbits/sec  330    254 KBytes       
+2025-03-14T16:05:19	[  5]  13.00-14.00  sec  71.5 MBytes   600 Mbits/sec  243   87.5 KBytes       
+2025-03-14T16:05:20	[  5]  14.00-15.00  sec  59.5 MBytes   499 Mbits/sec  157    140 KBytes       
+2025-03-14T16:05:21	[  5]  15.00-16.00  sec  80.0 MBytes   671 Mbits/sec  272    228 KBytes       
+2025-03-14T16:05:22	[  5]  16.00-17.00  sec  42.5 MBytes   357 Mbits/sec  150    166 KBytes       
+2025-03-14T16:05:23	[  5]  17.00-18.00  sec   220 MBytes  1.85 Gbits/sec  667    158 KBytes       
+2025-03-14T16:05:24	[  5]  18.00-19.00  sec  86.2 MBytes   724 Mbits/sec  333    192 KBytes       
+2025-03-14T16:05:25	[  5]  19.00-20.00  sec  95.8 MBytes   803 Mbits/sec  305    158 KBytes       
+2025-03-14T16:05:25	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:05:25	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:05:25	[  5]   0.00-20.00  sec  2.27 GBytes   977 Mbits/sec  7183            sender
+2025-03-14T16:05:25	[  5]   0.00-20.00  sec  2.27 GBytes   976 Mbits/sec                  receiver
+2025-03-14T16:05:25	
+2025-03-14T16:05:25	iperf Done.
+2025-03-14T16:05:26	Connecting to host nid005016, port 5201
+2025-03-14T16:05:26	[  5] local 172.28.11.80 port 40360 connected to 172.28.11.72 port 5201
+2025-03-14T16:05:27	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:05:27	[  5]   0.00-1.00   sec   190 MBytes  1.59 Gbits/sec  538    219 KBytes       
+2025-03-14T16:05:28	[  5]   1.00-2.00   sec  21.2 MBytes   178 Mbits/sec   97    236 KBytes       
+2025-03-14T16:05:29	[  5]   2.00-3.00   sec   104 MBytes   868 Mbits/sec  354    192 KBytes       
+2025-03-14T16:05:30	[  5]   3.00-4.00   sec   102 MBytes   856 Mbits/sec  319    219 KBytes       
+2025-03-14T16:05:31	[  5]   4.00-5.00   sec  87.8 MBytes   736 Mbits/sec  313    140 KBytes       
+2025-03-14T16:05:32	[  5]   5.00-6.00   sec   186 MBytes  1.56 Gbits/sec  458    254 KBytes       
+2025-03-14T16:05:33	[  5]   6.00-7.00   sec   106 MBytes   891 Mbits/sec  388    192 KBytes       
+2025-03-14T16:05:34	[  5]   7.00-8.00   sec  22.5 MBytes   189 Mbits/sec   96    201 KBytes       
+2025-03-14T16:05:35	[  5]   8.00-9.00   sec  56.8 MBytes   476 Mbits/sec  230    210 KBytes       
+2025-03-14T16:05:36	[  5]   9.00-10.00  sec  97.4 MBytes   817 Mbits/sec  395    131 KBytes       
+2025-03-14T16:05:37	[  5]  10.00-11.00  sec  37.2 MBytes   312 Mbits/sec  151    236 KBytes       
+2025-03-14T16:05:38	[  5]  11.00-12.00  sec  83.9 MBytes   704 Mbits/sec  327    158 KBytes       
+2025-03-14T16:05:39	[  5]  12.00-13.00  sec  82.5 MBytes   692 Mbits/sec  260    262 KBytes       
+2025-03-14T16:05:40	[  5]  13.00-14.00  sec  86.1 MBytes   722 Mbits/sec  276    262 KBytes       
+2025-03-14T16:05:41	[  5]  14.00-15.00  sec  72.5 MBytes   608 Mbits/sec  282    219 KBytes       
+2025-03-14T16:05:42	[  5]  15.00-16.00  sec  33.9 MBytes   284 Mbits/sec  145    192 KBytes       
+2025-03-14T16:05:43	[  5]  16.00-17.00  sec   124 MBytes  1.04 Gbits/sec  404    192 KBytes       
+2025-03-14T16:05:44	[  5]  17.00-18.00  sec   122 MBytes  1.02 Gbits/sec  429    166 KBytes       
+2025-03-14T16:05:45	[  5]  18.00-19.00  sec  86.6 MBytes   727 Mbits/sec  288    228 KBytes       
+2025-03-14T16:05:46	[  5]  19.00-20.00  sec  59.2 MBytes   497 Mbits/sec  221    254 KBytes       
+2025-03-14T16:05:46	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:05:46	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:05:46	[  5]   0.00-20.00  sec  1.72 GBytes   739 Mbits/sec  5971            sender
+2025-03-14T16:05:46	[  5]   0.00-20.00  sec  1.72 GBytes   738 Mbits/sec                  receiver
+2025-03-14T16:05:46	
+2025-03-14T16:05:46	iperf Done.
+2025-03-14T16:05:48	Connecting to host nid005016, port 5201
+2025-03-14T16:05:48	[  5] local 172.28.11.80 port 44846 connected to 172.28.11.72 port 5201
+2025-03-14T16:05:49	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:05:49	[  5]   0.00-1.00   sec   423 MBytes  3.54 Gbits/sec  1066    228 KBytes       
+2025-03-14T16:05:50	[  5]   1.00-2.00   sec   110 MBytes   919 Mbits/sec  262    184 KBytes       
+2025-03-14T16:05:51	[  5]   2.00-3.00   sec   305 MBytes  2.56 Gbits/sec  860    201 KBytes       
+2025-03-14T16:05:52	[  5]   3.00-4.00   sec   231 MBytes  1.94 Gbits/sec  668    192 KBytes       
+2025-03-14T16:05:53	[  5]   4.00-5.00   sec   228 MBytes  1.92 Gbits/sec  511    315 KBytes       
+2025-03-14T16:05:54	[  5]   5.00-6.00   sec  51.9 MBytes   435 Mbits/sec  138    245 KBytes       
+2025-03-14T16:05:55	[  5]   6.00-7.00   sec   109 MBytes   911 Mbits/sec  291    219 KBytes       
+2025-03-14T16:05:56	[  5]   7.00-8.00   sec   242 MBytes  2.03 Gbits/sec  613    271 KBytes       
+2025-03-14T16:05:57	[  5]   8.00-9.00   sec   253 MBytes  2.12 Gbits/sec  606    280 KBytes       
+2025-03-14T16:05:58	[  5]   9.00-10.00  sec   304 MBytes  2.55 Gbits/sec  657    228 KBytes       
+2025-03-14T16:05:59	[  5]  10.00-11.00  sec  48.9 MBytes   410 Mbits/sec  127    175 KBytes       
+2025-03-14T16:06:00	[  5]  11.00-12.00  sec  84.5 MBytes   709 Mbits/sec  232    228 KBytes       
+2025-03-14T16:06:01	[  5]  12.00-13.00  sec   258 MBytes  2.16 Gbits/sec  615    376 KBytes       
+2025-03-14T16:06:02	[  5]  13.00-14.00  sec   310 MBytes  2.60 Gbits/sec  866    262 KBytes       
+2025-03-14T16:06:03	[  5]  14.00-15.00  sec   194 MBytes  1.63 Gbits/sec  583    228 KBytes       
+2025-03-14T16:06:04	[  5]  15.00-16.00  sec   334 MBytes  2.80 Gbits/sec  777    271 KBytes       
+2025-03-14T16:06:05	[  5]  16.00-17.00  sec   246 MBytes  2.06 Gbits/sec  665    262 KBytes       
+2025-03-14T16:06:06	[  5]  17.00-18.00  sec   300 MBytes  2.52 Gbits/sec  784    236 KBytes       
+2025-03-14T16:06:07	[  5]  18.00-19.00  sec   192 MBytes  1.61 Gbits/sec  549    201 KBytes       
+2025-03-14T16:06:08	[  5]  19.00-20.00  sec   240 MBytes  2.01 Gbits/sec  671    254 KBytes       
+2025-03-14T16:06:08	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:06:08	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:06:08	[  5]   0.00-20.00  sec  4.36 GBytes  1.87 Gbits/sec  11541            sender
+2025-03-14T16:06:08	[  5]   0.00-20.00  sec  4.36 GBytes  1.87 Gbits/sec                  receiver
+2025-03-14T16:06:08	
+2025-03-14T16:06:08	iperf Done.
+2025-03-14T16:06:09	Connecting to host nid005016, port 5201
+2025-03-14T16:06:09	[  5] local 172.28.11.80 port 55272 connected to 172.28.11.72 port 5201
+2025-03-14T16:06:10	[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2025-03-14T16:06:10	[  5]   0.00-1.00   sec   378 MBytes  3.16 Gbits/sec  1164    219 KBytes       
+2025-03-14T16:06:11	[  5]   1.00-2.00   sec   148 MBytes  1.24 Gbits/sec  442    184 KBytes       
+2025-03-14T16:06:12	[  5]   2.00-3.00   sec   140 MBytes  1.18 Gbits/sec  353    245 KBytes       
+2025-03-14T16:06:13	[  5]   3.00-4.00   sec   124 MBytes  1.04 Gbits/sec  349    158 KBytes       
+2025-03-14T16:06:14	[  5]   4.00-5.00   sec   146 MBytes  1.22 Gbits/sec  356    280 KBytes       
+2025-03-14T16:06:15	[  5]   5.00-6.00   sec   224 MBytes  1.88 Gbits/sec  573    192 KBytes       
+2025-03-14T16:06:16	[  5]   6.00-7.00   sec  76.8 MBytes   644 Mbits/sec  240    175 KBytes       
+2025-03-14T16:06:17	[  5]   7.00-8.00   sec   175 MBytes  1.47 Gbits/sec  519    236 KBytes       
+2025-03-14T16:06:18	[  5]   8.00-9.00   sec   282 MBytes  2.36 Gbits/sec  675    245 KBytes       
+2025-03-14T16:06:19	[  5]   9.00-10.00  sec   199 MBytes  1.67 Gbits/sec  491    289 KBytes       
+2025-03-14T16:06:20	[  5]  10.00-11.00  sec   146 MBytes  1.23 Gbits/sec  469    254 KBytes       
+2025-03-14T16:06:21	[  5]  11.00-12.00  sec   116 MBytes   970 Mbits/sec  322    166 KBytes       
+2025-03-14T16:06:22	[  5]  12.00-13.00  sec  65.8 MBytes   552 Mbits/sec  236    236 KBytes       
+2025-03-14T16:06:23	[  5]  13.00-14.00  sec   171 MBytes  1.44 Gbits/sec  468    166 KBytes       
+2025-03-14T16:06:24	[  5]  14.00-15.00  sec   256 MBytes  2.15 Gbits/sec  703    254 KBytes       
+2025-03-14T16:06:25	[  5]  15.00-16.00  sec   203 MBytes  1.70 Gbits/sec  665    228 KBytes       
+2025-03-14T16:06:26	[  5]  16.00-17.00  sec   165 MBytes  1.38 Gbits/sec  430    245 KBytes       
+2025-03-14T16:06:27	[  5]  17.00-18.00  sec   397 MBytes  3.33 Gbits/sec  1013    158 KBytes       
+2025-03-14T16:06:28	[  5]  18.00-19.00  sec   260 MBytes  2.18 Gbits/sec  757    298 KBytes       
+2025-03-14T16:06:29	[  5]  19.00-20.00  sec   226 MBytes  1.90 Gbits/sec  664    184 KBytes       
+2025-03-14T16:06:29	- - - - - - - - - - - - - - - - - - - - - - - - -
+2025-03-14T16:06:29	[ ID] Interval           Transfer     Bitrate         Retr
+2025-03-14T16:06:29	[  5]   0.00-20.00  sec  3.81 GBytes  1.64 Gbits/sec  10889            sender
+2025-03-14T16:06:29	[  5]   0.00-20.00  sec  3.80 GBytes  1.63 Gbits/sec                  receiver
+2025-03-14T16:06:29	
+2025-03-14T16:06:29	iperf Done.
