@@ -2,7 +2,7 @@
 #SBATCH -J tcp-bw-var
 #SBATCH -t 1:00:00
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=288
+#SBATCH --ntasks-per-node=24
 #SBATCH --exclusive --mem=450G
 
 IPERF="numactl --cpunodebind=0 --membind=0 iperf3"
@@ -14,7 +14,7 @@ function submit_pair()
 	server=$1
 	client=$2
 
-	SRUN="srun -u -N1 -n1 --exclusive --cpus-per-task=288 --mem=50G"
+	SRUN="srun -u -N1 -n1 --exclusive --cpus-per-task=24 --mem=50G"
 	TS="%Y-%m-%dT%H:%M:%S%t"
 	LOG=${OFILE}-${server}-${client}.out
 
