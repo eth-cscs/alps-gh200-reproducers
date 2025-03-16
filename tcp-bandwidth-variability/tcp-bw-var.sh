@@ -36,7 +36,7 @@ function submit_pair()
 	echo "server: ${server} ${XNAME_SERVER}" >> ${LOG}
 	echo "client: ${client} ${XNAME_CLIENT}" >> ${LOG}
 
-	for i in $(seq 20); do
+	for i in $(seq 60); do
 		CLIENT_OPTS="${COMMON_OPTS} -c ${server} --time=20" # --zerocopy --affinity=10 --bitrate=64G"
 		${SRUN} --open-mode=append -o ${LOG} -w ${client} ${IPERF} ${CLIENT_OPTS}
 		sleep 1
