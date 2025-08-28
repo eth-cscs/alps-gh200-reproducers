@@ -1,4 +1,8 @@
+#if defined(GPUDIRECT_OOM_HIP)
+#include <hip/hip_runtime.h>
+#else
 #include <cuda_runtime.h>
+#endif
 #include <mpi.h>
 
 #include <cstddef>
@@ -12,16 +16,28 @@
         std::cout << "MPI error: " << e << '\n'; \
         std::exit(1);                            \
     }
+#if defined(GPUDIRECT_OOM_HIP)
+#define CHECK_CUDA(x)                            \
+    if (auto e = x; e != hipSuccess) {           \
+        std::cout << "HIP error: " << e << '\n'; \
+        std::exit(1);                            \
+    }
+#else
 #define CHECK_CUDA(x)                             \
     if (auto e = x; e != cudaSuccess) {           \
         std::cout << "CUDA error: " << e << '\n'; \
         std::exit(1);                             \
     }
+#endif
 
 static int mpi_rank{-1};
 
 void malloc_verbose(void** p, std::size_t n) {
+#if defined(GPUDIRECT_OOM_HIP)
+    CHECK_CUDA(hipMalloc(p, n));
+#else
     CHECK_CUDA(cudaMalloc(p, n));
+#endif
     std::ostringstream os;
     os << "rank: " << mpi_rank << ", ";
     os << "allocated ptr: " << *p << " of size: " << n << '\n';
@@ -33,18 +49,26 @@ void free_verbose(void* p) {
     os << "rank: " << mpi_rank << ", ";
     os << "freeing ptr: " << p << '\n';
     std::cerr << os.str();
+#if defined(GPUDIRECT_OOM_HIP)
+    CHECK_CUDA(hipFree(p));
+#else
     CHECK_CUDA(cudaFree(p));
+#endif
 }
 
-void print_cuda_mem_info() {
-    std::size_t cuda_free{0};
-    std::size_t cuda_total{0};
-    cudaMemGetInfo(&cuda_free, &cuda_total);
+void print_gpu_mem_info() {
+    std::size_t gpu_free{0};
+    std::size_t gpu_total{0};
+#if defined(GPUDIRECT_OOM_HIP)
+    CHECK_CUDA(hipMemGetInfo(&gpu_free, &gpu_total));
+#else
+    CHECK_CUDA(cudaMemGetInfo(&gpu_free, &gpu_total));
+#endif
 
     std::ostringstream os;
     os << "rank: " << mpi_rank << ", ";
-    os << "cuda_free: " << cuda_free << ", ";
-    os << "cuda_total: " << cuda_total << '\n';
+    os << "gpu_free: " << gpu_free << ", ";
+    os << "gpu_total: " << gpu_total << '\n';
     std::cerr << os.str();
 }
 
@@ -78,7 +102,7 @@ int main(int argc, char* argv[]) {
 
         free_verbose(p);
 
-        print_cuda_mem_info();
+        print_gpu_mem_info();
     }
 
     for (auto ptr : ptrs) {
@@ -86,5 +110,5 @@ int main(int argc, char* argv[]) {
     }
 
     CHECK_MPI(MPI_Finalize());
-    print_cuda_mem_info();
+    print_gpu_mem_info();
 }

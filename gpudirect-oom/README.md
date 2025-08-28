@@ -72,3 +72,12 @@ with `MPICH_GPU_IPC_ENABLED=0` to force use of CPU memory for communication
 behaves the same as not doing communication.
 
 `compute-sanitizer` does not report any leaks for the program.
+
+# AMD GPUs
+
+The reproducer fails in the same way on AMD GPUs (tested on MI300A). To compile
+for AMD GPUs, define `GPUDIRECT_OOM_HIP`, e.g:
+
+```bash
+g++ -O3 -DGPUDIRECT_OOM_HIP -D__HIP_PLATFORM_AMD__ -lmpi -lamdhip64 gpudirect_oom.cpp -o gpudirect_oom
+```
