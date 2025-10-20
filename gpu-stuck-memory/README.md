@@ -4,6 +4,10 @@ Due to the unified memory architecture of GH200, linux will sometimes use GPU me
 When an application allocates GPU memory directly, the GPU driver should evict the file caches to CPU memory.
 However, a bug in versions of the driver prior to 570 did not do this properly, leading to out of memory errors for applications that are IO heavy. 
 
+## Prerequisites
+
+The test requires [fio](https://github.com/axboe/fio) to be installed and available in `PATH`.
+
 # Reproducer
 
 This simple reproducer does three things:
