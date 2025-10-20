@@ -10,9 +10,9 @@ FASTDISK=/iopsstor/scratch/cscs/jpcoles/
 LARGEFILE=${FASTDISK}/gpu-stuckmem.tmp
 
 nvidia-smi
-/usr/bin/parallel_allocate_free_gpu_mem 95 || fail "First allocation failed."
+/usr/bin/parallel_allocate_free_gpu_mem 95 || fail "First allocation failed. Is this a clean node with file cached already flushed?"
 
 fio --name=cachetest --rw=read --size=100G --filename=${LARGEFILE} --bs=1M --ioengine=sync --direct=0
 
 nvidia-smi
-/usr/bin/parallel_allocate_free_gpu_mem 95 || fail "Last allocation failed."
+/usr/bin/parallel_allocate_free_gpu_mem 95 || fail "Last allocation failed. Stuck memory bug still present."
