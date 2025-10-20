@@ -2,14 +2,14 @@
 
 Due to the unified memory architecture of GH200, linux will sometimes use GPU memory for file caches.
 When an application allocates GPU memory directly, the GPU driver should evict the file caches to CPU memory.
-However, a bug in version of the driver prior to 570 did not do this properly, leading to out of memory errors for applications that are IO heavy. 
+However, a bug in versions of the driver prior to 570 did not do this properly, leading to out of memory errors for applications that are IO heavy. 
 
 # Reproducer
 
 This simple reproducer does three things:
-    - Allocate 95% of GPU memory. This should pass on a freshly assigned node. 
-    - Create and read a 100GB file on scratch.
-    - Attempt to allocate 95% of GPU memory again.
+- Allocate 95% of GPU memory. This should pass on a freshly assigned node. 
+- Create and read a 100GB file on scratch.
+- Attempt to allocate 95% of GPU memory again.
 
 This test should pass if the driver correctly evicts OS file caches, but fails on the second allocation attempt if the bug is present.
 
