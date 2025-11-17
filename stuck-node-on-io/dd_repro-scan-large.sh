@@ -9,7 +9,8 @@
 
 #OUT=/capstor/scratch/cscs/jpcoles/stuck-io-temp-dir
 #OUT=/capstor/store/cscs/cscs/csstaff/jpcoles/stuck-io-temp-dir
-OUT=/capstor/store/cscs/cscs/csstaff/jpcoles3
+#OUT=/capstor/store/cscs/cscs/csstaff/jpcoles3
+OUT=/capstor/scratch/cscs/jpcoles/tmp/alps-gh200-reproducers/stuck-node-on-io/test-dir
 #OUT=/capstor/store/cscs/cscs/csstaff/jpcoles2
 #mkdir -p ${OUT}
 
@@ -26,7 +27,8 @@ QUOTA=$(($(lfs quota -p $(lsattr -p -d $OUT | awk '{print $1}') $OUT -q | xargs 
 
 #lfs getstripe -v ${OUT}/dd_largefile.* 2>/dev/null | awk '{print "OLD:", $0}'
 
-sync $OUT/dd_largefile.*
+#sync $OUT/dd_largefile.*
+sync $OUT
 rm $OUT/dd_largefile.*
 #sleep 10
 
@@ -57,16 +59,18 @@ for count in ${COUNTS}; do
 
                 echo 
 
-                for ((i=0; i < 10; i+=1)); do
-                    USAGE=$(($(lfs quota -p $(lsattr -p -d $OUT | awk '{print $1}') $OUT -q | xargs | awk '{print $2}' | tr -d '*') * 1024))
-                    if [[ ${USAGE} -ge 10240 ]]; then
-                        echo "Files still occupying ${USAGE}. Waiting 5s for fs to update."
-                        sleep 5
-                    fi
-                done
+#               for ((i=0; i < 10; i+=1)); do
+#                   USAGE=$(($(lfs quota -p $(lsattr -p -d $OUT | awk '{print $1}') $OUT -q | xargs | awk '{print $2}' | tr -d '*') * 1024))
+#                   if [[ ${USAGE} -ge 10240 ]]; then
+#                       echo "Files still occupying ${USAGE}. Waiting 5s for fs to update."
+#                       sleep 5
+#                   fi
+#               done
+
+		#sleep 5
 
 		echo "------------------------------------------"
-		lfs quota -p $(lsattr -p -d $OUT | awk '{print $1}') $OUT -h
+		#lfs quota -p $(lsattr -p -d $OUT | awk '{print $1}') $OUT -h
 		echo "Running dd with bs=${bs} and ntasks=${ntasks} at $(date)"
 
 		CMD="dd if=/dev/zero of=$OUT/dd_largefile.0 bs=${bs} count=${count} status=progress" 
@@ -75,12 +79,12 @@ for count in ${COUNTS}; do
 
 		#lfs getstripe -v ${OUT}/dd_largefile.* 2>/dev/null | awk '{print "NEW:", $0}'
 
-		sync $OUT/dd_largefile.*
-		sleep 5
-                ~/TMP/file-ost.sh $OUT/dd_largefile.*
+		#sync $OUT/dd_largefile.*
+		#sleep 5
+                #~/TMP/file-ost.sh $OUT/dd_largefile.*
 		rm $OUT/dd_largefile.*
-                sync
-                lfs df > /dev/null
+                #sync
+                #lfs df > /dev/null
 		#sleep 10
 
 		echo "Finished."

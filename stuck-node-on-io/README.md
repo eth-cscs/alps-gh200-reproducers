@@ -1,5 +1,11 @@
 # Updates
 
+- 17-Nov-2025
+    - HPE identified a problem caused when the page size of the client and server differ
+    - On arm the page size is 64k, while on the x86 server it is 4k.
+    - A patch and subsequent testing has finally shown the bug to be fixed.
+    - dd_repro-scan-large-fast.sh was the final script used for testing on starlex.
+
 - 18-Jan-2025
     - The hanging behavior is clearly associated with the LNetError that appears in the output of dmesg as it shows up precisely when the process hangs.
     - The error won't *always* appear, even for the same block size, but after at most a few attempts it will hang. Two tasks are more likely to reproduce the problem, but one task has been enough.
