@@ -1,5 +1,12 @@
 # Updates
 
+- 17-Dec-2025
+    - The previous script used before was not enough to ensure the bug was fixed.
+    - lustre-client-2.15.7.1_cray_21_g120f975-1.aarch64
+    - starlex system
+    - dd_repro-scan-osts.sh was used this time. 
+    - Bug has been resolved.
+
 - 17-Nov-2025
     - HPE identified a problem caused when the page size of the client and server differ
     - On arm the page size is 64k, while on the x86 server it is 4k.

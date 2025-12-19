@@ -1,6 +1,7 @@
 #!/bin/bash
 
 OUT=/capstor/store/cscs/cscs/csstaff/jpcoles3
+OUT=/capstor/scratch/cscs/jpcoles/tmp/alps-gh200-reproducers/stuck-node-on-io/test-dir
 
 echo "Writing to $OUT"
 echo "HOSTNAME $(hostname)"
