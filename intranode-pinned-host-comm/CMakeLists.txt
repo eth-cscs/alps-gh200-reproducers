@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.18)
-project(IntraNodePinnedHostComm LANGUAGES CXX CUDA)
+project(IntraNodePinnedHostComm LANGUAGES CXX)
 
 # Find CUDA toolkit
 find_package(CUDAToolkit REQUIRED)
