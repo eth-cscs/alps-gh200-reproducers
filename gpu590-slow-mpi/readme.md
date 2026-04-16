@@ -1,5 +1,7 @@
 # GPU-590 slow MPI
 
+**HPE Case** a ticket has been opened with HPE: 5402335846
+
 CPU-only MPI communication slowed down significantly with the new SLES 15sp6 + driver update.
 
 This was observed in CP2K, in part of the code that performs Scalapack routines on the CPU.
