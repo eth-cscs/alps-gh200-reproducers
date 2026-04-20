@@ -7,7 +7,7 @@ module pdsygst_tests
    external blacs_pinfo
    external blacs_get
    external blacs_gridinit
-   external blas_gridinfo
+   external blacs_gridinfo
    external blacs_gridexit
    external blacs_exit
    integer, external :: numroc
@@ -20,8 +20,9 @@ contains
       integer :: ierr
 
       if (present(ictxt)) call blacs_gridexit(ictxt)
+      call blacs_exit(1)
       call mpi_finalize(ierr)
-      stop - 1
+      error stop 1
    end subroutine terminate
 
    subroutine setup_mpi(nprow, npcol, rank, nprocs)
@@ -87,7 +88,7 @@ contains
       deallocate (rand)
 
       ! Make hermitian
-      a = a*transpose(a)
+      a = matmul(a, transpose(a))
 
       ! Make positive definite
       do i = 1, n
@@ -109,7 +110,7 @@ contains
 
       integer:: nprow, npcol
       integer :: rank, numprocs, myrow, mycol
-      integer :: ictxt, ictxt_0
+      integer :: sctxt, ictxt, ictxt_0
       integer :: info, lld, nb, ma, na
       integer :: desca(9), desca_local(9)
       integer :: descb(9), descb_local(9)
@@ -127,10 +128,12 @@ contains
       call setup_mpi(nprow, npcol, rank, numprocs)
 
       ! Setup BLACS
-      call blacs_get(0, 0, ictxt)
-      ictxt_0 = ictxt
-      call blacs_gridinit(ictxt, 'R', nprow, npcol)
+      call blacs_get(0, 0, sctxt)
+      ictxt_0 = sctxt
       call blacs_gridinit(ictxt_0, 'R', 1, 1)
+      call blacs_get(0, 0, sctxt)
+      ictxt = sctxt
+      call blacs_gridinit(ictxt, 'R', nprow, npcol)
       call blacs_pinfo(rank, numprocs)
       call blacs_gridinfo(ictxt, nprow, npcol, myrow, mycol)
 
@@ -170,9 +173,9 @@ contains
       call mpi_barrier(MPI_COMM_WORLD, info)
 
       total_time = real(stop_count - start_count) / real(rate)
-      call mpi_allreduce(total_time, avg_time, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD, info)
-      call mpi_allreduce(total_time, max_time, 1, MPI_DOUBLE, MPI_MAX, MPI_COMM_WORLD, info)
-      call mpi_allreduce(total_time, min_time, 1, MPI_DOUBLE, MPI_MIN, MPI_COMM_WORLD, info)
+      call mpi_allreduce(total_time, avg_time, 1, MPI_DOUBLE_PRECISION, MPI_SUM, MPI_COMM_WORLD, info)
+      call mpi_allreduce(total_time, max_time, 1, MPI_DOUBLE_PRECISION, MPI_MAX, MPI_COMM_WORLD, info)
+      call mpi_allreduce(total_time, min_time, 1, MPI_DOUBLE_PRECISION, MPI_MIN, MPI_COMM_WORLD, info)
       if (rank == 0) then
          write(error_unit,'(A,F6.3,A," [",F6.3,", ",F6.3,"] seconds")') 'pdgemr2d: ', avg_time/numprocs, ', ', min_time, max_time
       end if
