@@ -1,6 +1,14 @@
 # GPU-590 slow MPI
 
 **HPE Case** a ticket has been opened with HPE: 5402335846
+**NVIDIA BugID**: 5867049
+
+## Updates
+
+13.05.2026: Nvidia has indicated they suspect a change introduced in R580 that interacts poorly with
+an assumption made in the slingshot driver that causes a performance regression.
+
+## Summary
 
 CPU-only MPI communication slowed down significantly with the new SLES 15sp6 + driver update.
 
@@ -95,6 +103,23 @@ There are two problems here:
 
 1. the universal problem that GPU-aware MPI has an enormous negative impact on performance.
 2. the local problem that this got significantly worse with the system upgrade.
+
+### Exploring earlier OS and Nvidia driver versions
+
+Reservations on starlex were created to explore the impact of kernel versions and nvidia drivers.
+
+```
++-------------------------+--------------------------------------+--------------------------------------+
+| Reservation             | MPICH_GPU_SUPPORT_ENABLED=0          | MPICH_GPU_SUPPORT_ENABLED=1          |
+|                         +------------+------------+------------+------------+------------+------------+
+|                         | pdgemr2d   | pdpotrf    | pdsygst    | pdgemr2d   | pdpotrf    | pdsygst    |
++-------------------------+------------+------------+------------+------------+------------+------------+
+| uss110-shs111-nv550     |      0.171 |      0.220 |      1.372 |      0.127 |      4.249 |      2.229 |
+| uss131-shs1201-nv565    |      0.140 |      0.221 |      1.386 |      0.125 |      3.150 |      2.243 |
+| uss140-shs131-nv595     |      0.142 |      0.381 |      1.375 |      0.126 |      3.098 |      5.792 |
+| uss140-shs131-nv580     |      0.142 |      0.225 |      1.468 |      0.127 |      3.333 |      3.682 |
++-------------------------+------------+------------+------------+------------+------------+------------+
+```
 
 ### use strace to check for system call differences with/without `MPICH_GPU_SUPPORT_ENABLED`
 
