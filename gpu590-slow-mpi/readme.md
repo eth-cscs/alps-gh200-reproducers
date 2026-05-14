@@ -1,6 +1,6 @@
 # GPU-590 slow MPI
 
-**HPE Case** a ticket has been opened with HPE: 5402335846
+**HPE Case** a ticket has been opened with HPE: 5402335846  
 **NVIDIA BugID**: 5867049
 
 ## Updates
