@@ -5,6 +5,11 @@
 
 ## Updates
 
+
+03.05.2026: Further information from Nvidia points to changes in two functions: cuPointerGetAttribute[s].
+The new tests in ptrbench.cu demonstrate the performance of these routines in successful and unsuccessful calls.
+Benchmark output across different driver versions is shown below.
+
 13.05.2026: Nvidia has indicated they suspect a change introduced in R580 that interacts poorly with
 an assumption made in the slingshot driver that causes a performance regression.
 
@@ -337,3 +342,20 @@ According to `nsys`, `libc` accounts for 1% of the total runtime.
       0.0            1,120          1       1,120.0        1,120.0      1,120        1,120           0.0  listen  
 ```
 According to `nsys`, `libc` accounts for 18% of the total runtime.
+
+# ptrbench output
+
+This table summarizes the output of `ptrbench` when run on slurm reservations with different nvidia driver versions.
+From 550 to 580 only `cuPointerGetAttribute()` is affected. Subsequent versions also affect `cuPointerGetAttributes()`.
+
+```
+Average time per call (µs)
+
+CUDA      NVIDIA        malloc()                cudaMalloc()            cudaMallocManaged()
+Driver    Driver        Attr Avg  GetAttr(4)    Attr Avg  GetAttr(4)    Attr Avg  GetAttr(4)
+--------  -----------   --------  ----------    --------  ----------    --------  ----------
+12.4      550.54.15       0.090      0.095        0.046      0.051        0.047      0.052
+13.0      580.159.03      0.442      0.095        0.052      0.053        0.053      0.054
+13.1      590.48.01       0.999      0.301        0.054      0.055        0.053      0.055
+13.2      595.71.05       1.017      0.330        0.061      0.063        0.061      0.064
+```
