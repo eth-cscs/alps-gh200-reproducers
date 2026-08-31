@@ -1,0 +1,19 @@
+# image = "/iopsstor/scratch/cscs/gfu/ce-images/pytorch2511_alps4_groupgemm0518_emrgopt020_deepgemm_v2.sqsh"
+# image = "/capstor/store/cscs/swissai/infra01/users/gfu/img/pytorch2511_alps4_groupgemm0518_emrgopt020_deepgemm_v2_gzip.sqsh"
+image = "jfrog.svc.cscs.ch/docker-group-csstaff/alps-images/ngc-pytorch:26.02-py3-alps6"
+
+    #"/capstor/",
+    #"/iopsstor/",
+mounts = [
+    "/ritom/",
+    "${HOME}:${HOME}"
+]
+
+workdir = "${PWD}"
+
+writable = true
+[env]
+
+[annotations]
+com.hooks.cxi.enabled = "false"
+com.hooks.netstack.source = "artifact"

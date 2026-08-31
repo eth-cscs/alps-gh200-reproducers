@@ -1,0 +1,66 @@
+# image = "/iopsstor/scratch/cscs/gfu/ce-images/pytorch2511_alps4_groupgemm0518_emrgopt020_deepgemm_v2.sqsh"
+# image = "/capstor/store/cscs/swissai/infra01/users/gfu/img/pytorch2511_alps4_groupgemm0518_emrgopt020_deepgemm_v2_gzip.sqsh"
+#image = "/iopsstor/scratch/cscs/gfu/ce-images/pytorch2511_alps4_groupgemm0518_emrgopt_deepgemm_uccl.sqsh"
+image = "jfrog.svc.cscs.ch/docker-group-csstaff/alps-images/ngc-pytorch:26.02-py3-alps4"
+
+mounts = [
+    "/ritom/",
+    "${HOME}:${HOME}"
+]
+
+workdir = "${PWD}"
+
+writable = true
+[env]
+# CUDA_CACHE_DISABLE = "1"
+# CUPY_CACHE_IN_MEMORY = "1"
+# NCCL_NET = "AWS Libfabric"
+# NCCL_SOCKET_IFNAME = "hsn"
+# NCCL_CROSS_NIC = "2"
+# PMIX_MCA_psec = "native"
+# NCCL_PXN_DISABLE = "1"
+# NCCL_P2P_LEVEL = "NVL"
+# #NCCL_NET_GDR_LEVEL = "PHB"
+# NCCL_NET_GDR_LEVEL = "PXB"
+# NCCL_GDRCOPY_ENABLE = "1"
+# NCCL_NET_GDR_C2C = "1"
+# NCCL_NET_GDR_READ = "1"
+# NCCL_PROTO = "^LL128"
+# #NCCL_NCHANNELS_PER_NET_PEER = "X"
+# #NCCL_SOCKET_NTHREADS = "1"
+# CCL_NSOCKS_PERTHREAD = "1"
+# NCCL_NCHANNELS_PER_NET_PEER = "4"
+# NCCL_SOCKET_NTHREADS = "4"
+# NCCL_NSOCKS_PERTHREAD = "1"
+# AWS_OFI_NCCL_VERSION = ""
+# FI_PROVIDER = "cxi"
+# FI_CXI_DEFAULT_CQ_SIZE = "131072"
+# FI_CXI_DEFAULT_TX_SIZE = "16384"
+# FI_CXI_DISABLE_HOST_REGISTER = "1"
+# FI_CXI_RDZV_PROTO = "alt_read"
+# FI_CXI_RDZV_EAGER_SIZE = "0"
+# FI_CXI_RDZV_GET_MIN = "0"
+# FI_CXI_RDZV_THRESHOLD = "0"
+# FI_CXI_RX_MATCH_MODE = "hybrid"
+# 
+# #FI_CXI_RDZV_PROTO = "X"
+# #FI_CXI_RDZV_EAGER_SIZE = "X"
+# #FI_CXI_RDZV_GET_MIN = "X"
+# #FI_CXI_RDZV_THRESHOLD = "X"
+# #FI_CXI_RX_MATCH_MODE = "X"
+# 
+# FI_MR_CACHE_MONITOR = "userfaultfd"
+# FI_MR_CACHE_MAX_SIZE = "-1"
+# FI_MR_CACHE_MAX_COUNT = "524288"
+# FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD = "16777216"
+# OMPI_MCA_btl = "^tcp,uct,usnic"
+# OMPI_MCA_pml = "cm"
+# OMPI_MCA_mtl = "ofi"
+# OMPI_MCA_opal_common_ofi_provider_include = "cxi"
+# NVSHMEM_REMOTE_TRANSPORT = "libfabric"
+# NVSHMEM_LIBFABRIC_PROVIDER = "cxi"
+# NVSHMEM_DISABLE_CUDA_VMM = "1"
+
+[annotations]
+com.hooks.cxi.enabled = "false"
+com.hooks.netstack.source = "artifact"
