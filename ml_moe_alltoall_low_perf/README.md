@@ -176,3 +176,65 @@ This reproducer was created for CSCS ticket SD-70419 to isolate EP dispatch
 latency variability on Alps Aptus GH200 nodes.  The broader investigation
 includes CXI telemetry, LDMS monitoring, node diagnostics, and comparisons
 between uenv and container execution.
+
+## Example Output
+
+```
+Shapes seen: tokens=8192 hidden=1792 ep=8 balanced=True
+
+=== per chunk (median dispatch across ranks) -- worst first, '<<' = > 1.5x overall median (19605 us) ===
+ chunk    d_med    d_min    d_max  spread    c_med  nodes
+    18    27002    21320    27045    1.27    24258  6065,6066
+     5    26495    20610    26614    1.29    25183  6065,6066
+     9    25692    18026    28967    1.61    25882  6065,6066
+    16    25307    16677    28607    1.72    25362  6065,6066
+    13    24741    17931    24793    1.38    25098  6065,6066
+     2    23718    10763    61816    5.74    24096  6065,6066
+     1    23541    10690    55692    5.21    23626  6065,6066
+    11    23158    20535    24138    1.18    23723  6065,6066
+     0    22921    10708    41860    3.91    18498  6065,6066
+     4    21560    10702    60432    5.65    21494  6065,6066
+     3    17649    10716    25018    2.33    17658  6065,6066
+    12    10775    10717    10782    1.01    10629  6065,6066
+    15    10774    10726    10782    1.01    10626  6065,6066
+     7    10762    10727    10771    1.00    15486  6065,6066
+    19    10752    10749    10759    1.00    10625  6065,6066
+     6    10748    10715    10753    1.00    10618  6065,6066
+    14    10745    10720    10757    1.00    10614  6065,6066
+    17    10733    10688    10736    1.00    10625  6065,6066
+    10    10718    10688    10722    1.00    10624  6065,6066
+     8    10717    10700    10724    1.00    10597  6065,6066
+
+=== per node (median dispatch across all chunk appearances) -- worst first ===
+        node    d_med    d_min    d_max           chunks  ranks
+   nid006065    10776    10688    61814 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19    100
+   nid006066    10775    10688    61816 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19    100
+
+Overall median dispatch across chunks: 19605 us
+
+
+Shapes seen: tokens=8192 hidden=1792 ep=8 balanced=True
+
+=== per chunk (median dispatch across ranks) -- worst first, '<<' = > 1.5x overall median (10767 us) ===
+ chunk    d_med    d_min    d_max  spread    c_med  nodes
+     9    25491    15444    25583    1.66    25323  6065,6066  <<
+     6    25260    17649    26370    1.49    23858  6065,6066  <<
+     4    25118    20504    26670    1.30    26804  6065,6066  <<
+     3    23106    18038    24390    1.35    23298  6065,6066  <<
+    10    22909    19472    23856    1.23    24669  6065,6066  <<
+     7    10777    10736    10800    1.01    10632  6065,6066
+     8    10758    10691    10775    1.01    10628  6065,6066
+     2    10758    10705    10764    1.01    10620  6065,6066
+    11    10754    10704    10765    1.01    10618  6065,6066
+     5    10743    10685    10753    1.01    10620  6065,6066
+     0    10730    10689    10732    1.00    10627  6065,6066
+     1    10716    10684    10722    1.00    10652  6065,6066
+
+=== per node (median dispatch across all chunk appearances) -- worst first ===
+        node    d_med    d_min    d_max           chunks  ranks
+   nid006065    10769    10684    26370 0,1,2,3,4,5,6,7,8,9,10,11     48
+   nid006066    10762    10689    26670 0,1,2,3,4,5,6,7,8,9,10,11     48
+
+Overall median dispatch across chunks: 10767 us
+Flagged chunks: 5
+```
