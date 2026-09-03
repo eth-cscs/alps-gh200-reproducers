@@ -19,6 +19,7 @@ import csv
 import json
 import os
 import pathlib
+import re
 import statistics
 import sys
 from typing import Dict, List, Optional
@@ -42,7 +43,13 @@ def pct(xs: List[float], q: float) -> float:
     return xs[min(len(xs) - 1, int(round(q * (len(xs) - 1))))]
 
 
-def load_rank_file(path: pathlib.Path) -> Optional[Dict]:
+def jobid_from_dir(d: pathlib.Path) -> str:
+    """Extract a numeric jobid from the result directory name if present."""
+    m = re.search(r'(\d{6,})$', d.name)
+    return m.group(1) if m else d.name
+
+
+def load_rank_file(path: pathlib.Path, outdir: pathlib.Path) -> Optional[Dict]:
     try:
         d = json.loads(path.read_text())
     except (json.JSONDecodeError, OSError):
@@ -59,6 +66,7 @@ def load_rank_file(path: pathlib.Path) -> Optional[Dict]:
         "group_id": d["group_id"],
         "chunk_id": d.get("chunk_id", 0),
         "total_chunks": d.get("total_chunks", 1),
+        "jobid": jobid_from_dir(outdir),
         "ep": cfg.get("ep", d.get("ep", 0)),
         "num_tokens": cfg.get("num_tokens", 0),
         "hidden": cfg.get("hidden", 0),
@@ -82,6 +90,7 @@ def summarize_chunks(rows: List[Dict], slow_threshold: float):
         d_meds = [r["d_med"] for r in chunk_rows]
         chunk_summaries.append({
             "chunk_id": chunk_id,
+            "jobids": sorted({r["jobid"] for r in chunk_rows}),
             "nodes": sorted({r["host"] for r in chunk_rows}),
             "d_med": statistics.median(d_meds),
             "d_min": min(d_meds),
@@ -95,14 +104,15 @@ def summarize_chunks(rows: List[Dict], slow_threshold: float):
     overall_d_med = statistics.median([c["d_med"] for c in chunk_summaries])
 
     print(f"\n=== per chunk (median dispatch across ranks) -- worst first, '<<' = > {slow_threshold:.1f}x overall median ({overall_d_med:.0f} us) ===")
-    print(f"{'chunk':>6} {'d_med':>8} {'d_min':>8} {'d_max':>8} {'spread':>7} {'c_med':>8}  nodes")
+    print(f"{'chunk':>6} {'jobid':>10} {'d_med':>8} {'d_min':>8} {'d_max':>8} {'spread':>7} {'c_med':>8}  nodes")
     flagged_chunks = []
     for c in sorted(chunk_summaries, key=lambda x: -x["d_med"]):
         slow = c["d_med"] > slow_threshold * overall_d_med
         if slow:
             flagged_chunks.append(c)
         short = ",".join(n.replace("nid00", "") for n in c["nodes"])
-        print(f"{c['chunk_id']:>6} {c['d_med']:>8.0f} {c['d_min']:>8.0f} {c['d_max']:>8.0f} "
+        jobids = ",".join(c["jobids"])
+        print(f"{c['chunk_id']:>6} {jobids:>10} {c['d_med']:>8.0f} {c['d_min']:>8.0f} {c['d_max']:>8.0f} "
               f"{c['d_spread']:>7.2f} {c['c_med']:>8.0f}  {short}{'  <<' if slow else ''}")
 
     return chunk_summaries, flagged_chunks, overall_d_med
@@ -119,6 +129,7 @@ def summarize_nodes(rows: List[Dict], slow_threshold: float, overall_d_med: floa
         node_summaries.append({
             "host": host,
             "chunks": sorted({r["chunk_id"] for r in node_rows}),
+            "jobids": sorted({r["jobid"] for r in node_rows}),
             "d_med": statistics.median(d_meds),
             "d_min": min(d_meds),
             "d_max": max(d_meds),
@@ -126,15 +137,16 @@ def summarize_nodes(rows: List[Dict], slow_threshold: float, overall_d_med: floa
         })
 
     print(f"\n=== per node (median dispatch across all chunk appearances) -- worst first ===")
-    print(f"{'node':>12} {'d_med':>8} {'d_min':>8} {'d_max':>8} {'chunks':>16} {'ranks':>6}")
+    print(f"{'node':>12} {'d_med':>8} {'d_min':>8} {'d_max':>8} {'chunks':>16} {'jobids':>16} {'ranks':>6}")
     flagged_nodes = []
     for n in sorted(node_summaries, key=lambda x: -x["d_med"]):
         slow = n["d_med"] > slow_threshold * overall_d_med
         if slow:
             flagged_nodes.append(n)
         chunks = ",".join(str(c) for c in n["chunks"])
+        jobids = ",".join(n["jobids"])
         print(f"{n['host']:>12} {n['d_med']:>8.0f} {n['d_min']:>8.0f} {n['d_max']:>8.0f} "
-              f"{chunks:>16} {n['n_ranks']:>6}{'  <<' if slow else ''}")
+              f"{chunks:>16} {jobids:>16} {n['n_ranks']:>6}{'  <<' if slow else ''}")
 
     return node_summaries, flagged_nodes
 
@@ -157,7 +169,7 @@ def main() -> int:
 
     rows = []
     for d in outdirs:
-        rows.extend(r for r in (load_rank_file(p) for p in d.glob("ep_custom_chunk*_rank*.json")) if r)
+        rows.extend(r for r in (load_rank_file(p, d) for p in d.glob("ep_custom_chunk*_rank*.json")) if r)
 
     if not rows:
         print(f"no rank result files found in {', '.join(str(d) for d in outdirs)}", file=sys.stderr)
@@ -183,11 +195,11 @@ def main() -> int:
     if args.csv:
         with open(args.csv, "w", newline="") as f:
             w = csv.writer(f, lineterminator="\n")
-            w.writerow(["chunk_id", "node", "rank", "local_rank", "d_med_us",
+            w.writerow(["jobid", "chunk_id", "node", "rank", "local_rank", "d_med_us",
                         "d_p90_us", "d_max_us", "c_med_us", "c_p90_us"])
             for r in sorted(rows, key=lambda x: (x["chunk_id"], x["rank"])):
                 w.writerow([
-                    r["chunk_id"], r["host"], r["rank"], r["local_rank"],
+                    r["jobid"], r["chunk_id"], r["host"], r["rank"], r["local_rank"],
                     f"{r['d_med']:.1f}", f"{r['d_p90']:.1f}", f"{r['d_max']:.1f}",
                     f"{r['c_med']:.1f}" if r["c_med"] == r["c_med"] else "",
                     f"{r['c_p90']:.1f}" if r["c_p90"] == r["c_p90"] else "",

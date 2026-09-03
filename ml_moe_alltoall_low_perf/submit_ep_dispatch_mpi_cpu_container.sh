@@ -47,6 +47,26 @@ export LF_LOG_PROV="${LF_LOG_PROV:-}"
 # routing on the same node pair.
 export CXI_DEV_PER_RANK="${CXI_DEV_PER_RANK:-}"
 
+# Optional NUMA pinning mode for each rank.
+#   none  - no numactl pinning (default)
+#   last  - pin rank to the last CPU of its assigned NUMA node
+#   node  - bind rank to all CPUs and memory of its assigned NUMA node
+# The assigned node is NUMA_NODE_BASE + LOCAL_RANK.  On GH200 with 72 CPUs per
+# NUMA node, NUMA_PIN_MODE=last pins local rank 0 to CPU 71 of node 0, rank 1
+# to CPU 143 of node 1, etc.
+export NUMA_PIN_MODE="${NUMA_PIN_MODE:-none}"
+export NUMA_NODE_BASE="${NUMA_NODE_BASE:-0}"
+export NUMA_CPUS_PER_NODE="${NUMA_CPUS_PER_NODE:-72}"
+
+# Optional network transport selection for Cray MPICH / libfabric.
+#   cxi     - use Slingshot CXI provider (default)
+#   tcp     - force libfabric TCP provider
+#   sockets - force libfabric sockets provider
+# This is useful as a negative control to verify whether an issue is specific
+# to the CXI/Slingshot path.  When tcp/sockets is selected, CXI is excluded
+# explicitly so libfabric cannot fall back to it.
+export MPI_NET="${MPI_NET:-cxi}"
+
 # Optional CXI counter collection. Set GATHER_CXI=1 to wrap each rank with
 # gather_cxi_counters. Output lands next to the benchmark JSON.
 export GATHER_CXI="${GATHER_CXI:-0}"
@@ -65,19 +85,27 @@ mkdir -p "$OUTDIR" slurm_logs
 
 echo "[$(date --iso-8601=seconds)] job $SLURM_JOB_ID  $SLURM_NNODES nodes  $WORLD_SIZE ranks  chunk $CHUNK_ID/$TOTAL_CHUNKS"
 echo "nodes: $(scontrol show hostlistsorted "$SLURM_JOB_NODELIST")"
-echo "binary: $PWD/ep_dispatch_bench_mpi_cpu_cnt"
+export BENCH_VARIANT="${BENCH_VARIANT:-dispatch}"
+if [ "$BENCH_VARIANT" = "p2p" ]; then
+    export BENCH_SOURCE="$PWD/ep_dispatch_bench_mpi_cpu_p2p.c"
+    export BENCH_BINARY="$PWD/ep_dispatch_bench_mpi_cpu_p2p_cnt"
+else
+    export BENCH_SOURCE="$PWD/ep_dispatch_bench_mpi_cpu.c"
+    export BENCH_BINARY="$PWD/ep_dispatch_bench_mpi_cpu_cnt"
+fi
+echo "binary: $BENCH_BINARY"
 echo "environment: $ENV_FILE"
 
 # Build the binary inside the container if it is missing or the source is newer.
 # This runs on a single task inside the allocation so the container toolchain
 # (mpicc, headers, MPI libs) is used.
-if [ ! -x "$PWD/ep_dispatch_bench_mpi_cpu_cnt" ] || [ "$PWD/ep_dispatch_bench_mpi_cpu.c" -nt "$PWD/ep_dispatch_bench_mpi_cpu_cnt" ]; then
-    echo "building $PWD/ep_dispatch_bench_mpi_cpu inside container..."
+if [ ! -x "$BENCH_BINARY" ] || [ "$BENCH_SOURCE" -nt "$BENCH_BINARY" ]; then
+    echo "building $BENCH_SOURCE inside container..."
     srun --environment="$ENV_FILE" \
          --mpi=pmix \
          --network=disable_rdzv_get \
          --ntasks=1 --nodes=1 --cpus-per-task=1 \
-         bash -c "mpicc -O2 -std=gnu11 -Wall -o '$PWD/ep_dispatch_bench_mpi_cpu_cnt' '$PWD/ep_dispatch_bench_mpi_cpu.c'"
+         bash -c "mpicc -O2 -std=gnu11 -Wall -o '$BENCH_BINARY' '$BENCH_SOURCE'"
     echo "build done"
 fi
 
@@ -91,16 +119,6 @@ export WORLD_SIZE=\$SLURM_NPROCS
 
 #export FI_CXI_RX_MATCH_MODE=software
 
-# Apply per-rank CXI device selection if requested.
-if [ -n "\${CXI_DEV_PER_RANK:-}" ]; then
-    IFS=',' read -ra CXI_DEVS <<< "\$CXI_DEV_PER_RANK"
-    if [ "\$LOCAL_RANK" -lt "\${#CXI_DEVS[@]}" ]; then
-        export FI_CXI_DEVICE_NAME="\${CXI_DEVS[\$LOCAL_RANK]}"
-    else
-        echo "warning: LOCAL_RANK=\$LOCAL_RANK out of range for CXI_DEV_PER_RANK" >&2
-    fi
-fi
-
 # Optional libfabric debug logging. When enabled, redirect each rank's stderr
 # to a dedicated log file under slurm_logs/<job>/ so logs for one job are kept
 # together and easy to diff as a group.
@@ -112,7 +130,7 @@ if [ -n "\${LF_LOG_LEVEL:-}" ]; then
     exec 2>"\$LOGDIR/rank\$RANK.log"
 fi
 
-BENCH="$PWD/ep_dispatch_bench_mpi_cpu_cnt"
+BENCH="$BENCH_BINARY"
 BENCH_ARGS=(
     --ep "\$SLURM_NPROCS"
     --iters "$TIMES"
@@ -125,6 +143,54 @@ BENCH_ARGS=(
     --out "$OUTDIR/ep-dispatch-\$SLURM_JOB_ID.json"
     "\$@"
 )
+
+# Build optional NUMA pinning prefix.
+NUMA_PREFIX=()
+# Apply Cray MPICH / libfabric transport selection.
+case "\${MPI_NET:-cxi}" in
+    tcp)
+        unset FI_PROVIDER
+        export MPICH_OFI_USE_PROVIDER="tcp;ofi_rxm"
+        export MPICH_OFI_ENABLE_HMEM=0
+        export MPICH_OFI_STARTUP_CONNECT=1
+        export MPICH_OFI_VERBOSE=1
+        ;;
+    sockets)
+        unset FI_PROVIDER
+        export MPICH_OFI_USE_PROVIDER=sockets
+        export MPICH_OFI_ENABLE_HMEM=0
+        export MPICH_OFI_VERBOSE=1
+        ;;
+    cxi|*)
+        # Default Slingshot/CXI path.  Explicit CXI device selection is applied
+        # below if CXI_DEV_PER_RANK is set.
+        ;;
+esac
+
+# Apply per-rank CXI device selection if requested *and* we are on the CXI path.
+if [ "\${MPI_NET:-cxi}" = "cxi" ] && [ -n "\${CXI_DEV_PER_RANK:-}" ]; then
+    IFS=',' read -ra CXI_DEVS <<< "\$CXI_DEV_PER_RANK"
+    if [ "\$LOCAL_RANK" -lt "\${#CXI_DEVS[@]}" ]; then
+        export FI_CXI_DEVICE_NAME="\${CXI_DEVS[\$LOCAL_RANK]}"
+    else
+        echo "warning: LOCAL_RANK=\$LOCAL_RANK out of range for CXI_DEV_PER_RANK" >&2
+    fi
+fi
+
+case "\${NUMA_PIN_MODE:-none}" in
+    last)
+        _NODE=\$((NUMA_NODE_BASE + \${SLURM_LOCALID:-0}))
+        _LAST_CPU=\$(( (_NODE + 1) * NUMA_CPUS_PER_NODE - 1 ))
+        NUMA_PREFIX=(numactl --physcpubind="\$_LAST_CPU" --membind="\$_NODE")
+        ;;
+    node)
+        _NODE=\$((NUMA_NODE_BASE + \${SLURM_LOCALID:-0}))
+        NUMA_PREFIX=(numactl --cpunodebind="\$_NODE" --membind="\$_NODE")
+        ;;
+    none|*)
+        NUMA_PREFIX=()
+        ;;
+esac
 
 if [ -n "\${GATHER_CXI:-}" ] && [ "\${GATHER_CXI}" != "0" ]; then
     export GATHER_CXI_COUNTERS_LEVEL="\${GATHER_CXI_COUNTERS_LEVEL:-5}"
@@ -139,12 +205,13 @@ if [ -n "\${GATHER_CXI:-}" ] && [ "\${GATHER_CXI}" != "0" ]; then
     # gather_cxi_counters only emits counter output on local_rank 0. Other ranks
     # produce empty stdout, which is fine; we still keep the file placeholder.
     if [ "\${SLURM_LOCALID:-0}" -eq 0 ]; then
-        "$GATHER_CXI_COUNTERS_BIN" -e "\$CTR_TAG" "\$BENCH" "\${BENCH_ARGS[@]}" > "\$CTR_OUT" 2> "\$CTR_OUT.err"
+        "\${NUMA_PREFIX[@]}" "$GATHER_CXI_COUNTERS_BIN" -e "\$CTR_TAG" "\$BENCH" "\${BENCH_ARGS[@]}" > "\$CTR_OUT" 2> "\$CTR_OUT.err"
     else
-        "$GATHER_CXI_COUNTERS_BIN" -e "\$CTR_TAG" "\$BENCH" "\${BENCH_ARGS[@]}" > /dev/null 2> "\$CTR_OUT.err"
+        "\${NUMA_PREFIX[@]}" "$GATHER_CXI_COUNTERS_BIN" -e "\$CTR_TAG" "\$BENCH" "\${BENCH_ARGS[@]}" > /dev/null 2> "\$CTR_OUT.err"
     fi
 else
-    "\$BENCH" "\${BENCH_ARGS[@]}"
+    CTR_OUT="$OUTDIR/bench-\$SLURM_JOB_ID-rank\$RANK"
+    "\${NUMA_PREFIX[@]}" "\$BENCH" "\${BENCH_ARGS[@]}" > "\${CTR_OUT}.out" 2> "\${CTR_OUT}.err"
 fi
 EOF
 chmod +x "$LAUNCHER"

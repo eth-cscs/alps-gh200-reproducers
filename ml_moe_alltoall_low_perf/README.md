@@ -22,10 +22,14 @@ within a slow repeat both ranks are slow together.
 |------|---------|
 | `ep_dispatch_bench_mpi_cpu.c` | CPU-only EP dispatch/combine benchmark using MPI `Alltoall`. |
 | `ep_dispatch_bench_mpi_cpu_cnt` | Pre-built binary (built inside the container on first run if source is newer). |
-| `Makefile.ep_mpi_cpu_cnt` | Local Makefile for manual builds with `mpicc`. |
+| `ep_dispatch_bench_mpi_cpu_p2p.c` | Variant that adds a point-to-point ping-pong benchmark between all rank pairs after the dispatch/combine phases. |
+| `ep_dispatch_bench_mpi_cpu_p2p_cnt` | Pre-built binary for the p2p variant. |
+| `Makefile.ep_mpi_cpu_cnt` | Local Makefile for manual builds of the standard variant. |
+| `Makefile.ep_mpi_cpu_p2p_cnt` | Local Makefile for manual builds of the p2p variant. |
 | `submit_ep_dispatch_mpi_cpu_container.sh` | Slurm submit script that runs the benchmark inside an Apptainer/Sarus container via `--environment=<toml>` and `--mpi=pmix`. |
 | `sweep_ep_dispatch_mpi_cpu_pair_repeat.sh` | Repeatedly submits the benchmark on the same two nodes to test run-to-run variability. |
 | `report_ep_dispatch_custom.py` | Aggregates per-rank JSON outputs and flags slow chunks/nodes. |
+| `report_p2p_pairs.py` | Summarizes the point-to-point pair latencies from the p2p variant and flags slow/variable pairs. |
 | `alps-pytorch2602.toml` | Container environment for Alps6 (single-node/multi-rank tests). |
 | `alps4-pytorch2602.toml` | Container environment for Alps4 (multi-node tests). |
 | `pair-repeat-slow-r13/` | Example output from 20 repeats on a known slow node pair. |
@@ -75,6 +79,20 @@ dispatch/combine pattern:
 - Per-iteration timings are written as JSON arrays (`dispatch_us`,
   `combine_us`).
 
+### P2P variant (`BENCH_VARIANT=p2p`)
+
+`ep_dispatch_bench_mpi_cpu_p2p.c` is identical to the standard benchmark, but
+after dispatch/combine it measures ping-pong latency between every ordered pair
+of ranks:
+
+- Message size = `count_per_rank * hidden * sizeof(uint16_t)`, i.e. the same
+  per-peer send size as the all-to-all.
+- 5 warmup + 200 timed iterations per ordered pair, measured sequentially with
+  global barriers between pairs.
+- Raw samples are written into each per-rank JSON file under `p2p_pairs`.
+- Rank 0 emits an aggregated `p2p_summary` with min/median/max for every
+  `(src, dst)` pair so slow links can be identified quickly.
+
 Command-line options (passed through by the submit script):
 
 ```text
@@ -113,6 +131,11 @@ The submit script and sweep script honor the following variables:
 | `GATHER_CXI_INTERVAL` | 100 | Sample interval when `DETAILED=1` (ms). |
 | `LF_LOG_LEVEL` | "" | Set to `debug` to capture libfabric logging per rank. |
 | `LF_LOG_PROV` | `cxi` | Provider filter for libfabric logging. |
+| `NUMA_PIN_MODE` | `none` | Pin ranks with `numactl`: `none`, `last` (last CPU of NUMA node), or `node` (whole NUMA node). |
+| `NUMA_NODE_BASE` | `0` | First NUMA node index used by `NUMA_PIN_MODE`. |
+| `NUMA_CPUS_PER_NODE` | `72` | CPUs per NUMA node used by `NUMA_PIN_MODE=last`. |
+| `MPI_NET` | `cxi` | MPI transport: `cxi` (Slingshot), `tcp` (libfabric TCP), or `sockets`. |
+| `BENCH_VARIANT` | `dispatch` | Select benchmark binary: `dispatch` or `p2p`. |
 | `OUTTAG` | "" | Output directory prefix. |
 
 ## Known issues and caveats

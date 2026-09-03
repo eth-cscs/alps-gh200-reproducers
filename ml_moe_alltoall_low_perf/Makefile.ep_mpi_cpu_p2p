@@ -1,0 +1,13 @@
+# Makefile for ep_dispatch_bench_mpi_cpu_p2p.c
+# Build inside the uenv with: make -f Makefile.ep_mpi_cpu_p2p
+
+MPICC ?= mpicc
+CFLAGS = -O2 -std=gnu11 -Wall
+
+ep_dispatch_bench_mpi_cpu_p2p: ep_dispatch_bench_mpi_cpu_p2p.c
+	$(MPICC) $(CFLAGS) -o $@ $<
+
+clean:
+	rm -f ep_dispatch_bench_mpi_cpu_p2p
+
+.PHONY: clean

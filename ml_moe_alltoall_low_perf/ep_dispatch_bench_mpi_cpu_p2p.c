@@ -41,7 +41,7 @@ static long getenv_long(const char *name, long def) {
 static int local_rank_from_env(void) {
     int lr = (int)getenv_long("OMPI_COMM_WORLD_LOCAL_RANK", -1);
     if (lr >= 0) return lr;
-    lr = (int)getenv_long("SLURM_LOCAL_RANK", -1);
+    lr = (int)getenv_long("SLURM_LOCALID", -1);
     if (lr >= 0) return lr;
     return 0;
 }
@@ -157,6 +157,28 @@ int main(int argc, char **argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &world);
 
+    /* Dump environment variables to stdout for reproducibility/debugging.
+     * Filter to variables that are likely to influence MPI/libfabric behavior. */
+    if (rank == 0) {
+        printf("=== environment after MPI_Init (rank 0 of %d) ===\n", world);
+        extern char **environ;
+        const char *prefixes[] = {
+            "FI_", "MPICH_", "OMPI_MCA_", "OPAL_", "PMIX_", "MPI_",
+            "CXI_", "GATHER_CXI", "NUMA", "OMP_", "SLURM_", "LDMS_",
+            "FI_CXI", NULL
+        };
+        for (char **e = environ; *e; ++e) {
+            for (int i = 0; prefixes[i]; ++i) {
+                if (strncmp(*e, prefixes[i], strlen(prefixes[i])) == 0) {
+                    printf("%s\n", *e);
+                    break;
+                }
+            }
+        }
+        printf("=== end environment ===\n");
+        fflush(stdout);
+    }
+
     int num_tokens = 8192;
     int hidden = 1792;
     int num_topk = 8;
@@ -168,6 +190,7 @@ int main(int argc, char **argv) {
     int chunk_id = 0;
     int total_chunks = 1;
     int no_combine = 0;
+    int no_p2p = 0;
     const char *outdir = "results-ep-mpi-cpu";
     const char *outfile = NULL;
     const char *pin = "";
@@ -184,6 +207,7 @@ int main(int argc, char **argv) {
         {"chunk-id", required_argument, 0, 0},
         {"total-chunks", required_argument, 0, 0},
         {"no-combine", no_argument, 0, 0},
+        {"no-p2p", no_argument, 0, 0},
         {"outdir", required_argument, 0, 0},
         {"out", required_argument, 0, 0},
         {"pin", required_argument, 0, 0},
@@ -208,6 +232,7 @@ int main(int argc, char **argv) {
         else if (!strcmp(name, "chunk-id")) chunk_id = atoi(val);
         else if (!strcmp(name, "total-chunks")) total_chunks = atoi(val);
         else if (!strcmp(name, "no-combine")) no_combine = 1;
+        else if (!strcmp(name, "no-p2p")) no_p2p = 1;
         else if (!strcmp(name, "outdir")) outdir = val;
         else if (!strcmp(name, "out")) outfile = val;
         else if (!strcmp(name, "pin")) pin = val;
@@ -311,6 +336,7 @@ int main(int argc, char **argv) {
         MPI_Barrier(MPI_COMM_WORLD);
         double t0 = MPI_Wtime();
         do_dispatch();
+        MPI_Barrier(MPI_COMM_WORLD);
         double t1 = MPI_Wtime();
         dispatch_us[i] = (t1 - t0) * 1e6;
     }
@@ -323,11 +349,84 @@ int main(int argc, char **argv) {
             MPI_Barrier(MPI_COMM_WORLD);
             double t0 = MPI_Wtime();
             do_combine();
+            MPI_Barrier(MPI_COMM_WORLD);
             double t1 = MPI_Wtime();
             combine_us[i] = (t1 - t0) * 1e6;
         }
     } else {
         for (int i = 0; i < iters; ++i) combine_us[i] = 0.0;
+    }
+
+    /* Point-to-point pairwise benchmark.
+     * For every ordered pair (src, dst) with src != dst, measure a ping-pong
+     * of a message whose size equals what one rank sends to one peer in the
+     * alltoall.  Pairs are measured sequentially to avoid cross-traffic.
+     * All ranks participate in a global barrier before each pair so that the
+     * network is quiet for the measurement.
+     * The receive is posted with MPI_Irecv before the matching send so that
+     * large-message rendezvous handshakes never wait for a receive to appear. */
+    int p2p_warmup = 5;
+    int p2p_iters = 200;
+    size_t p2p_bytes = g_mpi_count * sizeof(uint16_t);
+    uint8_t *p2p_send = NULL;
+    uint8_t *p2p_recv = NULL;
+    double **p2p_us = NULL;
+    int *p2p_peer_valid = NULL;
+
+    if (!no_p2p) {
+        p2p_send = malloc(p2p_bytes);
+        p2p_recv = malloc(p2p_bytes);
+        if (!p2p_send || !p2p_recv) {
+            fprintf(stderr, "[rank %d] p2p buffer allocation failed\n", rank);
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
+        memset(p2p_send, 0xAB, p2p_bytes);
+
+        /* Each rank stores results for pairs where it is the source. */
+        p2p_us = calloc(world, sizeof(double *));
+        p2p_peer_valid = calloc(world, sizeof(int));
+        for (int d = 0; d < world; ++d) {
+            if (d == rank) continue;
+            p2p_us[d] = malloc(p2p_iters * sizeof(double));
+            p2p_peer_valid[d] = 1;
+        }
+
+        for (int src = 0; src < world; ++src) {
+            for (int dst = 0; dst < world; ++dst) {
+                if (src == dst) continue;
+                MPI_Barrier(MPI_COMM_WORLD);
+                if (rank == src) {
+                    for (int w = 0; w < p2p_warmup; ++w) {
+                        MPI_Request req;
+                        MPI_Irecv(p2p_recv, (int)p2p_bytes, MPI_BYTE, dst, 0, MPI_COMM_WORLD, &req);
+                        MPI_Send(p2p_send, (int)p2p_bytes, MPI_BYTE, dst, 0, MPI_COMM_WORLD);
+                        MPI_Wait(&req, MPI_STATUS_IGNORE);
+                    }
+                    for (int i = 0; i < p2p_iters; ++i) {
+                        MPI_Request req;
+                        MPI_Irecv(p2p_recv, (int)p2p_bytes, MPI_BYTE, dst, 0, MPI_COMM_WORLD, &req);
+                        double t0 = MPI_Wtime();
+                        MPI_Send(p2p_send, (int)p2p_bytes, MPI_BYTE, dst, 0, MPI_COMM_WORLD);
+                        MPI_Wait(&req, MPI_STATUS_IGNORE);
+                        double t1 = MPI_Wtime();
+                        p2p_us[dst][i] = (t1 - t0) * 1e6;
+                    }
+                } else if (rank == dst) {
+                    for (int w = 0; w < p2p_warmup; ++w) {
+                        MPI_Request req;
+                        MPI_Irecv(p2p_recv, (int)p2p_bytes, MPI_BYTE, src, 0, MPI_COMM_WORLD, &req);
+                        MPI_Send(p2p_send, (int)p2p_bytes, MPI_BYTE, src, 0, MPI_COMM_WORLD);
+                        MPI_Wait(&req, MPI_STATUS_IGNORE);
+                    }
+                    for (int i = 0; i < p2p_iters; ++i) {
+                        MPI_Request req;
+                        MPI_Irecv(p2p_recv, (int)p2p_bytes, MPI_BYTE, src, 0, MPI_COMM_WORLD, &req);
+                        MPI_Send(p2p_send, (int)p2p_bytes, MPI_BYTE, src, 0, MPI_COMM_WORLD);
+                        MPI_Wait(&req, MPI_STATUS_IGNORE);
+                    }
+                }
+            }
+        }
     }
 
     char hostname[MPI_MAX_PROCESSOR_NAME];
@@ -422,9 +521,86 @@ int main(int argc, char **argv) {
     fprintf(jf, ",\n");
     write_float_array(jf, "combine_us", combine_us, iters);
     fprintf(jf, ",\n");
+    fprintf(jf, "  \"p2p_enabled\": %s,\n", no_p2p ? "false" : "true");
+    if (!no_p2p) {
+        fprintf(jf, "  \"p2p_pair_bytes\": %zu,\n", p2p_bytes);
+        fprintf(jf, "  \"p2p_warmup\": %d,\n", p2p_warmup);
+        fprintf(jf, "  \"p2p_iters\": %d,\n", p2p_iters);
+        fprintf(jf, "  \"p2p_pairs\": [\n");
+        bool first_p2p = true;
+        for (int d = 0; d < world; ++d) {
+            if (!p2p_peer_valid[d]) continue;
+            if (!first_p2p) fprintf(jf, ",\n");
+            first_p2p = false;
+            fprintf(jf, "    {\"dst\": %d, \"us\": [", d);
+            for (int i = 0; i < p2p_iters; ++i) {
+                if (i) fputc(',', jf);
+                fprintf(jf, "%.3f", p2p_us[d][i]);
+            }
+            fprintf(jf, "]}");
+        }
+        fprintf(jf, "\n  ],\n");
+    }
     fprintf(jf, "  \"mpi_cpu_staging\": false\n");
     fprintf(jf, "}\n");
+    fflush(jf);
+    fsync(fileno(jf));
     fclose(jf);
+
+    /* Ensure every rank has closed and flushed its per-rank JSON before rank 0
+     * tries to read them back for the aggregated file. */
+    MPI_Barrier(MPI_COMM_WORLD);
+
+    /* Aggregate p2p summary across all ranks.  This is a collective operation:
+     * every rank must participate in the broadcasts even though only rank 0
+     * writes the result to the aggregated JSON file.  If p2p is disabled, all
+     * ranks still participate with dummy values so the broadcast tree matches. */
+    int pairs = no_p2p ? 0 : world * (world - 1);
+    double *all_min = NULL;
+    double *all_max = NULL;
+    double *all_med = NULL;
+    int    *all_src = NULL;
+    int    *all_dst = NULL;
+    if (pairs > 0) {
+        all_min = malloc(pairs * sizeof(double));
+        all_max = malloc(pairs * sizeof(double));
+        all_med = malloc(pairs * sizeof(double));
+        all_src = malloc(pairs * sizeof(int));
+        all_dst = malloc(pairs * sizeof(int));
+    }
+    int pair_idx = 0;
+    for (int s = 0; s < world; ++s) {
+        for (int d = 0; d < world; ++d) {
+            if (s == d) continue;
+            double sample[1] = {0.0};
+            if (!no_p2p && rank == s) {
+                memcpy(sample, &p2p_us[d][0], sizeof(double));
+            }
+            MPI_Bcast(sample, 1, MPI_DOUBLE, s, MPI_COMM_WORLD);
+            double min_us = sample[0];
+            double max_us = sample[0];
+            double med_us = sample[0];
+            if (!no_p2p && rank == s) {
+                min_us = p2p_us[d][0];
+                max_us = p2p_us[d][0];
+                for (int i = 1; i < p2p_iters; ++i) {
+                    if (p2p_us[d][i] < min_us) min_us = p2p_us[d][i];
+                    if (p2p_us[d][i] > max_us) max_us = p2p_us[d][i];
+                }
+                med_us = median_double(p2p_us[d], p2p_iters);
+            }
+            double stats[3] = {min_us, max_us, med_us};
+            MPI_Bcast(stats, 3, MPI_DOUBLE, s, MPI_COMM_WORLD);
+            if (pairs > 0) {
+                all_src[pair_idx] = s;
+                all_dst[pair_idx] = d;
+                all_min[pair_idx] = stats[0];
+                all_max[pair_idx] = stats[1];
+                all_med[pair_idx] = stats[2];
+            }
+            pair_idx++;
+        }
+    }
 
     /* Aggregate output at rank 0. */
     if (rank == 0 && outfile) {
@@ -461,6 +637,20 @@ int main(int argc, char **argv) {
                 }
             }
             fprintf(of, "\n  ],\n");
+
+            if (pairs > 0) {
+                fprintf(of, "  \"p2p_summary\": {\n");
+                fprintf(of, "    \"pair_bytes\": %zu,\n", p2p_bytes);
+                fprintf(of, "    \"pairs\": [\n");
+                for (int i = 0; i < pairs; ++i) {
+                    fprintf(of, "      {\"src\": %d, \"dst\": %d, \"min_us\": %.3f, \"max_us\": %.3f, \"median_us\": %.3f}%s\n",
+                            all_src[i], all_dst[i], all_min[i], all_max[i], all_med[i],
+                            (i + 1 < pairs) ? "," : "");
+                }
+                fprintf(of, "    ]\n");
+                fprintf(of, "  },\n");
+            }
+
             fprintf(of, "  \"nodes\": [");
             bool first = true;
             for (int i = 0; i < world; ++i) {
@@ -483,6 +673,16 @@ int main(int argc, char **argv) {
             printf("WROTE %s\n", outfile);
         }
     }
+
+    free(all_min); free(all_max); free(all_med); free(all_src); free(all_dst);
+
+    if (p2p_send) free(p2p_send);
+    if (p2p_recv) free(p2p_recv);
+    if (p2p_us) {
+        for (int d = 0; d < world; ++d) free(p2p_us[d]);
+        free(p2p_us);
+    }
+    if (p2p_peer_valid) free(p2p_peer_valid);
 
     free(send); free(recv); free(cmb_send); free(cmb_recv);
     free(dispatch_us); free(combine_us);
