@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Plot dispatch/p90/max per-rank across log files, sorted by jobid."""
 
+import argparse
+import glob
 import re
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-LOG_DIR = Path("logs")
-OUT_PATTERN = re.compile(r"bench_bad_nodes-(\d+)\.out$")
+OUT_PATTERN = re.compile(r".*-(\d+)\.out$")
 
 RANK_RE = re.compile(r"^\s*(\d+)\s+\S+\s+\d+\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)")
 HEADER_RE = re.compile(r"EP dispatch benchmark \| backend (\S+)\s+world (\d+)\s+nodes (\d+)\s+ranks/node (\d+)\s+EP (\d+)\s+groups (\d+)")
@@ -70,15 +71,26 @@ def parse_summary_block(path: Path) -> dict:
     return {"rows": rows, "meta": meta}
 
 
-def load_data() -> tuple[pd.DataFrame, dict]:
+def load_data(file_glob: str) -> tuple[pd.DataFrame, dict, list]:
+    paths = [Path(p) for p in glob.glob(file_glob, recursive=True)]
+
     files = []
-    for path in LOG_DIR.glob("*.out"):
+    for path in paths:
+        if not path.is_file():
+            continue
         m = OUT_PATTERN.match(path.name)
-        if m:
-            files.append((int(m.group(1)), path))
+        if not m:
+            # Fallback: try to extract the last numeric run in the stem.
+            nums = re.findall(r"\d+", path.stem)
+            if not nums:
+                continue
+            jobid = int(nums[-1])
+        else:
+            jobid = int(m.group(1))
+        files.append((jobid, path))
 
     if not files:
-        raise FileNotFoundError(f"No matching .out files found in {LOG_DIR}")
+        raise FileNotFoundError(f"No matching .out files found for glob: {file_glob}")
 
     files.sort(key=lambda x: x[0])
 
@@ -103,7 +115,7 @@ def load_data() -> tuple[pd.DataFrame, dict]:
     return df, first_meta, files
 
 
-def plot(df: pd.DataFrame, meta: dict, files: list):
+def plot(df: pd.DataFrame, meta: dict, files: list, output: str, file_glob: str):
     fig, axes = plt.subplots(3, 1, figsize=(12, 12), sharex=True)
     fig.suptitle(
         "EP dispatch benchmark: per-rank timing across jobs",
@@ -131,7 +143,6 @@ def plot(df: pd.DataFrame, meta: dict, files: list):
         ax.set_title(f"{metric}")
         ax.grid(True, linestyle=":", alpha=0.6)
 
-    # Hand-customizable legend on the last subplot.
     axes[-1].set_xlabel("job index (sorted by jobid)")
     handles, labels = axes[0].get_legend_handles_labels()
     fig.legend(
@@ -148,6 +159,7 @@ def plot(df: pd.DataFrame, meta: dict, files: list):
     first_job = files[0][0]
     last_job = files[-1][0]
     meta_text = (
+        f"glob: {file_glob}\n"
         f"backend: {meta.get('backend', 'N/A')}\n"
         f"world: {meta.get('world', 'N/A')}  nodes: {meta.get('nodes', 'N/A')}  ranks/node: {meta.get('ranks_per_node', 'N/A')}\n"
         f"EP: {meta.get('EP', 'N/A')}  groups: {meta.get('groups', 'N/A')}\n"
@@ -169,16 +181,30 @@ def plot(df: pd.DataFrame, meta: dict, files: list):
     )
 
     plt.tight_layout(rect=[0, 0.12, 0.85, 0.96])
-    outname = "dispatch_summary.png"
-    plt.savefig(outname, dpi=150)
-    print(f"Saved {outname}")
+    plt.savefig(output, dpi=150, bbox_inches="tight", pad_inches=0.1)
+    print(f"Saved {output}")
 
 
 def main():
-    df, meta, files = load_data()
+    parser = argparse.ArgumentParser(
+        description="Plot per-rank dispatch/p90/max from summary blocks of .out files."
+    )
+    parser.add_argument(
+        "--glob",
+        default="logs/*.out",
+        help="Glob pattern for .out files to parse (default: logs/*.out).",
+    )
+    parser.add_argument(
+        "-o", "--output",
+        default="dispatch_summary.pdf",
+        help="Output image filename (default: dispatch_summary.pdf).",
+    )
+    args = parser.parse_args()
+
+    df, meta, files = load_data(args.glob)
     print(df.head(16))
     print(f"\nLoaded {len(files)} files, {len(df)} rows")
-    plot(df, meta, files)
+    plot(df, meta, files, args.output, args.glob)
 
 
 if __name__ == "__main__":
