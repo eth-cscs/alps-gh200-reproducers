@@ -69,6 +69,8 @@ podman build --target export --output ./ -t elbencho:v1 -f ./Dockerfile
 
 ### Main results (`results-89635.txt`, job 89635)
 
+Results files are best viewed with `less -r`.
+
 | Devices | Threads | Result | Approx. throughput |
 |---------|---------|--------|-------------------|
 | `cxi[0-3]` | 1 | PASS | ~7 GB/s |
