@@ -1,0 +1,12 @@
+ISO DATE: 2026-11-03T14:28:54+0100
+LABEL: cxi[0-3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],32" "--resfile" "results-89634.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007677" "--clients" "nid007678" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-03T14:34:54+0100
+LABEL: cxi[2-3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[2-3],32" "--resfile" "results-89634.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007677" "--clients" "nid007678" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========

@@ -8,22 +8,27 @@
 
 SRUN="srun"
 ELBENCHO="./elbencho"
-export SRUN ELBENCHO
 
-set -euo pipefail
+# Comma-separated list of allocated node names
+HOSTS=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | paste -sd, -)
+read -r SERVER CLIENT1 CLIENT2 <<< \
+  "$(scontrol show hostnames "$SLURM_JOB_NODELIST" | tr '\n' ' ')"
+
+export SRUN ELBENCHO SERVER CLIENT1 CLIENT2
+
+#set -euo pipefail
 
 function run_test()
 {
-    DEVS=${1:-cxi[0-3]}
-    THREADS=${2:-32}
+    DEVS=$1 ; shift
+    THREADS=$1 ; shift
+    # Remaining arguments are individual client hostnames
+    CLIENTS=$(IFS=,; echo "$*")
+    NUM_CLIENTS=$#
+    LABEL="$DEVS,$THREADS"
 
-    # Comma-separated list of allocated node names
-    HOSTS=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | paste -sd, -)
-    read -r SERVER CLIENT1 CLIENT2 <<< \
-      "$(scontrol show hostnames "$SLURM_JOB_NODELIST" | tr '\n' ' ')"
-
-    # Start one service on every allocated node
-    $SRUN -l --ntasks=3 --ntasks-per-node=1 $ELBENCHO --service --foreground --netdevs $DEVS &
+    # Start one service on every allocated node (server + each client)
+    $SRUN -l -w "$SERVER,$CLIENTS" --ntasks=$((NUM_CLIENTS + 1)) --ntasks-per-node=1 $ELBENCHO --service --foreground --netdevs $DEVS &
     SERVICE_STEP=$!
 
     cleanup() {
@@ -32,37 +37,42 @@ function run_test()
     }
     trap cleanup EXIT
 
-    # Give the services time to start, then run 2 clients against 1 server
-    sleep 3
-
-    LABEL="$DEVS,$THREADS"
-
-    $ELBENCHO --label "$LABEL" --resfile results.txt \
+    $ELBENCHO --label "$LABEL" --resfile results-${SLURM_JOBID}.txt \
               --netprov cxi --netengine libfabric --netbench \
-              --servers "$SERVER" --clients "$CLIENT1,$CLIENT2" -t $THREADS \
+              --servers "$SERVER" --clients "$CLIENTS" -t $THREADS \
               --sendsize 1M --recvsize 0 \
-              --timelimit 300 --base10 --graph --live1n
+              --timelimit 150 --base10 --graph --live1n
     wait
 }
 export -f run_test
 
 function one_test()
 {
-    timeout 6m bash -c "run_test $@"
-    sleep 10
+    timeout 3m bash -c "run_test $*"
+    #sleep 10
 }
 
-one_test cxi[0-3] 32
-one_test cxi[0-3] 16
-one_test cxi[0-3] 8
-one_test cxi[0-3] 4
-one_test cxi[0-3] 2
-one_test cxi[0-3] 1
+one_test cxi[0-3] 1 "$CLIENT1" 
+one_test cxi[0-3] 2 "$CLIENT1" 
+one_test cxi[0-3] 4 "$CLIENT1" 
+one_test cxi[0-3] 8 "$CLIENT1" 
+one_test cxi[0-3] 16 "$CLIENT1" 
+one_test cxi[0-3] 32 "$CLIENT1" 
+one_test cxi[0-1] 32 "$CLIENT1" 
+one_test cxi[2-3] 32 "$CLIENT1" 
+exit
 
-one_test cxi[0-1] 32
-one_test cxi[2-3] 32
-one_test cxi[0] 32
-one_test cxi[1] 32
-one_test cxi[2] 32
-one_test cxi[3] 32
+one_test cxi[0-3] 32 "$CLIENT1" "$CLIENT2"
+one_test cxi[0-3] 16 "$CLIENT1" "$CLIENT2"
+one_test cxi[0-3] 8 "$CLIENT1" "$CLIENT2"
+one_test cxi[0-3] 4 "$CLIENT1" "$CLIENT2"
+one_test cxi[0-3] 2 "$CLIENT1" "$CLIENT2"
+one_test cxi[0-3] 1 "$CLIENT1" "$CLIENT2"
+
+one_test cxi[0-1] 32 "$CLIENT1" "$CLIENT2"
+one_test cxi[2-3] 32 "$CLIENT1" "$CLIENT2"
+one_test cxi[0] 32 "$CLIENT1" "$CLIENT2"
+one_test cxi[1] 32 "$CLIENT1" "$CLIENT2"
+one_test cxi[2] 32 "$CLIENT1" "$CLIENT2"
+one_test cxi[3] 32 "$CLIENT1" "$CLIENT2"
 

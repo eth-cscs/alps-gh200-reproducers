@@ -1,0 +1,140 @@
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+1: Elbencho service now listening. Port: 1611
+0: Elbencho service now listening. Port: 1611
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.236]:57734'; ISO Date: 2026-11-03T14:28:53+0100
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.236]:52764'; ISO Date: 2026-11-03T14:28:53+0100
+0: LABEL: cxi[0-3],32
+0: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+1: LABEL: cxi[0-3],32
+1: 
+NET/libfabric: 48849 IOPS; 51222 MB/s; 97699 MiB; 64 threads; 3% CPU; 2s
+NET/libfabric: 44653 IOPS; 46822 MB/s; 186962 MiB; 64 threads; 1% CPU; 4s
+NET/libfabric: 45336 IOPS; 47538 MB/s; 277590 MiB; 64 threads; 2% CPU; 6s
+NET/libfabric: 43858 IOPS; 45988 MB/s; 365307 MiB; 64 threads; 2% CPU; 8s
+NET/libfabric: 43192 IOPS; 45290 MB/s; 451691 MiB; 64 threads; 1% CPU; 10s
+NET/libfabric: 45917 IOPS; 48148 MB/s; 543481 MiB; 64 threads; 1% CPU; 12s
+NET/libfabric: 42425 IOPS; 44486 MB/s; 628290 MiB; 64 threads; 2% CPU; 14s
+NET/libfabric: 45993 IOPS; 48227 MB/s; 720276 MiB; 64 threads; 1% CPU; 16s
+NET/libfabric: 45194 IOPS; 47389 MB/s; 810665 MiB; 64 threads; 2% CPU; 18s
+NET/libfabric: 42996 IOPS; 45085 MB/s; 896615 MiB; 64 threads; 2% CPU; 20s
+1: 14:29:14.845 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1074 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 0c465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 04625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 46
+1: 14:29:14.849 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 997 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 0d465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 05625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 62
+1: 14:29:14.849 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1105 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 11465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 00625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 38
+1: 14:29:14.850 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1210 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 10465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 02625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 34
+1: 14:29:14.850 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1159 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 1b465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 06625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 54
+1: 14:29:14.851 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1069 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 18465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 07625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 58
+1: 14:29:14.852 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1086 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 0f465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 03625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 50
+1: 14:29:14.852 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1194 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 16465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 01625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 42
+0: NET/libfabr Elapsed time     :     21.502s     21.682s
+0:             IOPS recv        :       43369       43009
+0:             MB/s recv        :       45476       45098
+0:             MiB recv         :      932549      932549
+0: ---
+0: 
+14:29:15.672 === [ HOST: nid007678:1611 (Rank: 1) ] ===
+  14:29:14.845 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1074 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 0c465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 04625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 46
+  14:29:14.849 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 997 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 0d465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 05625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 62
+  14:29:14.849 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1105 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 11465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 00625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 38
+  14:29:14.850 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1210 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 10465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 02625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 34
+  14:29:14.850 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1159 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 1b465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 06625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 54
+  14:29:14.851 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1069 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 18465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 07625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 58
+  14:29:14.852 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1086 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 0f465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 03625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 50
+  14:29:14.852 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 1194 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 16465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 01625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 42
+=== [ END ] ===
+srun: forcing job termination
+srun: got SIGCONT
+14:31:52.824 ERROR: Service interruption/termination requires a host list.
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:31:52.845] error: *** STEP 89634.0 ON nid007677 CANCELLED AT 2026-11-03T14:31:52 DUE to SIGNAL Killed ***
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007678: task 1: Killed
+srun: Terminating StepId=89634.0
+srun: error: nid007677: task 0: Killed
+srun: Step created for StepId=89634.1
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+14:31:57.919 ERROR: Timed out waiting for services to become ready. Unreachable service: nid007678:1611
+srun: forcing job termination
+srun: got SIGCONT
+14:34:52.844 ERROR: Service interruption/termination requires a host list.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: forcing job termination
+0: [2026-11-03T14:34:52.847] error: *** STEP 89634.1 ON nid007677 CANCELLED AT 2026-11-03T14:34:52 DUE to SIGNAL Killed ***
+srun: error: nid007679: task 1: Killed
+srun: Terminating StepId=89634.1
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007677: task 0: Killed
+srun: Step created for StepId=89634.2
+1: Elbencho service now listening. Port: 1611
+0: Elbencho service now listening. Port: 1611
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.236]:34626'; ISO Date: 2026-11-03T14:34:53+0100
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.236]:58912'; ISO Date: 2026-11-03T14:34:53+0100
+0: LABEL: cxi[2-3],32
+0: 
+1: LABEL: cxi[2-3],32
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 45621 IOPS; 47837 MB/s; 91242 MiB; 64 threads; 1% CPU; 2s
+NET/libfabric: 45937 IOPS; 48168 MB/s; 183071 MiB; 64 threads; 1% CPU; 4s
+NET/libfabric: 47014 IOPS; 49298 MB/s; 277053 MiB; 64 threads; 1% CPU; 6s
+NET/libfabric: 45984 IOPS; 48218 MB/s; 369022 MiB; 64 threads; 2% CPU; 8s
+NET/libfabric: 44944 IOPS; 47127 MB/s; 458866 MiB; 64 threads; 1% CPU; 10s
+NET/libfabric: 47576 IOPS; 49887 MB/s; 553972 MiB; 64 threads; 1% CPU; 12s
+NET/libfabric: 44368 IOPS; 46523 MB/s; 642664 MiB; 64 threads; 1% CPU; 14s
+NET/libfabric: 47765 IOPS; 50085 MB/s; 738195 MiB; 64 threads; 2% CPU; 16s
+NET/libfabric: 46711 IOPS; 48980 MB/s; 831572 MiB; 64 threads; 1% CPU; 18s
+NET/libfabric: 43352 IOPS; 45458 MB/s; 918234 MiB; 64 threads; 2% CPU; 20s
+NET/libfabric: 47929 IOPS; 50257 MB/s; 1014093 MiB; 64 threads; 2% CPU; 22s
+NET/libfabric: 47360 IOPS; 49661 MB/s; 1108767 MiB; 64 threads; 2% CPU; 24s
+NET/libfabric: 45868 IOPS; 48097 MB/s; 1200459 MiB; 64 threads; 2% CPU; 26s
+NET/libfabric: 43223 IOPS; 45322 MB/s; 1286905 MiB; 64 threads; 2% CPU; 28s
+NET/libfabric: 46354 IOPS; 48606 MB/s; 1379568 MiB; 64 threads; 2% CPU; 30s
+NET/libfabric: 49707 IOPS; 52122 MB/s; 1478934 MiB; 64 threads; 2% CPU; 32s
+NET/libfabric: 45436 IOPS; 47643 MB/s; 1569762 MiB; 64 threads; 2% CPU; 34s
+NET/libfabric: 39875 IOPS; 41812 MB/s; 1649513 MiB; 64 threads; 2% CPU; 36s
+NET/libfabric: 50608 IOPS; 53067 MB/s; 1750680 MiB; 64 threads; 2% CPU; 38s
+NET/libfabric: 44539 IOPS; 46703 MB/s; 1839715 MiB; 64 threads; 2% CPU; 40s
+NET/libfabric: 46855 IOPS; 49131 MB/s; 1933425 MiB; 64 threads; 2% CPU; 42s
+NET/libfabric: 49315 IOPS; 51710 MB/s; 2032006 MiB; 64 threads; 2% CPU; 44s
+NET/libfabric: 41169 IOPS; 43168 MB/s; 2114344 MiB; 64 threads; 2% CPU; 46s
+NET/libfabric: 42896 IOPS; 44980 MB/s; 2200095 MiB; 64 threads; 2% CPU; 48s
+NET/libfabric: 44531 IOPS; 46694 MB/s; 2289157 MiB; 64 threads; 2% CPU; 50s
+NET/libfabric: 46092 IOPS; 48331 MB/s; 2381296 MiB; 64 threads; 2% CPU; 52s
+NET/libfabric: 45847 IOPS; 48074 MB/s; 2472991 MiB; 64 threads; 2% CPU; 54s
+NET/libfabric: 45888 IOPS; 48117 MB/s; 2564767 MiB; 64 threads; 2% CPU; 56s
+NET/libfabric: 46259 IOPS; 48506 MB/s; 2657239 MiB; 64 threads; 2% CPU; 58s
+NET/libfabric: 46247 IOPS; 48493 MB/s; 2749733 MiB; 64 threads; 2% CPU; 1m0s
+NET/libfabric: 41740 IOPS; 43767 MB/s; 2833213 MiB; 64 threads; 2% CPU; 1m2s
+NET/libfabric: 46212 IOPS; 48457 MB/s; 2925592 MiB; 64 threads; 2% CPU; 1m4s
+NET/libfabric: 46204 IOPS; 48448 MB/s; 3018000 MiB; 64 threads; 2% CPU; 1m6s
+NET/libfabric: 46196 IOPS; 48440 MB/s; 3110393 MiB; 64 threads; 3% CPU; 1m8s
+NET/libfabric: 46245 IOPS; 48492 MB/s; 3202838 MiB; 64 threads; 2% CPU; 1m10s
+NET/libfabric: 46193 IOPS; 48437 MB/s; 3295179 MiB; 64 threads; 2% CPU; 1m12s
+NET/libfabric: 46228 IOPS; 48474 MB/s; 3387636 MiB; 64 threads; 2% CPU; 1m14s
+NET/libfabric: 46231 IOPS; 48477 MB/s; 3480099 MiB; 64 threads; 2% CPU; 1m16s
+NET/libfabric: 46082 IOPS; 48320 MB/s; 3572263 MiB; 64 threads; 2% CPU; 1m18s
+NET/libfabric: 46285 IOPS; 48533 MB/s; 3664787 MiB; 64 threads; 2% CPU; 1m20s
+NET/libfabric: 46170 IOPS; 48412 MB/s; 3757127 MiB; 64 threads; 2% CPU; 1m22s
+NET/libfabric: 46274 IOPS; 48521 MB/s; 3849675 MiB; 64 threads; 2% CPU; 1m24s
+NET/libfabric: 46266 IOPS; 48514 MB/s; 3942162 MiB; 64 threads; 2% CPU; 1m26s
+0: 14:36:21.206 ERROR: Timed out waiting for data from clients. Timeout: 20s; endpoints: cxi FI_PROTO_CXI: 07465f0200000000 (cxi2), cxi FI_PROTO_CXI: 08c65e0200000000 (cxi3); streams not done: 6 from 03625e0200000000 (received 97375, sent 0 of 549755813887 rounds); WorkerRank: 6
+1: 14:36:21.686 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 97375 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 07465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 03625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 38
+NET/libfabric: 46249 IOPS; 48496 MB/s; 4034661 MiB; 64 threads; 2% CPU; 1m28s
+14:36:22.720 === [ HOST: nid007678:1611 (Rank: 1) ] ===
+  14:36:21.686 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 97375 of 549755813887; server: nid007677:1611; server endpoint: cxi FI_PROTO_CXI: 07465f0200000000 (cxi2); own endpoint: cxi FI_PROTO_CXI: 03625e0200000000 (cxi2) (own interface cxi2); WorkerRank: 38
+=== [ END ] ===
+14:36:38.656 === [ HOST: nid007677:1611 (Rank: 0) ] ===
+  14:36:21.206 ERROR: Timed out waiting for data from clients. Timeout: 20s; endpoints: cxi FI_PROTO_CXI: 07465f0200000000 (cxi2), cxi FI_PROTO_CXI: 08c65e0200000000 (cxi3); streams not done: 6 from 03625e0200000000 (received 97375, sent 0 of 549755813887 rounds); WorkerRank: 6
+=== [ END ] ===
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:37:09.526] error: *** STEP 89634.2 ON nid007677 CANCELLED AT 2026-11-03T14:37:09 DUE to SIGNAL Terminated ***
+[2026-11-03T14:37:09.526] error: *** JOB 89634 ON nid007677 CANCELLED AT 2026-11-03T14:37:09 DUE to SIGNAL Terminated ***
+srun: error: nid007678: task 1: Terminated
+srun: Terminating StepId=89634.2

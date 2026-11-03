@@ -1,0 +1,66 @@
+ISO DATE: 2026-11-02T19:13:56+0100
+LABEL: cxi[0-3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],32" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:16:55+0100
+LABEL: cxi[0-3],16
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],16" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "16" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:20:04+0100
+LABEL: cxi[0-3],8
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],8" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "8" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:23:07+0100
+LABEL: cxi[0-3],4
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],4" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "4" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:26:09+0100
+LABEL: cxi[0-3],2
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],2" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "2" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:29:10+0100
+LABEL: cxi[0-3],1
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],1" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "1" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:32:27+0100
+LABEL: cxi[2-3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[2-3],32" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:35:37+0100
+LABEL: cxi[0],32
+COMMAND LINE: "./elbencho" "--label" "cxi[0],32" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:38:41+0100
+LABEL: cxi[1],32
+COMMAND LINE: "./elbencho" "--label" "cxi[1],32" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:41:46+0100
+LABEL: cxi[2],32
+COMMAND LINE: "./elbencho" "--label" "cxi[2],32" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-02T19:44:52+0100
+LABEL: cxi[3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[3],32" "--resfile" "results.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid006006" "--clients" "nid007683,nid007684" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "180" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========

@@ -1,0 +1,160 @@
+ISO DATE: 2026-11-03T14:34:10+0100
+LABEL: cxi[0-3],1
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],1" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "1" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :        6718        6718
+            MB/s send        :        7044        7044
+            MiB send         :     1007958     1007958
+            Graph MB/s       :  12K ┤            ⡄⢀⡠⠤⠤⠤⡄      ⢰⠤⢄⠤⠤⠤⠤⡄         ⣀
+                                    │⢠⡄  ⡀⢀⠎⢆    ⡟⠁    ⡇      ⡎      ⢇         ⡇
+                                    │⠃⡇  ⡟⠎ ⢸    ⡇     ⡇     ⢀⠇      ⢸        ⢸
+                                    │ ⢣  ⡇  ⢸   ⢠⠃     ⢇     ⢸       ⠘⡄       ⢸
+                                    │ ⢸ ⢸    ⡇  ⢸      ⢸  ⡰⡜⣄⡜        ⢣       ⡎
+                                    │ ⠘⠉⢺    ⡧⡀ ⢸      ⢸ ⢰⠁ ⠁⠁         ⠣⠒⠤⠤⠊⠉⠉⠁
+                                    │         ⠱⣀⠞      ⢸ ⡎
+                                    │          ⠁       ⠈⠉⠁
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   150s
+---
+
+ISO DATE: 2026-11-03T14:37:10+0100
+LABEL: cxi[0-3],2
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],2" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "2" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :        7560        7560
+            MB/s send        :        7927        7927
+            MiB send         :     1134256     1134256
+            Graph MB/s       :  14K ┤                    ⢠    ⡀⣀⣀⡠⡄⡠⣀
+                                    │⠱⢄ ⣄⡀⢰⠑⡆            ⢸⡀  ⡰⠉   ⠘⠁⠉⡆ ⡰⡀
+                                    │  ⠉⠈⢣⠇ ⢣            ⡜⡇ ⡜        ⠱⡜ ⢇
+                                    │    ⠈  ⢸       ⣠ ⡀  ⡇⠱⣰⠁           ⢸
+                                    │       ⠘⣄⢆    ⡜ ⠳⢇  ⡇               ⡇
+                                    │        ⠟⠘⠢⠤⢢⠴⠁  ⢸ ⢠⠃               ⢣
+                                    │                 ⠈⠦⠼                ⠘⠢⠢⠢⠒⠒⡆
+                                    │                                          ⠸
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   152s
+---
+
+ISO DATE: 2026-11-03T14:40:10+0100
+LABEL: cxi[0-3],4
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],4" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "4" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.030s   2m30.052s
+            IOPS send        :       13249       13247
+            MB/s send        :       13893       13891
+            MiB send         :     1987856     1987856
+            Graph MB/s       :  19K ┤⡠⡆                               ⢠⡀   ⡤⠒⢄⢄
+                                    │ ⢸⢀⡀⡤⣠⡀              ⣀  ⡔⠤⡀      ⢸⠑⠔⠒⠊   ⢸
+                                    │  ⠁⠈ ⠁⠑⠤⠢⡀⣆⡰⡄⢀⠤⢄⡀⢀⡀⡠⡜⠈⣆⢰⠁ ⠘⣄ ⡀   ⡇       ⢸
+                                    │         ⠘⠈ ⠘⠁ ⠈⠈⠁⠈    ⠁   ⠁⠉⠈⠑⢢⠔⠃       ⠘⡄
+                                    │                                          ⡇
+                                    │                                          ⡇
+                                    │                                          ⡇
+                                    │                                          ⢸
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   154s
+---
+
+ISO DATE: 2026-11-03T14:43:10+0100
+LABEL: cxi[0-3],8
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],8" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "8" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.030s   2m30.032s
+            IOPS send        :       23449       23449
+            MB/s send        :       24588       24588
+            MiB send         :     3518148     3518148
+            Graph MB/s       :  29K ┤   ⡀⣄⢠⠢⡰⠹⡀⡄⣰          ⡤⡀ ⣄⢀⣀⢀⣀          ⢠⡄
+                                    │⡸⠉⠊⠈ ⠃ ⠁ ⢧⠻⠃⡧⡠⠜⠉⠉⠉⠉⢣ ⡜ ⠈⠉ ⠁ ⠁ ⠉⠢⡀  ⢀⣀⣀⣀⣠⠃⡇
+                                    │⠃        ⠈          ⠉           ⠑⠒⠒⠊     ⡇
+                                    │                                         ⢱
+                                    │                                         ⢸
+                                    │                                         ⢸
+                                    │                                         ⢸
+                                    │                                          ⣇
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   156s
+---
+
+ISO DATE: 2026-11-03T14:46:10+0100
+LABEL: cxi[0-3],16
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],16" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "16" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :       51708       51708
+            MB/s send        :       54219       54219
+            MiB send         :     7757821     7757821
+            Graph MB/s       :  62K ┤⢀⣀ ⢀⡀⡤⢄⢀⢦⢰⣀⡄                   ⢠⠋⠒⠒⢄   ⡀
+                                    │⡸ ⠉⠊⠱⠁ ⠋⠈⡎⠋⠸⠒⠉⠉⠉⠒⠢⠢⠒⠒⠊⠑⠒⠒⠊⠊⠑⠊⠒⠒⠊    ⠉⠉⠉⡇
+                                    │⠇                                      ⡇
+                                    │                                       ⢣
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                        ⣇⣀⣀
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   164s
+---
+
+ISO DATE: 2026-11-03T14:49:11+0100
+LABEL: cxi[0-3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[0-3],32" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+ISO DATE: 2026-11-03T14:52:10+0100
+LABEL: cxi[0-1],32
+COMMAND LINE: "./elbencho" "--label" "cxi[0-1],32" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :       46201       46201
+            MB/s send        :       48445       48445
+            MiB send         :     6931686     6931686
+            Graph MB/s       :  54K ┤⢀⣀⢠⣠⡀⡤⢄⢀⢆⢸⣄⡆ ⣀⣀⡀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀
+                                    │⠁ ⠁⠁⠘  ⠋⠘⡇⠁⠸⠊  ⠘⠁                      ⡇
+                                    │                                       ⡇
+                                    │                                       ⢣
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                        ⣇⣀⣀
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   164s
+---
+
+ISO DATE: 2026-11-03T14:55:10+0100
+LABEL: cxi[2-3],32
+COMMAND LINE: "./elbencho" "--label" "cxi[2-3],32" "--resfile" "results-89635.txt" "--netprov" "cxi" "--netengine" "libfabric" "--netbench" "--servers" "nid007680" "--clients" "nid007681" "-t" "32" "--sendsize" "1M" "--recvsize" "0" "--timelimit" "150" "--base10" "--graph" "--live1n" 
+
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabr Elapsed time     :   2m30.030s   2m30.031s
+            IOPS send        :       46130       46130
+            MB/s send        :       48371       48371
+            MiB send         :     6920999     6920999
+            Graph MB/s       :  54K ┤⢀⣀⢠⣠⡀⡤⡀⢀⢆⢸⣄⡆ ⣀⣀⡀⣀⣀⣀⣀⣀⣀⣀⣀⣀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀
+                                    │⠁ ⠁⠁⠘ ⠘⠁⠘⡇⠁⠸⠊  ⠱⠁        ⠁            ⢸
+                                    │                                      ⢸
+                                    │                                      ⠘⡄
+                                    │                                       ⡇
+                                    │                                       ⡇
+                                    │                                       ⡇
+                                    │                                       ⢸⣀⣀⣀
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   166s
+---
+

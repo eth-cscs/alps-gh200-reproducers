@@ -1,0 +1,955 @@
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:44582'; ISO Date: 2026-11-03T14:34:10+0100
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:34254'; ISO Date: 2026-11-03T14:34:10+0100
+0: LABEL: cxi[0-3],1
+0: 
+1: LABEL: cxi[0-3],1
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 8165 IOPS; 8561 MB/s; 16330 MiB; 2 threads; 0% CPU; 2s
+NET/libfabric: 9223 IOPS; 9671 MB/s; 34767 MiB; 2 threads; 0% CPU; 4s
+NET/libfabric: 9221 IOPS; 9669 MB/s; 53210 MiB; 2 threads; 0% CPU; 6s
+NET/libfabric: 3738 IOPS; 3920 MB/s; 60687 MiB; 2 threads; 0% CPU; 8s
+NET/libfabric: 3939 IOPS; 4130 MB/s; 68562 MiB; 2 threads; 0% CPU; 10s
+NET/libfabric: 3807 IOPS; 3992 MB/s; 76177 MiB; 2 threads; 0% CPU; 12s
+NET/libfabric: 2970 IOPS; 3114 MB/s; 82115 MiB; 2 threads; 0% CPU; 14s
+NET/libfabric: 8719 IOPS; 9142 MB/s; 99545 MiB; 2 threads; 0% CPU; 16s
+NET/libfabric: 8071 IOPS; 8463 MB/s; 115688 MiB; 2 threads; 0% CPU; 18s
+NET/libfabric: 7694 IOPS; 8068 MB/s; 131069 MiB; 2 threads; 0% CPU; 20s
+NET/libfabric: 8863 IOPS; 9294 MB/s; 148796 MiB; 2 threads; 0% CPU; 22s
+NET/libfabric: 9826 IOPS; 10304 MB/s; 168440 MiB; 2 threads; 0% CPU; 24s
+NET/libfabric: 9469 IOPS; 9929 MB/s; 187379 MiB; 2 threads; 0% CPU; 26s
+NET/libfabric: 8031 IOPS; 8421 MB/s; 203442 MiB; 2 threads; 0% CPU; 28s
+NET/libfabric: 3112 IOPS; 3263 MB/s; 209663 MiB; 2 threads; 0% CPU; 30s
+NET/libfabric: 3348 IOPS; 3511 MB/s; 216357 MiB; 2 threads; 0% CPU; 32s
+NET/libfabric: 2524 IOPS; 2646 MB/s; 221405 MiB; 2 threads; 0% CPU; 34s
+NET/libfabric: 1066 IOPS; 1117 MB/s; 223537 MiB; 2 threads; 0% CPU; 36s
+NET/libfabric: 1628 IOPS; 1707 MB/s; 226792 MiB; 2 threads; 0% CPU; 38s
+NET/libfabric: 2068 IOPS; 2168 MB/s; 230926 MiB; 2 threads; 0% CPU; 40s
+NET/libfabric: 2154 IOPS; 2258 MB/s; 235232 MiB; 2 threads; 0% CPU; 42s
+NET/libfabric: 10645 IOPS; 11162 MB/s; 256512 MiB; 2 threads; 0% CPU; 44s
+NET/libfabric: 9594 IOPS; 10060 MB/s; 275700 MiB; 2 threads; 0% CPU; 46s
+NET/libfabric: 9982 IOPS; 10467 MB/s; 295655 MiB; 2 threads; 0% CPU; 48s
+NET/libfabric: 10408 IOPS; 10914 MB/s; 316472 MiB; 2 threads; 0% CPU; 50s
+NET/libfabric: 10762 IOPS; 11285 MB/s; 337997 MiB; 2 threads; 0% CPU; 52s
+NET/libfabric: 10821 IOPS; 11347 MB/s; 359630 MiB; 2 threads; 0% CPU; 54s
+NET/libfabric: 10855 IOPS; 11382 MB/s; 381341 MiB; 2 threads; 0% CPU; 56s
+NET/libfabric: 10824 IOPS; 11350 MB/s; 402990 MiB; 2 threads; 0% CPU; 58s
+NET/libfabric: 10745 IOPS; 11266 MB/s; 424480 MiB; 2 threads; 0% CPU; 1m0s
+NET/libfabric: 10758 IOPS; 11280 MB/s; 445996 MiB; 2 threads; 0% CPU; 1m2s
+NET/libfabric: 10737 IOPS; 11258 MB/s; 467460 MiB; 2 threads; 0% CPU; 1m4s
+NET/libfabric: 1185 IOPS; 1242 MB/s; 469829 MiB; 2 threads; 0% CPU; 1m6s
+NET/libfabric: 1046 IOPS; 1096 MB/s; 471921 MiB; 2 threads; 0% CPU; 1m8s
+NET/libfabric: 1018 IOPS; 1067 MB/s; 473957 MiB; 2 threads; 0% CPU; 1m10s
+NET/libfabric: 1039 IOPS; 1089 MB/s; 476035 MiB; 2 threads; 0% CPU; 1m12s
+NET/libfabric: 3656 IOPS; 3833 MB/s; 483344 MiB; 2 threads; 0% CPU; 1m14s
+NET/libfabric: 5042 IOPS; 5287 MB/s; 493429 MiB; 2 threads; 0% CPU; 1m16s
+NET/libfabric: 4508 IOPS; 4727 MB/s; 502442 MiB; 2 threads; 0% CPU; 1m18s
+NET/libfabric: 5501 IOPS; 5768 MB/s; 513445 MiB; 2 threads; 0% CPU; 1m20s
+NET/libfabric: 3906 IOPS; 4096 MB/s; 521254 MiB; 2 threads; 0% CPU; 1m22s
+NET/libfabric: 4394 IOPS; 4607 MB/s; 530042 MiB; 2 threads; 0% CPU; 1m24s
+NET/libfabric: 4084 IOPS; 4282 MB/s; 538206 MiB; 2 threads; 0% CPU; 1m26s
+NET/libfabric: 6387 IOPS; 6697 MB/s; 550974 MiB; 2 threads; 0% CPU; 1m28s
+NET/libfabric: 10913 IOPS; 11443 MB/s; 572801 MiB; 2 threads; 0% CPU; 1m30s
+NET/libfabric: 10885 IOPS; 11414 MB/s; 594562 MiB; 2 threads; 0% CPU; 1m32s
+NET/libfabric: 10803 IOPS; 11328 MB/s; 616169 MiB; 2 threads; 1% CPU; 1m34s
+NET/libfabric: 10597 IOPS; 11112 MB/s; 637354 MiB; 2 threads; 0% CPU; 1m36s
+NET/libfabric: 10482 IOPS; 10991 MB/s; 658309 MiB; 2 threads; 0% CPU; 1m38s
+NET/libfabric: 10629 IOPS; 11145 MB/s; 679568 MiB; 2 threads; 0% CPU; 1m40s
+NET/libfabric: 10699 IOPS; 11219 MB/s; 700967 MiB; 2 threads; 0% CPU; 1m42s
+NET/libfabric: 10640 IOPS; 11156 MB/s; 722247 MiB; 2 threads; 0% CPU; 1m44s
+NET/libfabric: 10607 IOPS; 11122 MB/s; 743451 MiB; 2 threads; 0% CPU; 1m46s
+NET/libfabric: 10571 IOPS; 11084 MB/s; 764583 MiB; 2 threads; 0% CPU; 1m48s
+NET/libfabric: 10654 IOPS; 11171 MB/s; 785881 MiB; 2 threads; 0% CPU; 1m50s
+NET/libfabric: 10690 IOPS; 11209 MB/s; 807251 MiB; 2 threads; 0% CPU; 1m52s
+NET/libfabric: 10631 IOPS; 11147 MB/s; 828513 MiB; 2 threads; 0% CPU; 1m54s
+NET/libfabric: 6977 IOPS; 7316 MB/s; 842461 MiB; 2 threads; 0% CPU; 1m56s
+NET/libfabric: 4258 IOPS; 4465 MB/s; 850978 MiB; 2 threads; 0% CPU; 1m58s
+NET/libfabric: 3796 IOPS; 3980 MB/s; 858570 MiB; 2 threads; 0% CPU; 2m0s
+NET/libfabric: 3328 IOPS; 3489 MB/s; 865226 MiB; 2 threads; 0% CPU; 2m2s
+NET/libfabric: 3700 IOPS; 3880 MB/s; 872627 MiB; 2 threads; 0% CPU; 2m4s
+NET/libfabric: 3718 IOPS; 3898 MB/s; 880060 MiB; 2 threads; 0% CPU; 2m6s
+NET/libfabric: 3286 IOPS; 3445 MB/s; 886629 MiB; 2 threads; 0% CPU; 2m8s
+NET/libfabric: 3224 IOPS; 3381 MB/s; 893078 MiB; 2 threads; 0% CPU; 2m10s
+NET/libfabric: 3420 IOPS; 3586 MB/s; 899915 MiB; 2 threads; 0% CPU; 2m12s
+NET/libfabric: 3651 IOPS; 3828 MB/s; 907218 MiB; 2 threads; 0% CPU; 2m14s
+NET/libfabric: 4031 IOPS; 4227 MB/s; 915277 MiB; 2 threads; 0% CPU; 2m16s
+NET/libfabric: 3925 IOPS; 4116 MB/s; 923125 MiB; 2 threads; 0% CPU; 2m18s
+NET/libfabric: 4128 IOPS; 4329 MB/s; 931382 MiB; 2 threads; 0% CPU; 2m20s
+NET/libfabric: 3897 IOPS; 4086 MB/s; 939176 MiB; 2 threads; 0% CPU; 2m22s
+NET/libfabric: 4060 IOPS; 4257 MB/s; 947297 MiB; 2 threads; 0% CPU; 2m24s
+NET/libfabric: 7101 IOPS; 7446 MB/s; 961500 MiB; 2 threads; 0% CPU; 2m26s
+NET/libfabric: 10333 IOPS; 10835 MB/s; 982156 MiB; 2 threads; 0% CPU; 2m28s
+NET/libfabric: 10321 IOPS; 10822 MB/s; 1002798 MiB; 2 threads; 0% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+1:             IOPS send        :        6718        6718
+1:             MB/s send        :        7044        7044
+1:             MiB send         :     1007958     1007958
+1: ---
+1: 
+0: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+0:             IOPS recv        :        6718        6718
+0:             MB/s recv        :        7044        7044
+0:             MiB recv         :     1007958     1007958
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :        6718        6718
+            MB/s send        :        7044        7044
+            MiB send         :     1007958     1007958
+            Graph MB/s       :  12K ┤            ⡄⢀⡠⠤⠤⠤⡄      ⢰⠤⢄⠤⠤⠤⠤⡄         ⣀
+                                    │⢠⡄  ⡀⢀⠎⢆    ⡟⠁    ⡇      ⡎      ⢇         ⡇
+                                    │⠃⡇  ⡟⠎ ⢸    ⡇     ⡇     ⢀⠇      ⢸        ⢸
+                                    │ ⢣  ⡇  ⢸   ⢠⠃     ⢇     ⢸       ⠘⡄       ⢸
+                                    │ ⢸ ⢸    ⡇  ⢸      ⢸  ⡰⡜⣄⡜        ⢣       ⡎
+                                    │ ⠘⠉⢺    ⡧⡀ ⢸      ⢸ ⢰⠁ ⠁⠁         ⠣⠒⠤⠤⠊⠉⠉⠁
+                                    │         ⠱⣀⠞      ⢸ ⡎
+                                    │          ⠁       ⠈⠉⠁
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   150s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+14:37:09.592 ERROR: Service interruption/termination requires a host list.
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:37:09.609] error: *** STEP 89635.0 ON nid007680 CANCELLED AT 2026-11-03T14:37:09 DUE to SIGNAL Killed ***
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007680: task 0: Killed
+srun: Terminating StepId=89635.0
+srun: error: nid007681: task 1: Killed
+srun: Step created for StepId=89635.1
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:52086'; ISO Date: 2026-11-03T14:37:10+0100
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:46088'; ISO Date: 2026-11-03T14:37:10+0100
+0: LABEL: cxi[0-3],2
+0: 
+1: LABEL: cxi[0-3],2
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 11671 IOPS; 12238 MB/s; 23343 MiB; 4 threads; 0% CPU; 2s
+NET/libfabric: 10576 IOPS; 11090 MB/s; 44486 MiB; 4 threads; 0% CPU; 4s
+NET/libfabric: 10866 IOPS; 11394 MB/s; 66208 MiB; 4 threads; 0% CPU; 6s
+NET/libfabric: 10507 IOPS; 11017 MB/s; 87212 MiB; 4 threads; 0% CPU; 8s
+NET/libfabric: 10028 IOPS; 10515 MB/s; 107269 MiB; 4 threads; 0% CPU; 10s
+NET/libfabric: 10634 IOPS; 11150 MB/s; 128527 MiB; 4 threads; 0% CPU; 12s
+NET/libfabric: 9793 IOPS; 10268 MB/s; 148113 MiB; 4 threads; 0% CPU; 14s
+NET/libfabric: 10251 IOPS; 10749 MB/s; 168616 MiB; 4 threads; 0% CPU; 16s
+NET/libfabric: 8310 IOPS; 8713 MB/s; 185228 MiB; 4 threads; 0% CPU; 18s
+NET/libfabric: 9649 IOPS; 10118 MB/s; 204517 MiB; 4 threads; 0% CPU; 20s
+NET/libfabric: 11368 IOPS; 11920 MB/s; 227253 MiB; 4 threads; 0% CPU; 22s
+NET/libfabric: 11794 IOPS; 12367 MB/s; 250831 MiB; 4 threads; 0% CPU; 24s
+NET/libfabric: 11132 IOPS; 11672 MB/s; 273084 MiB; 4 threads; 0% CPU; 26s
+NET/libfabric: 7241 IOPS; 7592 MB/s; 287566 MiB; 4 threads; 0% CPU; 28s
+NET/libfabric: 3938 IOPS; 4130 MB/s; 295440 MiB; 4 threads; 0% CPU; 30s
+NET/libfabric: 4910 IOPS; 5149 MB/s; 305257 MiB; 4 threads; 0% CPU; 32s
+NET/libfabric: 6118 IOPS; 6415 MB/s; 317487 MiB; 4 threads; 0% CPU; 34s
+NET/libfabric: 4194 IOPS; 4398 MB/s; 325876 MiB; 4 threads; 0% CPU; 36s
+NET/libfabric: 4335 IOPS; 4545 MB/s; 334542 MiB; 4 threads; 0% CPU; 38s
+NET/libfabric: 3892 IOPS; 4081 MB/s; 342326 MiB; 4 threads; 0% CPU; 40s
+NET/libfabric: 4085 IOPS; 4283 MB/s; 350496 MiB; 4 threads; 0% CPU; 42s
+NET/libfabric: 4168 IOPS; 4370 MB/s; 358833 MiB; 4 threads; 0% CPU; 44s
+NET/libfabric: 3540 IOPS; 3712 MB/s; 365911 MiB; 4 threads; 0% CPU; 46s
+NET/libfabric: 3698 IOPS; 3878 MB/s; 373305 MiB; 4 threads; 0% CPU; 48s
+NET/libfabric: 4088 IOPS; 4287 MB/s; 381478 MiB; 4 threads; 0% CPU; 50s
+NET/libfabric: 5434 IOPS; 5698 MB/s; 392347 MiB; 4 threads; 0% CPU; 52s
+NET/libfabric: 6366 IOPS; 6675 MB/s; 405079 MiB; 4 threads; 0% CPU; 54s
+NET/libfabric: 7204 IOPS; 7554 MB/s; 419481 MiB; 4 threads; 0% CPU; 56s
+NET/libfabric: 6119 IOPS; 6416 MB/s; 431719 MiB; 4 threads; 0% CPU; 58s
+NET/libfabric: 5727 IOPS; 6005 MB/s; 443168 MiB; 4 threads; 0% CPU; 1m0s
+NET/libfabric: 6686 IOPS; 7010 MB/s; 456540 MiB; 4 threads; 0% CPU; 1m2s
+NET/libfabric: 3280 IOPS; 3439 MB/s; 463100 MiB; 4 threads; 0% CPU; 1m4s
+NET/libfabric: 2224 IOPS; 2332 MB/s; 467548 MiB; 4 threads; 0% CPU; 1m6s
+NET/libfabric: 2228 IOPS; 2336 MB/s; 472003 MiB; 4 threads; 0% CPU; 1m8s
+NET/libfabric: 2229 IOPS; 2337 MB/s; 476460 MiB; 4 threads; 0% CPU; 1m10s
+NET/libfabric: 6122 IOPS; 6419 MB/s; 488704 MiB; 4 threads; 0% CPU; 1m12s
+NET/libfabric: 12451 IOPS; 13055 MB/s; 513606 MiB; 4 threads; 0% CPU; 1m14s
+NET/libfabric: 8766 IOPS; 9192 MB/s; 531131 MiB; 4 threads; 0% CPU; 1m16s
+NET/libfabric: 7256 IOPS; 7609 MB/s; 545637 MiB; 4 threads; 0% CPU; 1m18s
+NET/libfabric: 6892 IOPS; 7227 MB/s; 559422 MiB; 4 threads; 0% CPU; 1m20s
+NET/libfabric: 6891 IOPS; 7225 MB/s; 573204 MiB; 4 threads; 0% CPU; 1m22s
+NET/libfabric: 9191 IOPS; 9637 MB/s; 591577 MiB; 4 threads; 0% CPU; 1m24s
+NET/libfabric: 10441 IOPS; 10948 MB/s; 612459 MiB; 4 threads; 0% CPU; 1m26s
+NET/libfabric: 10866 IOPS; 11394 MB/s; 634192 MiB; 4 threads; 0% CPU; 1m28s
+NET/libfabric: 11848 IOPS; 12424 MB/s; 657889 MiB; 4 threads; 0% CPU; 1m30s
+NET/libfabric: 11784 IOPS; 12356 MB/s; 681458 MiB; 4 threads; 0% CPU; 1m32s
+NET/libfabric: 12212 IOPS; 12805 MB/s; 705882 MiB; 4 threads; 0% CPU; 1m34s
+NET/libfabric: 11851 IOPS; 12426 MB/s; 729584 MiB; 4 threads; 0% CPU; 1m36s
+NET/libfabric: 12060 IOPS; 12645 MB/s; 753692 MiB; 4 threads; 0% CPU; 1m38s
+NET/libfabric: 12141 IOPS; 12730 MB/s; 777974 MiB; 4 threads; 0% CPU; 1m40s
+NET/libfabric: 12309 IOPS; 12907 MB/s; 802581 MiB; 4 threads; 0% CPU; 1m42s
+NET/libfabric: 12471 IOPS; 13077 MB/s; 827524 MiB; 4 threads; 0% CPU; 1m44s
+NET/libfabric: 11207 IOPS; 11751 MB/s; 849927 MiB; 4 threads; 0% CPU; 1m46s
+NET/libfabric: 11845 IOPS; 12420 MB/s; 873606 MiB; 4 threads; 0% CPU; 1m48s
+NET/libfabric: 12474 IOPS; 13080 MB/s; 898543 MiB; 4 threads; 0% CPU; 1m50s
+NET/libfabric: 11708 IOPS; 12277 MB/s; 921960 MiB; 4 threads; 0% CPU; 1m52s
+NET/libfabric: 12268 IOPS; 12864 MB/s; 946484 MiB; 4 threads; 0% CPU; 1m54s
+NET/libfabric: 9129 IOPS; 9573 MB/s; 964734 MiB; 4 threads; 0% CPU; 1m56s
+NET/libfabric: 8482 IOPS; 8894 MB/s; 981698 MiB; 4 threads; 0% CPU; 1m58s
+NET/libfabric: 10010 IOPS; 10496 MB/s; 1001718 MiB; 4 threads; 0% CPU; 2m0s
+NET/libfabric: 10301 IOPS; 10801 MB/s; 1022310 MiB; 4 threads; 0% CPU; 2m2s
+NET/libfabric: 11146 IOPS; 11687 MB/s; 1044591 MiB; 4 threads; 0% CPU; 2m4s
+NET/libfabric: 9262 IOPS; 9712 MB/s; 1063107 MiB; 4 threads; 0% CPU; 2m6s
+NET/libfabric: 8023 IOPS; 8413 MB/s; 1079154 MiB; 4 threads; 0% CPU; 2m8s
+NET/libfabric: 2419 IOPS; 2537 MB/s; 1083993 MiB; 4 threads; 0% CPU; 2m10s
+NET/libfabric: 2541 IOPS; 2665 MB/s; 1089074 MiB; 4 threads; 0% CPU; 2m12s
+NET/libfabric: 2264 IOPS; 2374 MB/s; 1093603 MiB; 4 threads; 0% CPU; 2m14s
+NET/libfabric: 2525 IOPS; 2648 MB/s; 1098654 MiB; 4 threads; 0% CPU; 2m16s
+NET/libfabric: 2361 IOPS; 2476 MB/s; 1103375 MiB; 4 threads; 0% CPU; 2m18s
+NET/libfabric: 2544 IOPS; 2667 MB/s; 1108461 MiB; 4 threads; 0% CPU; 2m20s
+NET/libfabric: 2364 IOPS; 2479 MB/s; 1113187 MiB; 4 threads; 0% CPU; 2m22s
+NET/libfabric: 2576 IOPS; 2701 MB/s; 1118339 MiB; 4 threads; 0% CPU; 2m24s
+NET/libfabric: 2523 IOPS; 2646 MB/s; 1123386 MiB; 4 threads; 0% CPU; 2m26s
+NET/libfabric: 2496 IOPS; 2618 MB/s; 1128377 MiB; 4 threads; 0% CPU; 2m28s
+NET/libfabric: 2398 IOPS; 2515 MB/s; 1133174 MiB; 4 threads; 0% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+1:             IOPS send        :        7560        7560
+1:             MB/s send        :        7927        7927
+1:             MiB send         :     1134256     1134256
+1: ---
+1: 
+NET/libfabric: 541 IOPS; 567 MB/s; 1134256 MiB; 2 threads; 0% CPU; 2m32s
+0: NET/libfabr Elapsed time     :   2m30.049s   2m30.049s
+0:             IOPS recv        :        7559        7559
+0:             MB/s recv        :        7926        7926
+0:             MiB recv         :     1134258     1134258
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :        7560        7560
+            MB/s send        :        7927        7927
+            MiB send         :     1134256     1134256
+            Graph MB/s       :  14K ┤                    ⢠    ⡀⣀⣀⡠⡄⡠⣀
+                                    │⠱⢄ ⣄⡀⢰⠑⡆            ⢸⡀  ⡰⠉   ⠘⠁⠉⡆ ⡰⡀
+                                    │  ⠉⠈⢣⠇ ⢣            ⡜⡇ ⡜        ⠱⡜ ⢇
+                                    │    ⠈  ⢸       ⣠ ⡀  ⡇⠱⣰⠁           ⢸
+                                    │       ⠘⣄⢆    ⡜ ⠳⢇  ⡇               ⡇
+                                    │        ⠟⠘⠢⠤⢢⠴⠁  ⢸ ⢠⠃               ⢣
+                                    │                 ⠈⠦⠼                ⠘⠢⠢⠢⠒⠒⡆
+                                    │                                          ⠸
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   152s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+14:40:09.609 ERROR: Service interruption/termination requires a host list.
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:40:09.617] error: *** STEP 89635.1 ON nid007680 CANCELLED AT 2026-11-03T14:40:09 DUE to SIGNAL Killed ***
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007681: task 1: Killed
+srun: Terminating StepId=89635.1
+srun: error: nid007680: task 0: Killed
+srun: Step created for StepId=89635.2
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:53268'; ISO Date: 2026-11-03T14:40:10+0100
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:35534'; ISO Date: 2026-11-03T14:40:10+0100
+0: LABEL: cxi[0-3],4
+0: 
+1: LABEL: cxi[0-3],4
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 16144 IOPS; 16928 MB/s; 32288 MiB; 8 threads; 0% CPU; 2s
+NET/libfabric: 16877 IOPS; 17697 MB/s; 66026 MiB; 8 threads; 0% CPU; 4s
+NET/libfabric: 17351 IOPS; 18194 MB/s; 100711 MiB; 8 threads; 0% CPU; 6s
+NET/libfabric: 13991 IOPS; 14671 MB/s; 128694 MiB; 8 threads; 0% CPU; 8s
+NET/libfabric: 13428 IOPS; 14080 MB/s; 155537 MiB; 8 threads; 0% CPU; 10s
+NET/libfabric: 14229 IOPS; 14920 MB/s; 183982 MiB; 8 threads; 0% CPU; 12s
+NET/libfabric: 13363 IOPS; 14012 MB/s; 210708 MiB; 8 threads; 0% CPU; 14s
+NET/libfabric: 14549 IOPS; 15256 MB/s; 239792 MiB; 8 threads; 0% CPU; 16s
+NET/libfabric: 14640 IOPS; 15351 MB/s; 269072 MiB; 8 threads; 0% CPU; 18s
+NET/libfabric: 13347 IOPS; 13995 MB/s; 295766 MiB; 8 threads; 0% CPU; 20s
+NET/libfabric: 14440 IOPS; 15141 MB/s; 324646 MiB; 8 threads; 0% CPU; 22s
+NET/libfabric: 13683 IOPS; 14347 MB/s; 352012 MiB; 8 threads; 0% CPU; 24s
+NET/libfabric: 13145 IOPS; 13784 MB/s; 378290 MiB; 8 threads; 0% CPU; 26s
+NET/libfabric: 12326 IOPS; 12925 MB/s; 402931 MiB; 8 threads; 0% CPU; 28s
+NET/libfabric: 13048 IOPS; 13681 MB/s; 429027 MiB; 8 threads; 2% CPU; 30s
+NET/libfabric: 12244 IOPS; 12839 MB/s; 453504 MiB; 8 threads; 0% CPU; 32s
+NET/libfabric: 11691 IOPS; 12259 MB/s; 476876 MiB; 8 threads; 0% CPU; 34s
+NET/libfabric: 10288 IOPS; 10787 MB/s; 497452 MiB; 8 threads; 0% CPU; 36s
+NET/libfabric: 13138 IOPS; 13776 MB/s; 523728 MiB; 8 threads; 0% CPU; 38s
+NET/libfabric: 11231 IOPS; 11776 MB/s; 546179 MiB; 8 threads; 0% CPU; 40s
+NET/libfabric: 11944 IOPS; 12524 MB/s; 570056 MiB; 8 threads; 0% CPU; 42s
+NET/libfabric: 12587 IOPS; 13198 MB/s; 595218 MiB; 8 threads; 0% CPU; 44s
+NET/libfabric: 10534 IOPS; 11046 MB/s; 616277 MiB; 8 threads; 0% CPU; 46s
+NET/libfabric: 11299 IOPS; 11848 MB/s; 638876 MiB; 8 threads; 0% CPU; 48s
+NET/libfabric: 11693 IOPS; 12261 MB/s; 662251 MiB; 8 threads; 0% CPU; 50s
+NET/libfabric: 12375 IOPS; 12976 MB/s; 687001 MiB; 8 threads; 0% CPU; 52s
+NET/libfabric: 12356 IOPS; 12956 MB/s; 711714 MiB; 8 threads; 0% CPU; 54s
+NET/libfabric: 12350 IOPS; 12950 MB/s; 736402 MiB; 8 threads; 0% CPU; 56s
+NET/libfabric: 11313 IOPS; 11863 MB/s; 759018 MiB; 8 threads; 0% CPU; 58s
+NET/libfabric: 11449 IOPS; 12005 MB/s; 781917 MiB; 8 threads; 0% CPU; 1m0s
+NET/libfabric: 11269 IOPS; 11816 MB/s; 804455 MiB; 8 threads; 0% CPU; 1m2s
+NET/libfabric: 11436 IOPS; 11992 MB/s; 827317 MiB; 8 threads; 0% CPU; 1m4s
+NET/libfabric: 11472 IOPS; 12029 MB/s; 850262 MiB; 8 threads; 0% CPU; 1m6s
+NET/libfabric: 11395 IOPS; 11949 MB/s; 873042 MiB; 8 threads; 0% CPU; 1m8s
+NET/libfabric: 11875 IOPS; 12451 MB/s; 896792 MiB; 8 threads; 0% CPU; 1m10s
+NET/libfabric: 12067 IOPS; 12653 MB/s; 920915 MiB; 8 threads; 0% CPU; 1m12s
+NET/libfabric: 11840 IOPS; 12415 MB/s; 944595 MiB; 8 threads; 0% CPU; 1m14s
+NET/libfabric: 13406 IOPS; 14057 MB/s; 971395 MiB; 8 threads; 0% CPU; 1m16s
+NET/libfabric: 14231 IOPS; 14922 MB/s; 999857 MiB; 8 threads; 0% CPU; 1m18s
+NET/libfabric: 11675 IOPS; 12243 MB/s; 1023197 MiB; 8 threads; 0% CPU; 1m20s
+NET/libfabric: 11686 IOPS; 12253 MB/s; 1046569 MiB; 8 threads; 0% CPU; 1m22s
+NET/libfabric: 11194 IOPS; 11737 MB/s; 1068946 MiB; 8 threads; 0% CPU; 1m24s
+NET/libfabric: 11697 IOPS; 12265 MB/s; 1092341 MiB; 8 threads; 0% CPU; 1m26s
+NET/libfabric: 14452 IOPS; 15154 MB/s; 1121231 MiB; 8 threads; 0% CPU; 1m28s
+NET/libfabric: 15479 IOPS; 16230 MB/s; 1152189 MiB; 8 threads; 0% CPU; 1m30s
+NET/libfabric: 14456 IOPS; 15158 MB/s; 1181101 MiB; 8 threads; 0% CPU; 1m32s
+NET/libfabric: 14464 IOPS; 15166 MB/s; 1210015 MiB; 8 threads; 0% CPU; 1m34s
+NET/libfabric: 13399 IOPS; 14049 MB/s; 1236813 MiB; 8 threads; 0% CPU; 1m36s
+NET/libfabric: 11248 IOPS; 11795 MB/s; 1259299 MiB; 8 threads; 0% CPU; 1m38s
+NET/libfabric: 11479 IOPS; 12036 MB/s; 1282246 MiB; 8 threads; 0% CPU; 1m40s
+NET/libfabric: 11243 IOPS; 11789 MB/s; 1304732 MiB; 8 threads; 0% CPU; 1m42s
+NET/libfabric: 11075 IOPS; 11613 MB/s; 1326883 MiB; 8 threads; 0% CPU; 1m44s
+NET/libfabric: 11494 IOPS; 12052 MB/s; 1349871 MiB; 8 threads; 0% CPU; 1m46s
+NET/libfabric: 11210 IOPS; 11754 MB/s; 1372280 MiB; 8 threads; 0% CPU; 1m48s
+NET/libfabric: 11234 IOPS; 11780 MB/s; 1394738 MiB; 8 threads; 0% CPU; 1m50s
+NET/libfabric: 10560 IOPS; 11073 MB/s; 1415848 MiB; 8 threads; 0% CPU; 1m52s
+NET/libfabric: 9540 IOPS; 10003 MB/s; 1434928 MiB; 8 threads; 0% CPU; 1m54s
+NET/libfabric: 10017 IOPS; 10503 MB/s; 1454952 MiB; 8 threads; 0% CPU; 1m56s
+NET/libfabric: 10310 IOPS; 10811 MB/s; 1475573 MiB; 8 threads; 0% CPU; 1m58s
+NET/libfabric: 10308 IOPS; 10809 MB/s; 1496180 MiB; 8 threads; 0% CPU; 2m0s
+NET/libfabric: 17228 IOPS; 18064 MB/s; 1530636 MiB; 8 threads; 0% CPU; 2m2s
+NET/libfabric: 15750 IOPS; 16515 MB/s; 1562137 MiB; 8 threads; 0% CPU; 2m4s
+NET/libfabric: 15033 IOPS; 15763 MB/s; 1592188 MiB; 8 threads; 0% CPU; 2m6s
+NET/libfabric: 14577 IOPS; 15285 MB/s; 1621329 MiB; 8 threads; 0% CPU; 2m8s
+NET/libfabric: 14997 IOPS; 15726 MB/s; 1651310 MiB; 8 threads; 0% CPU; 2m10s
+NET/libfabric: 14958 IOPS; 15684 MB/s; 1681226 MiB; 8 threads; 0% CPU; 2m12s
+NET/libfabric: 14956 IOPS; 15682 MB/s; 1711138 MiB; 8 threads; 0% CPU; 2m14s
+NET/libfabric: 15836 IOPS; 16606 MB/s; 1742796 MiB; 8 threads; 0% CPU; 2m16s
+NET/libfabric: 17060 IOPS; 17888 MB/s; 1776899 MiB; 8 threads; 0% CPU; 2m18s
+NET/libfabric: 17161 IOPS; 17994 MB/s; 1811204 MiB; 8 threads; 0% CPU; 2m20s
+NET/libfabric: 17485 IOPS; 18334 MB/s; 1846157 MiB; 8 threads; 0% CPU; 2m22s
+NET/libfabric: 17282 IOPS; 18121 MB/s; 1880704 MiB; 8 threads; 0% CPU; 2m24s
+NET/libfabric: 16632 IOPS; 17439 MB/s; 1913968 MiB; 8 threads; 0% CPU; 2m26s
+NET/libfabric: 17171 IOPS; 18005 MB/s; 1948311 MiB; 8 threads; 0% CPU; 2m28s
+NET/libfabric: 15828 IOPS; 16597 MB/s; 1979968 MiB; 8 threads; 0% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.030s   2m30.052s
+1:             IOPS send        :       13249       13247
+1:             MB/s send        :       13893       13891
+1:             MiB send         :     1987856     1987856
+1: ---
+1: 
+NET/libfabric: 3945 IOPS; 4137 MB/s; 1987856 MiB; 4 threads; 0% CPU; 2m32s
+NET/libfabric: 0 IOPS; 0 MB/s; 1987856 MiB; 4 threads; 0% CPU; 2m34s
+0: NET/libfabr Elapsed time     :   2m30.031s   2m30.051s
+0:             IOPS recv        :       13249       13247
+0:             MB/s recv        :       13893       13891
+0:             MiB recv         :     1987854     1987854
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.030s   2m30.052s
+            IOPS send        :       13249       13247
+            MB/s send        :       13893       13891
+            MiB send         :     1987856     1987856
+            Graph MB/s       :  19K ┤⡠⡆                               ⢠⡀   ⡤⠒⢄⢄
+                                    │ ⢸⢀⡀⡤⣠⡀              ⣀  ⡔⠤⡀      ⢸⠑⠔⠒⠊   ⢸
+                                    │  ⠁⠈ ⠁⠑⠤⠢⡀⣆⡰⡄⢀⠤⢄⡀⢀⡀⡠⡜⠈⣆⢰⠁ ⠘⣄ ⡀   ⡇       ⢸
+                                    │         ⠘⠈ ⠘⠁ ⠈⠈⠁⠈    ⠁   ⠁⠉⠈⠑⢢⠔⠃       ⠘⡄
+                                    │                                          ⡇
+                                    │                                          ⡇
+                                    │                                          ⡇
+                                    │                                          ⢸
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   154s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+14:43:09.624 ERROR: Service interruption/termination requires a host list.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: forcing job termination
+0: [2026-11-03T14:43:09.630] error: *** STEP 89635.2 ON nid007680 CANCELLED AT 2026-11-03T14:43:09 DUE to SIGNAL Killed ***
+srun: error: nid007680: task 0: Killed
+srun: Terminating StepId=89635.2
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007681: task 1: Killed
+srun: Step created for StepId=89635.3
+1: Elbencho service now listening. Port: 1611
+0: Elbencho service now listening. Port: 1611
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:35356'; ISO Date: 2026-11-03T14:43:10+0100
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:43798'; ISO Date: 2026-11-03T14:43:10+0100
+0: LABEL: cxi[0-3],8
+0: 
+1: LABEL: cxi[0-3],8
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 19561 IOPS; 20511 MB/s; 39122 MiB; 16 threads; 0% CPU; 2s
+NET/libfabric: 24157 IOPS; 25330 MB/s; 87412 MiB; 16 threads; 0% CPU; 4s
+NET/libfabric: 24484 IOPS; 25673 MB/s; 136381 MiB; 16 threads; 0% CPU; 6s
+NET/libfabric: 23977 IOPS; 25142 MB/s; 184313 MiB; 16 threads; 0% CPU; 8s
+NET/libfabric: 23357 IOPS; 24492 MB/s; 231028 MiB; 16 threads; 0% CPU; 10s
+NET/libfabric: 24882 IOPS; 26091 MB/s; 280769 MiB; 16 threads; 0% CPU; 12s
+NET/libfabric: 23761 IOPS; 24915 MB/s; 328292 MiB; 16 threads; 0% CPU; 14s
+NET/libfabric: 25489 IOPS; 26727 MB/s; 379245 MiB; 16 threads; 0% CPU; 16s
+NET/libfabric: 24752 IOPS; 25954 MB/s; 428749 MiB; 16 threads; 0% CPU; 18s
+NET/libfabric: 22750 IOPS; 23855 MB/s; 474249 MiB; 16 threads; 0% CPU; 20s
+NET/libfabric: 25880 IOPS; 27138 MB/s; 525985 MiB; 16 threads; 1% CPU; 22s
+NET/libfabric: 27070 IOPS; 28384 MB/s; 580125 MiB; 16 threads; 1% CPU; 24s
+NET/libfabric: 26015 IOPS; 27278 MB/s; 632155 MiB; 16 threads; 1% CPU; 26s
+NET/libfabric: 24469 IOPS; 25657 MB/s; 681093 MiB; 16 threads; 1% CPU; 28s
+NET/libfabric: 26367 IOPS; 27647 MB/s; 733827 MiB; 16 threads; 1% CPU; 30s
+NET/libfabric: 27455 IOPS; 28788 MB/s; 788710 MiB; 16 threads; 0% CPU; 32s
+NET/libfabric: 23466 IOPS; 24606 MB/s; 835620 MiB; 16 threads; 0% CPU; 34s
+NET/libfabric: 20716 IOPS; 21722 MB/s; 877032 MiB; 16 threads; 1% CPU; 36s
+NET/libfabric: 26101 IOPS; 27369 MB/s; 929209 MiB; 16 threads; 1% CPU; 38s
+NET/libfabric: 22693 IOPS; 23795 MB/s; 974595 MiB; 16 threads; 0% CPU; 40s
+NET/libfabric: 24523 IOPS; 25714 MB/s; 1023642 MiB; 16 threads; 0% CPU; 42s
+NET/libfabric: 26518 IOPS; 27806 MB/s; 1076653 MiB; 16 threads; 1% CPU; 44s
+NET/libfabric: 21107 IOPS; 22132 MB/s; 1118868 MiB; 16 threads; 1% CPU; 46s
+NET/libfabric: 22261 IOPS; 23342 MB/s; 1163368 MiB; 16 threads; 1% CPU; 48s
+NET/libfabric: 21413 IOPS; 22453 MB/s; 1206173 MiB; 16 threads; 0% CPU; 50s
+NET/libfabric: 22640 IOPS; 23740 MB/s; 1251454 MiB; 16 threads; 1% CPU; 52s
+NET/libfabric: 24124 IOPS; 25295 MB/s; 1299702 MiB; 16 threads; 1% CPU; 54s
+NET/libfabric: 24011 IOPS; 25177 MB/s; 1347701 MiB; 16 threads; 1% CPU; 56s
+NET/libfabric: 24162 IOPS; 25335 MB/s; 1396001 MiB; 16 threads; 1% CPU; 58s
+NET/libfabric: 23997 IOPS; 25162 MB/s; 1443995 MiB; 16 threads; 1% CPU; 1m0s
+NET/libfabric: 24048 IOPS; 25216 MB/s; 1492067 MiB; 16 threads; 1% CPU; 1m2s
+NET/libfabric: 24048 IOPS; 25216 MB/s; 1540139 MiB; 16 threads; 1% CPU; 1m4s
+NET/libfabric: 23938 IOPS; 25101 MB/s; 1588016 MiB; 16 threads; 0% CPU; 1m6s
+NET/libfabric: 24084 IOPS; 25253 MB/s; 1636184 MiB; 16 threads; 1% CPU; 1m8s
+NET/libfabric: 23986 IOPS; 25151 MB/s; 1684157 MiB; 16 threads; 1% CPU; 1m10s
+NET/libfabric: 21492 IOPS; 22536 MB/s; 1727120 MiB; 16 threads; 0% CPU; 1m12s
+NET/libfabric: 20717 IOPS; 21723 MB/s; 1768534 MiB; 16 threads; 0% CPU; 1m14s
+NET/libfabric: 20604 IOPS; 21605 MB/s; 1809743 MiB; 16 threads; 0% CPU; 1m16s
+NET/libfabric: 22340 IOPS; 23425 MB/s; 1854402 MiB; 16 threads; 1% CPU; 1m18s
+NET/libfabric: 24050 IOPS; 25218 MB/s; 1902503 MiB; 16 threads; 0% CPU; 1m20s
+NET/libfabric: 26075 IOPS; 27342 MB/s; 1954628 MiB; 16 threads; 1% CPU; 1m22s
+NET/libfabric: 25827 IOPS; 27082 MB/s; 2006283 MiB; 16 threads; 1% CPU; 1m24s
+NET/libfabric: 24867 IOPS; 26075 MB/s; 2055993 MiB; 16 threads; 1% CPU; 1m26s
+NET/libfabric: 23894 IOPS; 25054 MB/s; 2103781 MiB; 16 threads; 0% CPU; 1m28s
+NET/libfabric: 24056 IOPS; 25224 MB/s; 2151893 MiB; 16 threads; 1% CPU; 1m30s
+NET/libfabric: 25661 IOPS; 26908 MB/s; 2203191 MiB; 16 threads; 1% CPU; 1m32s
+NET/libfabric: 24889 IOPS; 26098 MB/s; 2252969 MiB; 16 threads; 0% CPU; 1m34s
+NET/libfabric: 23977 IOPS; 25142 MB/s; 2300901 MiB; 16 threads; 2% CPU; 1m36s
+NET/libfabric: 24749 IOPS; 25951 MB/s; 2350399 MiB; 16 threads; 0% CPU; 1m38s
+NET/libfabric: 24945 IOPS; 26157 MB/s; 2400265 MiB; 16 threads; 0% CPU; 1m40s
+NET/libfabric: 24928 IOPS; 26139 MB/s; 2450098 MiB; 16 threads; 0% CPU; 1m42s
+NET/libfabric: 24107 IOPS; 25278 MB/s; 2498313 MiB; 16 threads; 1% CPU; 1m44s
+NET/libfabric: 24553 IOPS; 25745 MB/s; 2547395 MiB; 16 threads; 1% CPU; 1m46s
+NET/libfabric: 24545 IOPS; 25737 MB/s; 2596486 MiB; 16 threads; 0% CPU; 1m48s
+NET/libfabric: 24532 IOPS; 25723 MB/s; 2645550 MiB; 16 threads; 0% CPU; 1m50s
+NET/libfabric: 24299 IOPS; 25479 MB/s; 2694124 MiB; 16 threads; 0% CPU; 1m52s
+NET/libfabric: 23488 IOPS; 24628 MB/s; 2741100 MiB; 16 threads; 1% CPU; 1m54s
+NET/libfabric: 21893 IOPS; 22956 MB/s; 2784865 MiB; 16 threads; 0% CPU; 1m56s
+NET/libfabric: 20493 IOPS; 21488 MB/s; 2825852 MiB; 16 threads; 0% CPU; 1m58s
+NET/libfabric: 19433 IOPS; 20377 MB/s; 2864719 MiB; 16 threads; 0% CPU; 2m0s
+NET/libfabric: 19412 IOPS; 20355 MB/s; 2903524 MiB; 16 threads; 0% CPU; 2m2s
+NET/libfabric: 19329 IOPS; 20267 MB/s; 2942182 MiB; 16 threads; 0% CPU; 2m4s
+NET/libfabric: 19299 IOPS; 20236 MB/s; 2980781 MiB; 16 threads; 0% CPU; 2m6s
+NET/libfabric: 19423 IOPS; 20366 MB/s; 3019608 MiB; 16 threads; 0% CPU; 2m8s
+NET/libfabric: 21302 IOPS; 22337 MB/s; 3062192 MiB; 16 threads; 0% CPU; 2m10s
+NET/libfabric: 21557 IOPS; 22604 MB/s; 3105285 MiB; 16 threads; 0% CPU; 2m12s
+NET/libfabric: 21425 IOPS; 22465 MB/s; 3148114 MiB; 16 threads; 0% CPU; 2m14s
+NET/libfabric: 21330 IOPS; 22366 MB/s; 3190775 MiB; 16 threads; 0% CPU; 2m16s
+NET/libfabric: 21322 IOPS; 22357 MB/s; 3233419 MiB; 16 threads; 0% CPU; 2m18s
+NET/libfabric: 21196 IOPS; 22225 MB/s; 3275790 MiB; 16 threads; 0% CPU; 2m20s
+NET/libfabric: 21168 IOPS; 22196 MB/s; 3318127 MiB; 16 threads; 0% CPU; 2m22s
+NET/libfabric: 21024 IOPS; 22045 MB/s; 3360155 MiB; 16 threads; 0% CPU; 2m24s
+NET/libfabric: 21204 IOPS; 22234 MB/s; 3402543 MiB; 16 threads; 2% CPU; 2m26s
+NET/libfabric: 25700 IOPS; 26948 MB/s; 3453943 MiB; 16 threads; 1% CPU; 2m28s
+NET/libfabric: 25657 IOPS; 26903 MB/s; 3505257 MiB; 16 threads; 1% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.030s   2m30.032s
+1:             IOPS send        :       23449       23449
+1:             MB/s send        :       24588       24588
+1:             MiB send         :     3518148     3518148
+1: ---
+1: 
+NET/libfabric: 6448 IOPS; 6761 MB/s; 3518148 MiB; 8 threads; 0% CPU; 2m32s
+NET/libfabric: 0 IOPS; 0 MB/s; 3518148 MiB; 8 threads; 0% CPU; 2m34s
+NET/libfabric: 0 IOPS; 0 MB/s; 3518148 MiB; 8 threads; 0% CPU; 2m36s
+0: NET/libfabr Elapsed time     :   2m30.030s   2m30.031s
+0:             IOPS recv        :       23449       23449
+0:             MB/s recv        :       24588       24588
+0:             MiB recv         :     3518142     3518142
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.030s   2m30.032s
+            IOPS send        :       23449       23449
+            MB/s send        :       24588       24588
+            MiB send         :     3518148     3518148
+            Graph MB/s       :  29K ┤   ⡀⣄⢠⠢⡰⠹⡀⡄⣰          ⡤⡀ ⣄⢀⣀⢀⣀          ⢠⡄
+                                    │⡸⠉⠊⠈ ⠃ ⠁ ⢧⠻⠃⡧⡠⠜⠉⠉⠉⠉⢣ ⡜ ⠈⠉ ⠁ ⠁ ⠉⠢⡀  ⢀⣀⣀⣀⣠⠃⡇
+                                    │⠃        ⠈          ⠉           ⠑⠒⠒⠊     ⡇
+                                    │                                         ⢱
+                                    │                                         ⢸
+                                    │                                         ⢸
+                                    │                                         ⢸
+                                    │                                          ⣇
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   156s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+14:46:09.643 ERROR: Service interruption/termination requires a host list.
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:46:09.657] error: *** STEP 89635.3 ON nid007680 CANCELLED AT 2026-11-03T14:46:09 DUE to SIGNAL Killed ***
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007680: task 0: Killed
+srun: Terminating StepId=89635.3
+srun: error: nid007681: task 1: Killed
+srun: Step created for StepId=89635.4
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:41454'; ISO Date: 2026-11-03T14:46:10+0100
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:56932'; ISO Date: 2026-11-03T14:46:10+0100
+0: LABEL: cxi[0-3],16
+0: 
+1: LABEL: cxi[0-3],16
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 40853 IOPS; 42837 MB/s; 81706 MiB; 32 threads; 2% CPU; 2s
+NET/libfabric: 52660 IOPS; 55218 MB/s; 187027 MiB; 32 threads; 2% CPU; 4s
+NET/libfabric: 53721 IOPS; 56331 MB/s; 294470 MiB; 32 threads; 2% CPU; 6s
+NET/libfabric: 52474 IOPS; 55023 MB/s; 399367 MiB; 32 threads; 2% CPU; 8s
+NET/libfabric: 50676 IOPS; 53137 MB/s; 500719 MiB; 32 threads; 2% CPU; 10s
+NET/libfabric: 52186 IOPS; 54721 MB/s; 605039 MiB; 32 threads; 1% CPU; 12s
+NET/libfabric: 48999 IOPS; 51379 MB/s; 703037 MiB; 32 threads; 2% CPU; 14s
+NET/libfabric: 53557 IOPS; 56158 MB/s; 810098 MiB; 32 threads; 2% CPU; 16s
+NET/libfabric: 52758 IOPS; 55320 MB/s; 915614 MiB; 32 threads; 2% CPU; 18s
+NET/libfabric: 48556 IOPS; 50915 MB/s; 1012679 MiB; 32 threads; 2% CPU; 20s
+NET/libfabric: 55545 IOPS; 58243 MB/s; 1123714 MiB; 32 threads; 2% CPU; 22s
+NET/libfabric: 54818 IOPS; 57481 MB/s; 1233296 MiB; 32 threads; 2% CPU; 24s
+NET/libfabric: 52960 IOPS; 55532 MB/s; 1339216 MiB; 32 threads; 2% CPU; 26s
+NET/libfabric: 49747 IOPS; 52164 MB/s; 1438711 MiB; 32 threads; 2% CPU; 28s
+NET/libfabric: 54058 IOPS; 56684 MB/s; 1546774 MiB; 32 threads; 2% CPU; 30s
+NET/libfabric: 57464 IOPS; 60255 MB/s; 1661702 MiB; 32 threads; 2% CPU; 32s
+NET/libfabric: 52546 IOPS; 55098 MB/s; 1766794 MiB; 32 threads; 2% CPU; 34s
+NET/libfabric: 46615 IOPS; 48880 MB/s; 1859979 MiB; 32 threads; 2% CPU; 36s
+NET/libfabric: 57081 IOPS; 59853 MB/s; 1974141 MiB; 32 threads; 2% CPU; 38s
+NET/libfabric: 50530 IOPS; 52984 MB/s; 2075201 MiB; 32 threads; 2% CPU; 40s
+NET/libfabric: 52874 IOPS; 55443 MB/s; 2180898 MiB; 32 threads; 2% CPU; 42s
+NET/libfabric: 56029 IOPS; 58750 MB/s; 2292900 MiB; 32 threads; 2% CPU; 44s
+NET/libfabric: 46896 IOPS; 49174 MB/s; 2386693 MiB; 32 threads; 2% CPU; 46s
+NET/libfabric: 49013 IOPS; 51393 MB/s; 2484670 MiB; 32 threads; 2% CPU; 48s
+NET/libfabric: 50138 IOPS; 52574 MB/s; 2584947 MiB; 32 threads; 2% CPU; 50s
+NET/libfabric: 51110 IOPS; 53592 MB/s; 2687116 MiB; 32 threads; 2% CPU; 52s
+NET/libfabric: 51225 IOPS; 53713 MB/s; 2789515 MiB; 32 threads; 2% CPU; 54s
+NET/libfabric: 52300 IOPS; 54840 MB/s; 2894115 MiB; 32 threads; 2% CPU; 56s
+NET/libfabric: 52283 IOPS; 54822 MB/s; 2998629 MiB; 32 threads; 2% CPU; 58s
+NET/libfabric: 51409 IOPS; 53906 MB/s; 3101448 MiB; 32 threads; 2% CPU; 1m0s
+NET/libfabric: 51782 IOPS; 54297 MB/s; 3205012 MiB; 32 threads; 2% CPU; 1m2s
+NET/libfabric: 49097 IOPS; 51481 MB/s; 3303157 MiB; 32 threads; 2% CPU; 1m4s
+NET/libfabric: 49045 IOPS; 51427 MB/s; 3401247 MiB; 32 threads; 2% CPU; 1m6s
+NET/libfabric: 48023 IOPS; 50355 MB/s; 3497293 MiB; 32 threads; 2% CPU; 1m8s
+NET/libfabric: 48839 IOPS; 51212 MB/s; 3594924 MiB; 32 threads; 2% CPU; 1m10s
+NET/libfabric: 48392 IOPS; 50743 MB/s; 3691661 MiB; 32 threads; 2% CPU; 1m12s
+NET/libfabric: 49565 IOPS; 51973 MB/s; 3790792 MiB; 32 threads; 2% CPU; 1m14s
+NET/libfabric: 50071 IOPS; 52503 MB/s; 3890884 MiB; 32 threads; 2% CPU; 1m16s
+NET/libfabric: 48858 IOPS; 51232 MB/s; 3988553 MiB; 32 threads; 2% CPU; 1m18s
+NET/libfabric: 48940 IOPS; 51317 MB/s; 4086434 MiB; 32 threads; 1% CPU; 1m20s
+NET/libfabric: 50056 IOPS; 52488 MB/s; 4186497 MiB; 32 threads; 2% CPU; 1m22s
+NET/libfabric: 50637 IOPS; 53097 MB/s; 4287722 MiB; 32 threads; 2% CPU; 1m24s
+NET/libfabric: 50569 IOPS; 53025 MB/s; 4388810 MiB; 32 threads; 2% CPU; 1m26s
+NET/libfabric: 49912 IOPS; 52337 MB/s; 4488635 MiB; 32 threads; 2% CPU; 1m28s
+NET/libfabric: 49783 IOPS; 52201 MB/s; 4588152 MiB; 32 threads; 2% CPU; 1m30s
+NET/libfabric: 50044 IOPS; 52475 MB/s; 4688241 MiB; 32 threads; 2% CPU; 1m32s
+NET/libfabric: 49313 IOPS; 51708 MB/s; 4786818 MiB; 32 threads; 2% CPU; 1m34s
+NET/libfabric: 49679 IOPS; 52093 MB/s; 4886128 MiB; 32 threads; 2% CPU; 1m36s
+NET/libfabric: 49980 IOPS; 52408 MB/s; 4986039 MiB; 32 threads; 2% CPU; 1m38s
+NET/libfabric: 50689 IOPS; 53151 MB/s; 5087417 MiB; 32 threads; 2% CPU; 1m40s
+NET/libfabric: 50418 IOPS; 52867 MB/s; 5188204 MiB; 32 threads; 2% CPU; 1m42s
+NET/libfabric: 50650 IOPS; 53110 MB/s; 5289505 MiB; 32 threads; 2% CPU; 1m44s
+NET/libfabric: 50020 IOPS; 52449 MB/s; 5389495 MiB; 32 threads; 2% CPU; 1m46s
+NET/libfabric: 49921 IOPS; 52346 MB/s; 5489288 MiB; 32 threads; 2% CPU; 1m48s
+NET/libfabric: 50613 IOPS; 53071 MB/s; 5590514 MiB; 32 threads; 2% CPU; 1m50s
+NET/libfabric: 50131 IOPS; 52566 MB/s; 5690727 MiB; 32 threads; 2% CPU; 1m52s
+NET/libfabric: 50162 IOPS; 52599 MB/s; 5791002 MiB; 32 threads; 2% CPU; 1m54s
+NET/libfabric: 50364 IOPS; 52810 MB/s; 5891680 MiB; 32 threads; 2% CPU; 1m56s
+NET/libfabric: 50500 IOPS; 52953 MB/s; 5992681 MiB; 32 threads; 2% CPU; 1m58s
+NET/libfabric: 50474 IOPS; 52926 MB/s; 6093580 MiB; 32 threads; 2% CPU; 2m0s
+NET/libfabric: 53439 IOPS; 56035 MB/s; 6200459 MiB; 32 threads; 2% CPU; 2m2s
+NET/libfabric: 58470 IOPS; 61311 MB/s; 6317342 MiB; 32 threads; 2% CPU; 2m4s
+NET/libfabric: 58482 IOPS; 61323 MB/s; 6434248 MiB; 32 threads; 2% CPU; 2m6s
+NET/libfabric: 57924 IOPS; 60737 MB/s; 6550096 MiB; 32 threads; 2% CPU; 2m8s
+NET/libfabric: 57710 IOPS; 60514 MB/s; 6665460 MiB; 32 threads; 2% CPU; 2m10s
+NET/libfabric: 56929 IOPS; 59695 MB/s; 6779263 MiB; 32 threads; 2% CPU; 2m12s
+NET/libfabric: 56528 IOPS; 59274 MB/s; 6892320 MiB; 32 threads; 2% CPU; 2m14s
+NET/libfabric: 55022 IOPS; 57694 MB/s; 7002309 MiB; 32 threads; 2% CPU; 2m16s
+NET/libfabric: 53328 IOPS; 55919 MB/s; 7108913 MiB; 32 threads; 2% CPU; 2m18s
+NET/libfabric: 52140 IOPS; 54672 MB/s; 7213193 MiB; 32 threads; 2% CPU; 2m20s
+NET/libfabric: 51426 IOPS; 53924 MB/s; 7315995 MiB; 32 threads; 2% CPU; 2m22s
+NET/libfabric: 51266 IOPS; 53756 MB/s; 7418528 MiB; 32 threads; 1% CPU; 2m24s
+NET/libfabric: 51329 IOPS; 53822 MB/s; 7521186 MiB; 32 threads; 2% CPU; 2m26s
+NET/libfabric: 52077 IOPS; 54606 MB/s; 7625288 MiB; 32 threads; 2% CPU; 2m28s
+NET/libfabric: 52813 IOPS; 55378 MB/s; 7730914 MiB; 32 threads; 2% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+1:             IOPS send        :       51708       51708
+1:             MB/s send        :       54219       54219
+1:             MiB send         :     7757821     7757821
+1: ---
+1: 
+NET/libfabric: 13460 IOPS; 14114 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m32s
+NET/libfabric: 0 IOPS; 0 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m34s
+NET/libfabric: 0 IOPS; 0 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m36s
+NET/libfabric: 0 IOPS; 0 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m38s
+NET/libfabric: 0 IOPS; 0 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m40s
+NET/libfabric: 0 IOPS; 0 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m42s
+NET/libfabric: 0 IOPS; 0 MB/s; 7757821 MiB; 16 threads; 1% CPU; 2m44s
+0: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+0:             IOPS recv        :       51708       51707
+0:             MB/s recv        :       54219       54219
+0:             MiB recv         :     7757813     7757813
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :       51708       51708
+            MB/s send        :       54219       54219
+            MiB send         :     7757821     7757821
+            Graph MB/s       :  62K ┤⢀⣀ ⢀⡀⡤⢄⢀⢦⢰⣀⡄                   ⢠⠋⠒⠒⢄   ⡀
+                                    │⡸ ⠉⠊⠱⠁ ⠋⠈⡎⠋⠸⠒⠉⠉⠉⠒⠢⠢⠒⠒⠊⠑⠒⠒⠊⠊⠑⠊⠒⠒⠊    ⠉⠉⠉⡇
+                                    │⠇                                      ⡇
+                                    │                                       ⢣
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                        ⣇⣀⣀
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   164s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+14:49:09.656 ERROR: Service interruption/termination requires a host list.
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:49:09.667] error: *** STEP 89635.4 ON nid007680 CANCELLED AT 2026-11-03T14:49:09 DUE to SIGNAL Killed ***
+srun: error: nid007680: task 0: Killed
+srun: Terminating StepId=89635.4
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007681: task 1: Killed
+srun: Step created for StepId=89635.5
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:46138'; ISO Date: 2026-11-03T14:49:10+0100
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:56766'; ISO Date: 2026-11-03T14:49:10+0100
+0: LABEL: cxi[0-3],32
+0: 
+1: LABEL: cxi[0-3],32
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 68662 IOPS; 71997 MB/s; 137324 MiB; 64 threads; 3% CPU; 2s
+NET/libfabric: 64275 IOPS; 67397 MB/s; 265810 MiB; 64 threads; 3% CPU; 4s
+NET/libfabric: 68226 IOPS; 71540 MB/s; 402262 MiB; 64 threads; 2% CPU; 6s
+NET/libfabric: 67286 IOPS; 70554 MB/s; 536834 MiB; 64 threads; 2% CPU; 8s
+NET/libfabric: 66472 IOPS; 69701 MB/s; 669712 MiB; 64 threads; 2% CPU; 10s
+NET/libfabric: 70913 IOPS; 74358 MB/s; 811539 MiB; 64 threads; 2% CPU; 12s
+NET/libfabric: 66244 IOPS; 69461 MB/s; 943961 MiB; 64 threads; 2% CPU; 14s
+NET/libfabric: 71317 IOPS; 74781 MB/s; 1086525 MiB; 64 threads; 2% CPU; 16s
+NET/libfabric: 69728 IOPS; 73115 MB/s; 1225982 MiB; 64 threads; 2% CPU; 18s
+NET/libfabric: 64696 IOPS; 67838 MB/s; 1355374 MiB; 64 threads; 2% CPU; 20s
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2614 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 04c05f0200000000 (cxi0); own endpoint: cxi 
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2407 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 09c05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 06c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 48
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2403 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 1cc05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 05c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 36
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2707 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 0dc05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 04c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 56
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2735 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 18c05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 07c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 60
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 4578 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 02c05f0200000000 (cxi0); own endpoint: cxi 
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2433 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 1bc05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 02c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 40
+1: 14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2231 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 15c05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 01c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 52
+0: NET/libfabr Elapsed time     :     21.938s     22.153s
+0:             IOPS recv        :       66273       65629
+0:             MB/s recv        :       69492       68818
+0:             MiB recv         :     1453907     1453907
+0: ---
+0: 
+14:49:32.781 === [ HOST: nid007681:1611 (Rank: 1) ] ===
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2614 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 04c05f0200000000 (cxi0); own endpoint: cxi 
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2407 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 09c05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 06c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 48
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2403 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 1cc05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 05c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 36
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2707 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 0dc05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 04c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 56
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2735 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 18c05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 07c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 60
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 4578 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 02c05f0200000000 (cxi0); own endpoint: cxi 
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2433 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 1bc05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 02c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 40
+  14:49:32.155 ERROR: Timed out waiting for response from server. Timeout: 20s; rounds done: 2231 of 549755813887; server: nid007680:1611; server endpoint: cxi FI_PROTO_CXI: 15c05f0200000000 (cxi0); own endpoint: cxi FI_PROTO_CXI: 01c05e0200000000 (cxi0) (own interface cxi0); WorkerRank: 52
+=== [ END ] ===
+srun: forcing job termination
+srun: got SIGCONT
+14:52:09.671 ERROR: Service interruption/termination requires a host list.
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:52:09.686] error: *** STEP 89635.5 ON nid007680 CANCELLED AT 2026-11-03T14:52:09 DUE to SIGNAL Killed ***
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007680: task 0: Killed
+srun: Terminating StepId=89635.5
+srun: error: nid007681: task 1: Killed
+srun: Step created for StepId=89635.6
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:53730'; ISO Date: 2026-11-03T14:52:10+0100
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:34304'; ISO Date: 2026-11-03T14:52:10+0100
+0: LABEL: cxi[0-1],32
+0: 
+1: LABEL: cxi[0-1],32
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 45558 IOPS; 47771 MB/s; 91116 MiB; 64 threads; 2% CPU; 2s
+NET/libfabric: 45890 IOPS; 48120 MB/s; 182852 MiB; 64 threads; 1% CPU; 4s
+NET/libfabric: 46952 IOPS; 49233 MB/s; 276710 MiB; 64 threads; 2% CPU; 6s
+NET/libfabric: 45997 IOPS; 48231 MB/s; 368705 MiB; 64 threads; 2% CPU; 8s
+NET/libfabric: 44905 IOPS; 47087 MB/s; 458472 MiB; 64 threads; 1% CPU; 10s
+NET/libfabric: 47554 IOPS; 49864 MB/s; 553581 MiB; 64 threads; 1% CPU; 12s
+NET/libfabric: 44340 IOPS; 46494 MB/s; 642218 MiB; 64 threads; 2% CPU; 14s
+NET/libfabric: 47862 IOPS; 50187 MB/s; 737895 MiB; 64 threads; 2% CPU; 16s
+NET/libfabric: 46717 IOPS; 48987 MB/s; 831284 MiB; 64 threads; 2% CPU; 18s
+NET/libfabric: 43371 IOPS; 45478 MB/s; 918027 MiB; 64 threads; 2% CPU; 20s
+NET/libfabric: 47950 IOPS; 50280 MB/s; 1013881 MiB; 64 threads; 2% CPU; 22s
+NET/libfabric: 47404 IOPS; 49706 MB/s; 1108689 MiB; 64 threads; 2% CPU; 24s
+NET/libfabric: 45897 IOPS; 48127 MB/s; 1200484 MiB; 64 threads; 2% CPU; 26s
+NET/libfabric: 43183 IOPS; 45280 MB/s; 1286850 MiB; 64 threads; 2% CPU; 28s
+NET/libfabric: 46304 IOPS; 48553 MB/s; 1379458 MiB; 64 threads; 2% CPU; 30s
+NET/libfabric: 49747 IOPS; 52164 MB/s; 1478904 MiB; 64 threads; 2% CPU; 32s
+NET/libfabric: 45470 IOPS; 47678 MB/s; 1569844 MiB; 64 threads; 2% CPU; 34s
+NET/libfabric: 39989 IOPS; 41931 MB/s; 1649822 MiB; 64 threads; 2% CPU; 36s
+NET/libfabric: 50725 IOPS; 53189 MB/s; 1751222 MiB; 64 threads; 2% CPU; 38s
+NET/libfabric: 44692 IOPS; 46863 MB/s; 1840563 MiB; 64 threads; 2% CPU; 40s
+NET/libfabric: 46955 IOPS; 49235 MB/s; 1934473 MiB; 64 threads; 2% CPU; 42s
+NET/libfabric: 49366 IOPS; 51764 MB/s; 2033157 MiB; 64 threads; 2% CPU; 44s
+NET/libfabric: 41250 IOPS; 43253 MB/s; 2115657 MiB; 64 threads; 1% CPU; 46s
+NET/libfabric: 42965 IOPS; 45052 MB/s; 2201545 MiB; 64 threads; 2% CPU; 48s
+NET/libfabric: 44674 IOPS; 46844 MB/s; 2290893 MiB; 64 threads; 2% CPU; 50s
+NET/libfabric: 45735 IOPS; 47957 MB/s; 2382364 MiB; 64 threads; 2% CPU; 52s
+NET/libfabric: 46078 IOPS; 48316 MB/s; 2474475 MiB; 64 threads; 2% CPU; 54s
+NET/libfabric: 46312 IOPS; 48562 MB/s; 2567054 MiB; 64 threads; 2% CPU; 56s
+NET/libfabric: 46238 IOPS; 48484 MB/s; 2659531 MiB; 64 threads; 2% CPU; 58s
+NET/libfabric: 46318 IOPS; 48568 MB/s; 2752121 MiB; 64 threads; 2% CPU; 1m0s
+NET/libfabric: 43909 IOPS; 46041 MB/s; 2839939 MiB; 64 threads; 2% CPU; 1m2s
+NET/libfabric: 46319 IOPS; 48569 MB/s; 2932532 MiB; 64 threads; 2% CPU; 1m4s
+NET/libfabric: 46270 IOPS; 48517 MB/s; 3025072 MiB; 64 threads; 2% CPU; 1m6s
+NET/libfabric: 46297 IOPS; 48545 MB/s; 3117666 MiB; 64 threads; 2% CPU; 1m8s
+NET/libfabric: 46218 IOPS; 48463 MB/s; 3210102 MiB; 64 threads; 2% CPU; 1m10s
+NET/libfabric: 46326 IOPS; 48577 MB/s; 3302709 MiB; 64 threads; 2% CPU; 1m12s
+NET/libfabric: 46283 IOPS; 48531 MB/s; 3395276 MiB; 64 threads; 2% CPU; 1m14s
+NET/libfabric: 46319 IOPS; 48569 MB/s; 3487868 MiB; 64 threads; 2% CPU; 1m16s
+NET/libfabric: 46256 IOPS; 48503 MB/s; 3580381 MiB; 64 threads; 2% CPU; 1m18s
+NET/libfabric: 46311 IOPS; 48560 MB/s; 3672957 MiB; 64 threads; 2% CPU; 1m20s
+NET/libfabric: 46266 IOPS; 48513 MB/s; 3765443 MiB; 64 threads; 2% CPU; 1m22s
+NET/libfabric: 46288 IOPS; 48537 MB/s; 3857974 MiB; 64 threads; 2% CPU; 1m24s
+NET/libfabric: 46300 IOPS; 48549 MB/s; 3950574 MiB; 64 threads; 2% CPU; 1m26s
+NET/libfabric: 46310 IOPS; 48559 MB/s; 4043148 MiB; 64 threads; 2% CPU; 1m28s
+NET/libfabric: 46286 IOPS; 48534 MB/s; 4135720 MiB; 64 threads; 2% CPU; 1m30s
+NET/libfabric: 46289 IOPS; 48537 MB/s; 4228252 MiB; 64 threads; 2% CPU; 1m32s
+NET/libfabric: 46298 IOPS; 48546 MB/s; 4320848 MiB; 64 threads; 2% CPU; 1m34s
+NET/libfabric: 46247 IOPS; 48493 MB/s; 4413342 MiB; 64 threads; 2% CPU; 1m36s
+NET/libfabric: 46313 IOPS; 48562 MB/s; 4505922 MiB; 64 threads; 2% CPU; 1m38s
+NET/libfabric: 46228 IOPS; 48473 MB/s; 4598378 MiB; 64 threads; 2% CPU; 1m40s
+NET/libfabric: 46240 IOPS; 48486 MB/s; 4690859 MiB; 64 threads; 2% CPU; 1m42s
+NET/libfabric: 46248 IOPS; 48495 MB/s; 4783310 MiB; 64 threads; 2% CPU; 1m44s
+NET/libfabric: 46241 IOPS; 48487 MB/s; 4875792 MiB; 64 threads; 2% CPU; 1m46s
+NET/libfabric: 46289 IOPS; 48538 MB/s; 4968325 MiB; 64 threads; 2% CPU; 1m48s
+NET/libfabric: 46205 IOPS; 48450 MB/s; 5060690 MiB; 64 threads; 2% CPU; 1m50s
+NET/libfabric: 46250 IOPS; 48496 MB/s; 5153190 MiB; 64 threads; 2% CPU; 1m52s
+NET/libfabric: 46263 IOPS; 48510 MB/s; 5245670 MiB; 64 threads; 2% CPU; 1m54s
+NET/libfabric: 46293 IOPS; 48541 MB/s; 5338210 MiB; 64 threads; 2% CPU; 1m56s
+NET/libfabric: 46248 IOPS; 48495 MB/s; 5430707 MiB; 64 threads; 2% CPU; 1m58s
+NET/libfabric: 46194 IOPS; 48438 MB/s; 5523096 MiB; 64 threads; 2% CPU; 2m0s
+NET/libfabric: 46234 IOPS; 48480 MB/s; 5615565 MiB; 64 threads; 2% CPU; 2m2s
+NET/libfabric: 45894 IOPS; 48123 MB/s; 5707353 MiB; 64 threads; 2% CPU; 2m4s
+NET/libfabric: 46235 IOPS; 48481 MB/s; 5799778 MiB; 64 threads; 2% CPU; 2m6s
+NET/libfabric: 46233 IOPS; 48478 MB/s; 5892198 MiB; 64 threads; 2% CPU; 2m8s
+NET/libfabric: 45846 IOPS; 48073 MB/s; 5983891 MiB; 64 threads; 2% CPU; 2m10s
+NET/libfabric: 46185 IOPS; 48429 MB/s; 6076216 MiB; 64 threads; 1% CPU; 2m12s
+NET/libfabric: 46212 IOPS; 48457 MB/s; 6168641 MiB; 64 threads; 2% CPU; 2m14s
+NET/libfabric: 46222 IOPS; 48467 MB/s; 6261085 MiB; 64 threads; 2% CPU; 2m16s
+NET/libfabric: 46281 IOPS; 48529 MB/s; 6353601 MiB; 64 threads; 2% CPU; 2m18s
+NET/libfabric: 46287 IOPS; 48535 MB/s; 6446175 MiB; 64 threads; 2% CPU; 2m20s
+NET/libfabric: 46261 IOPS; 48508 MB/s; 6538651 MiB; 64 threads; 2% CPU; 2m22s
+NET/libfabric: 46266 IOPS; 48513 MB/s; 6631184 MiB; 64 threads; 2% CPU; 2m24s
+NET/libfabric: 46217 IOPS; 48462 MB/s; 6723572 MiB; 64 threads; 2% CPU; 2m26s
+NET/libfabric: 46258 IOPS; 48505 MB/s; 6816042 MiB; 64 threads; 2% CPU; 2m28s
+NET/libfabric: 46259 IOPS; 48506 MB/s; 6908560 MiB; 64 threads; 2% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+1:             IOPS send        :       46201       46201
+1:             MB/s send        :       48445       48445
+1:             MiB send         :     6931686     6931686
+1: ---
+1: 
+NET/libfabric: 11568 IOPS; 12130 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m32s
+NET/libfabric: 0 IOPS; 0 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m34s
+NET/libfabric: 0 IOPS; 0 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m36s
+NET/libfabric: 0 IOPS; 0 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m38s
+NET/libfabric: 0 IOPS; 0 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m40s
+NET/libfabric: 0 IOPS; 0 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m42s
+NET/libfabric: 0 IOPS; 0 MB/s; 6931686 MiB; 32 threads; 1% CPU; 2m44s
+0: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+0:             IOPS recv        :       46201       46201
+0:             MB/s recv        :       48445       48445
+0:             MiB recv         :     6931685     6931685
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+            IOPS send        :       46201       46201
+            MB/s send        :       48445       48445
+            MiB send         :     6931686     6931686
+            Graph MB/s       :  54K ┤⢀⣀⢠⣠⡀⡤⢄⢀⢆⢸⣄⡆ ⣀⣀⡀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀
+                                    │⠁ ⠁⠁⠘  ⠋⠘⡇⠁⠸⠊  ⠘⠁                      ⡇
+                                    │                                       ⡇
+                                    │                                       ⢣
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                       ⢸
+                                    │                                        ⣇⣀⣀
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   164s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+14:55:09.688 ERROR: Service interruption/termination requires a host list.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: [2026-11-03T14:55:09.698] error: *** STEP 89635.6 ON nid007680 CANCELLED AT 2026-11-03T14:55:09 DUE to SIGNAL Killed ***
+srun: forcing job termination
+srun: error: nid007680: task 0: Killed
+srun: Terminating StepId=89635.6
+srun: warning: can't run 2 processes on 3 nodes, setting nnodes to 2
+srun: error: nid007681: task 1: Killed
+srun: Step created for StepId=89635.7
+0: Elbencho service now listening. Port: 1611
+1: Elbencho service now listening. Port: 1611
+1: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:47962'; ISO Date: 2026-11-03T14:55:10+0100
+0: Preparing new benchmark run... Remote Endpoint: '[::ffff:172.28.46.248]:42834'; ISO Date: 2026-11-03T14:55:10+0100
+0: LABEL: cxi[2-3],32
+0: 
+1: LABEL: cxi[2-3],32
+1: 
+NOTE: Waiting for services to become reachable... (Max wait time: 5s)
+OPERATION   RESULT TYPE         FIRST DONE   LAST DONE
+=========== ================    ==========   =========
+NET/libfabric: 45620 IOPS; 47836 MB/s; 91241 MiB; 64 threads; 1% CPU; 2s
+NET/libfabric: 45989 IOPS; 48223 MB/s; 183174 MiB; 64 threads; 1% CPU; 4s
+NET/libfabric: 46989 IOPS; 49271 MB/s; 277152 MiB; 64 threads; 2% CPU; 6s
+NET/libfabric: 45863 IOPS; 48091 MB/s; 368834 MiB; 64 threads; 2% CPU; 8s
+NET/libfabric: 44901 IOPS; 47083 MB/s; 458593 MiB; 64 threads; 2% CPU; 10s
+NET/libfabric: 47489 IOPS; 49795 MB/s; 553571 MiB; 64 threads; 2% CPU; 12s
+NET/libfabric: 44396 IOPS; 46553 MB/s; 642320 MiB; 64 threads; 2% CPU; 14s
+NET/libfabric: 47728 IOPS; 50046 MB/s; 737777 MiB; 64 threads; 2% CPU; 16s
+NET/libfabric: 46683 IOPS; 48951 MB/s; 831097 MiB; 64 threads; 2% CPU; 18s
+NET/libfabric: 43343 IOPS; 45448 MB/s; 917783 MiB; 64 threads; 1% CPU; 20s
+NET/libfabric: 47906 IOPS; 50233 MB/s; 1013596 MiB; 64 threads; 2% CPU; 22s
+NET/libfabric: 47438 IOPS; 49742 MB/s; 1108425 MiB; 64 threads; 2% CPU; 24s
+NET/libfabric: 45921 IOPS; 48152 MB/s; 1200223 MiB; 64 threads; 2% CPU; 26s
+NET/libfabric: 43231 IOPS; 45331 MB/s; 1286642 MiB; 64 threads; 2% CPU; 28s
+NET/libfabric: 46391 IOPS; 48645 MB/s; 1379379 MiB; 64 threads; 4% CPU; 30s
+NET/libfabric: 49710 IOPS; 52124 MB/s; 1478799 MiB; 64 threads; 2% CPU; 32s
+NET/libfabric: 45467 IOPS; 47676 MB/s; 1569689 MiB; 64 threads; 2% CPU; 34s
+NET/libfabric: 39993 IOPS; 41936 MB/s; 1649636 MiB; 64 threads; 2% CPU; 36s
+NET/libfabric: 50677 IOPS; 53138 MB/s; 1750990 MiB; 64 threads; 2% CPU; 38s
+NET/libfabric: 44658 IOPS; 46828 MB/s; 1840263 MiB; 64 threads; 2% CPU; 40s
+NET/libfabric: 46984 IOPS; 49266 MB/s; 1934231 MiB; 64 threads; 2% CPU; 42s
+NET/libfabric: 49223 IOPS; 51614 MB/s; 2032678 MiB; 64 threads; 2% CPU; 44s
+NET/libfabric: 41244 IOPS; 43247 MB/s; 2115167 MiB; 64 threads; 2% CPU; 46s
+NET/libfabric: 42976 IOPS; 45064 MB/s; 2201078 MiB; 64 threads; 2% CPU; 48s
+NET/libfabric: 44648 IOPS; 46817 MB/s; 2290330 MiB; 64 threads; 2% CPU; 50s
+NET/libfabric: 46090 IOPS; 48329 MB/s; 2382465 MiB; 64 threads; 2% CPU; 52s
+NET/libfabric: 46229 IOPS; 48474 MB/s; 2474877 MiB; 64 threads; 2% CPU; 54s
+NET/libfabric: 46197 IOPS; 48441 MB/s; 2567271 MiB; 64 threads; 2% CPU; 56s
+NET/libfabric: 46237 IOPS; 48483 MB/s; 2659746 MiB; 64 threads; 2% CPU; 58s
+NET/libfabric: 46273 IOPS; 48521 MB/s; 2752293 MiB; 64 threads; 2% CPU; 1m0s
+NET/libfabric: 41518 IOPS; 43535 MB/s; 2835288 MiB; 64 threads; 2% CPU; 1m2s
+NET/libfabric: 46291 IOPS; 48539 MB/s; 2927824 MiB; 64 threads; 2% CPU; 1m4s
+NET/libfabric: 46310 IOPS; 48559 MB/s; 3020398 MiB; 64 threads; 2% CPU; 1m6s
+NET/libfabric: 46282 IOPS; 48530 MB/s; 3112962 MiB; 64 threads; 2% CPU; 1m8s
+NET/libfabric: 46332 IOPS; 48582 MB/s; 3205580 MiB; 64 threads; 2% CPU; 1m10s
+NET/libfabric: 46205 IOPS; 48450 MB/s; 3297945 MiB; 64 threads; 2% CPU; 1m12s
+NET/libfabric: 46281 IOPS; 48529 MB/s; 3390508 MiB; 64 threads; 2% CPU; 1m14s
+NET/libfabric: 46272 IOPS; 48519 MB/s; 3483006 MiB; 64 threads; 2% CPU; 1m16s
+NET/libfabric: 46311 IOPS; 48561 MB/s; 3575583 MiB; 64 threads; 2% CPU; 1m18s
+NET/libfabric: 46250 IOPS; 48497 MB/s; 3668084 MiB; 64 threads; 2% CPU; 1m20s
+NET/libfabric: 46169 IOPS; 48412 MB/s; 3760377 MiB; 64 threads; 2% CPU; 1m22s
+NET/libfabric: 46263 IOPS; 48510 MB/s; 3852858 MiB; 64 threads; 2% CPU; 1m24s
+NET/libfabric: 46266 IOPS; 48514 MB/s; 3945345 MiB; 64 threads; 2% CPU; 1m26s
+NET/libfabric: 46222 IOPS; 48467 MB/s; 4037744 MiB; 64 threads; 2% CPU; 1m28s
+NET/libfabric: 46188 IOPS; 48431 MB/s; 4130120 MiB; 64 threads; 2% CPU; 1m30s
+NET/libfabric: 46089 IOPS; 48327 MB/s; 4222298 MiB; 64 threads; 2% CPU; 1m32s
+NET/libfabric: 46120 IOPS; 48360 MB/s; 4314492 MiB; 64 threads; 2% CPU; 1m34s
+NET/libfabric: 45805 IOPS; 48030 MB/s; 4406057 MiB; 64 threads; 2% CPU; 1m36s
+NET/libfabric: 45437 IOPS; 47644 MB/s; 4496931 MiB; 64 threads; 2% CPU; 1m38s
+NET/libfabric: 46161 IOPS; 48403 MB/s; 4589254 MiB; 64 threads; 2% CPU; 1m40s
+NET/libfabric: 46212 IOPS; 48457 MB/s; 4681633 MiB; 64 threads; 2% CPU; 1m42s
+NET/libfabric: 46090 IOPS; 48329 MB/s; 4773814 MiB; 64 threads; 2% CPU; 1m44s
+NET/libfabric: 46308 IOPS; 48557 MB/s; 4866384 MiB; 64 threads; 2% CPU; 1m46s
+NET/libfabric: 46241 IOPS; 48487 MB/s; 4958820 MiB; 64 threads; 2% CPU; 1m48s
+NET/libfabric: 46055 IOPS; 48292 MB/s; 5050885 MiB; 64 threads; 2% CPU; 1m50s
+NET/libfabric: 45786 IOPS; 48010 MB/s; 5142457 MiB; 64 threads; 2% CPU; 1m52s
+NET/libfabric: 46251 IOPS; 48497 MB/s; 5234913 MiB; 64 threads; 2% CPU; 1m54s
+NET/libfabric: 45956 IOPS; 48188 MB/s; 5326825 MiB; 64 threads; 2% CPU; 1m56s
+NET/libfabric: 46214 IOPS; 48459 MB/s; 5419207 MiB; 64 threads; 2% CPU; 1m58s
+NET/libfabric: 46140 IOPS; 48381 MB/s; 5511441 MiB; 64 threads; 2% CPU; 2m0s
+NET/libfabric: 46196 IOPS; 48440 MB/s; 5603788 MiB; 64 threads; 2% CPU; 2m2s
+NET/libfabric: 46239 IOPS; 48485 MB/s; 5696220 MiB; 64 threads; 2% CPU; 2m4s
+NET/libfabric: 46262 IOPS; 48509 MB/s; 5788699 MiB; 64 threads; 2% CPU; 2m6s
+NET/libfabric: 46271 IOPS; 48519 MB/s; 5881242 MiB; 64 threads; 2% CPU; 2m8s
+NET/libfabric: 46210 IOPS; 48455 MB/s; 5973617 MiB; 64 threads; 2% CPU; 2m10s
+NET/libfabric: 46291 IOPS; 48540 MB/s; 6066200 MiB; 64 threads; 2% CPU; 2m12s
+NET/libfabric: 46188 IOPS; 48432 MB/s; 6158531 MiB; 64 threads; 2% CPU; 2m14s
+NET/libfabric: 46168 IOPS; 48411 MB/s; 6250822 MiB; 64 threads; 2% CPU; 2m16s
+NET/libfabric: 46297 IOPS; 48545 MB/s; 6343416 MiB; 64 threads; 2% CPU; 2m18s
+NET/libfabric: 46302 IOPS; 48551 MB/s; 6436021 MiB; 64 threads; 2% CPU; 2m20s
+NET/libfabric: 46244 IOPS; 48490 MB/s; 6528509 MiB; 64 threads; 2% CPU; 2m22s
+NET/libfabric: 46270 IOPS; 48517 MB/s; 6621003 MiB; 64 threads; 2% CPU; 2m24s
+NET/libfabric: 46265 IOPS; 48512 MB/s; 6713534 MiB; 64 threads; 2% CPU; 2m26s
+NET/libfabric: 46117 IOPS; 48357 MB/s; 6805769 MiB; 64 threads; 2% CPU; 2m28s
+NET/libfabric: 46072 IOPS; 48310 MB/s; 6897867 MiB; 64 threads; 2% CPU; 2m30s
+1: NET/libfabr Elapsed time     :   2m30.030s   2m30.031s
+1:             IOPS send        :       46130       46130
+1:             MB/s send        :       48371       48371
+1:             MiB send         :     6920999     6920999
+1: ---
+1: 
+NET/libfabric: 11566 IOPS; 12127 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m32s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m34s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m36s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m38s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m40s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m42s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m44s
+NET/libfabric: 0 IOPS; 0 MB/s; 6920999 MiB; 32 threads; 1% CPU; 2m46s
+0: NET/libfabr Elapsed time     :   2m30.031s   2m30.031s
+0:             IOPS recv        :       46130       46130
+0:             MB/s recv        :       48371       48371
+0:             MiB recv         :     6920998     6920998
+0: ---
+0: 
+NET/libfabr Elapsed time     :   2m30.030s   2m30.031s
+            IOPS send        :       46130       46130
+            MB/s send        :       48371       48371
+            MiB send         :     6920999     6920999
+            Graph MB/s       :  54K ┤⢀⣀⢠⣠⡀⡤⡀⢀⢆⢸⣄⡆ ⣀⣀⡀⣀⣀⣀⣀⣀⣀⣀⣀⣀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀
+                                    │⠁ ⠁⠁⠘ ⠘⠁⠘⡇⠁⠸⠊  ⠱⠁        ⠁            ⢸
+                                    │                                      ⢸
+                                    │                                      ⠘⡄
+                                    │                                       ⡇
+                                    │                                       ⡇
+                                    │                                       ⡇
+                                    │                                       ⢸⣀⣀⣀
+                                  0 └───────────────────────────────────────────
+                                     2.0s                                   166s
+---
+Terminating due to phase time limit.
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+14:58:09.720 ERROR: Service interruption/termination requires a host list.
+0: [2026-11-03T14:58:09.724] error: *** STEP 89635.7 ON nid007680 CANCELLED AT 2026-11-03T14:58:09 DUE to SIGNAL Killed ***
+srun: forcing job termination
