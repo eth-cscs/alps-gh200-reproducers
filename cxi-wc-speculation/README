@@ -1,0 +1,113 @@
+C_PI_EXT pri_mb_xlat_pf_addr_error from speculative reads of CQ launch pages
+==========================================================================
+
+On GH200 (Grace, arm64) nodes with Cassini NICs, cxi_ss1 logs
+
+  cxi_ss1 0020:01:00.0: cxi2[hsn3]: C_EC_INFO: C_PI_EXT error: pri_mb_xlat_pf_addr_error (12) ...
+  cxi_ss1 0020:01:00.0: cxi2[hsn3]: C_EC_INFO: C_PI_ERR_INFO_RTRGT 0000700100250100 0ff0400000000420 0000000000000000
+  cxi_ss1 0020:01:00.0: cxi2[hsn3]: C_EC_CRIT: C_PI_EXT error: pri_mb_xlat_comp_ca (19)
+
+until the bits are auto-masked. The trigger is the CPU speculatively reading
+command-queue launch pages, which cxi_user maps write-combined. On arm64,
+write-combined is Normal Non-cacheable memory, which may be read
+speculatively.
+
+
+Environment
+-----------
+
+  GH200, kernel 6.4.0-150600.23.125-64kb (SLES 15 SP6, 64K pages)
+  SHS 13.1.0: cray-cxi-driver 1.0.0, libcxi 1.0.2, libfabric 2.3.1
+  Cassini firmware 1.5.61, links Gen4 x16, no AER errors
+
+
+Decoding
+--------
+
+C_PI_ERR_INFO_RTRGT (union c_pi_err_info_rtrgt, cassini_user_defs.h) holds
+the PCIe request the NIC could not decode. In every case seen it is:
+
+  fmt/type   MRd, 64-bit address
+  reqid      00:00.0 (CPU root port; not a GPU or other peer)
+  dw_len     16 (64 bytes), first/last BE 0xf
+  addr       BAR0 + offset inside a CQ launch page
+
+C_MEMORG_CQ_LAUNCH: TXQ n launch page at BAR0 + n * 64K, TGT n at
+BAR0 + 64M + n * 64K. On one production node (inference workload) 203 of
+203 errors, on all four NICs and 34 different queues, were 64-byte CPU
+reads of launch pages, at doorbell, low-latency and unused offsets
+anywhere in the 64K page. Software only writes these pages.
+
+
+Cause
+-----
+
+cxi_user_mmap.c, ucxi_mmap():
+
+	if (static_branch_unlikely(&avoid_writecombine))
+		vma->vm_page_prot = pgprot_device(vma->vm_page_prot);
+	else
+		vma->vm_page_prot = pgprot_writecombine(vma->vm_page_prot);
+
+avoid_writecombine is enabled only when an Ampere Altra root port
+(PCI_VENDOR_ID_AMPERE, 0xe100) is present (cxi_user_core.c, cass_cq.c).
+On Grace launch pages are Normal-NC, so speculative loads and line fills
+reach the NIC. Unchanged in release/shs-14.0.1.
+
+
+Reproducer (reproducer/)
+------------------------
+
+wcprobe allocates a TXQ and a TGT queue with libcxi and touches the launch
+page. run.sh builds it and runs one phase per NIC:
+
+  # as root, idle node, error bits not masked
+  cd reproducer && ./run.sh
+
+Results (two runs, SHS 13.1.0):
+
+  phase    access                                       pri_mb_xlat_pf_addr_error
+  write    200k CQ NOOPs, doorbell + LL writes only     0
+  prfm     PRFM hints, all lines of the page            0
+  spec     mispredicted bounds check, no architectural  2 / 9 (TXQ), 10 (TGT),
+           load from the launch page                    9 (whole page)
+  read     one 8-byte or 64-byte load                   1 each
+
+Each spec error decodes to the queue and line offsets the probe used, with
+the same signature as the production errors. An 8-byte load is also
+reported as dw_len 16 (line fill). Real loads returned normally: no SIGBUS,
+SError or panic.
+
+
+Fix test (patch/)
+-----------------
+
+patch/cxi_user_force_avoid_wc.patch is a test patch that enables the
+existing avoid_writecombine branch of ucxi_mmap() through a runtime module
+parameter. With the patched module loaded, spec gives 9 errors with the
+parameter off, 0 with it on (TXQ, TGT, whole page), and 9 when it is turned
+off again. With it on, a real 8-byte load is reported as dw_len 2, which
+confirms the page is now mapped as Device memory. See patch/README.
+
+This shows that the mapping attribute is what decides the error. It does
+not say what the fix should be.
+
+
+Notes
+-----
+
+- The driver logs about one occurrence per 50 ms per NIC, so logged counts
+  are lower bounds.
+- The "(was first error at S:NS)" value uses the NIC clock, which here was
+  50-64 s behind the host.
+- The cost of the device mapping on the low-latency command path was not
+  measured.
+- Kernel command queues (cass_cq.c, ioremap_wc) are not covered by the patch.
+- Nothing was tested on SHS 14.0.1 (the relevant code is identical).
+- No application impact of the error itself is established.
+
+
+License
+-------
+
+GPL-2.0-only, see LICENSE. The patch modifies the GPL-2.0 HPE cxi driver.

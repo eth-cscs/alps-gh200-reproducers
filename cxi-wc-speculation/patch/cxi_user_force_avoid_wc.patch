@@ -1,0 +1,55 @@
+cxi_user: add force_avoid_wc parameter (test only)
+
+Test patch, not a proposed fix. Lets the existing arm64 avoid_writecombine
+path in ucxi_mmap() (pgprot_device instead of pgprot_writecombine for CQ
+launch pages) be enabled at runtime on platforms other than Ampere Altra:
+
+  echo 1 > /sys/module/cxi_user/parameters/force_avoid_wc
+
+It is evaluated at mmap time, so it applies to command queues allocated
+after the write. Kernel command queues (ioremap_wc in cass_cq.c) are not
+affected.
+
+Against shs-cxi-driver release/shs-13.1.0 (built and tested). Also applies
+cleanly to release/shs-14.0.1 (not built or tested there).
+
+--- a/drivers/net/ethernet/hpe/ss1/cxi_user_mmap.c	2026-11-03 23:38:52
++++ b/drivers/net/ethernet/hpe/ss1/cxi_user_mmap.c	2026-11-03 23:39:04
+@@ -13,6 +13,8 @@
+ #include <linux/fs.h>
+ #include <linux/vmalloc.h>
+ 
++#include <linux/moduleparam.h>
++
+ #include "cxi_prov_hw.h"
+ #include "cxi_user.h"
+ 
+@@ -39,6 +41,18 @@
+ 	.close = cxi_vma_close,
+ };
+ 
++/* cxi_xlat harness test patch (not upstream): map CQ launch pages as Device
++ * memory instead of write-combined (arm64 Normal-NC). Normal-NC mappings allow
++ * speculative CPU reads, which hit the launch pages as 64-byte MRd TLPs and are
++ * logged as C_PI_EXT pri_mb_xlat_pf_addr_error + pri_mb_xlat_comp_ca on Grace.
++ * Checked at mmap time, so it can be toggled at runtime via
++ * /sys/module/cxi_user/parameters/force_avoid_wc for new command queues.
++ */
++static bool force_avoid_wc;
++module_param(force_avoid_wc, bool, 0644);
++MODULE_PARM_DESC(force_avoid_wc,
++		 "Map CQ launch pages as device memory instead of write-combined (test)");
++
+ /* This is a copy of vm_iomap_memory() with a small change. It appears
+  * that vm_iomap_memory only works when the physical page are mapped
+  * from the first page of the mapping. If we map something else before
+@@ -124,7 +138,8 @@
+ 	case MMAP_PHYSICAL:
+ 		if (ip->wc)
+ #ifdef CONFIG_ARM64
+-			if (static_branch_unlikely(&avoid_writecombine)) {
++			if (static_branch_unlikely(&avoid_writecombine) ||
++			    READ_ONCE(force_avoid_wc)) {
+ 				vma->vm_page_prot =
+ 					pgprot_device(vma->vm_page_prot);
+ 				pr_warn("Broken PCIe write-combine detected on this platform, LL_RING will use slow workaround and should be avoided in userspace.");

@@ -1,0 +1,76 @@
+cxi_user_force_avoid_wc.patch
+=============================
+
+Test patch. Adds a writable module parameter to cxi_user that takes the
+existing CONFIG_ARM64 avoid_writecombine branch of ucxi_mmap(), i.e. maps
+CQ launch pages with pgprot_device instead of pgprot_writecombine. Only
+cxi_user changes; cxi_ss1 is untouched, so only cxi_user needs to be
+reloaded and HSN networking (cxi_eth) stays up.
+
+
+Build (on the node, with the installed dkms source)
+-----------------------------------------------------
+
+  PATCH=$PWD/cxi_user_force_avoid_wc.patch     # run from this directory
+  SRC=$(ls -d /usr/src/cray-cxi-driver-1.0.0-SHS*)
+  for v in stock patched; do
+      d=/usr/src/cray-cxi-driver-wc$v
+      cp -a $SRC $d
+      sed -i "s/^PACKAGE_VERSION=.*/PACKAGE_VERSION=\"wc$v\"/" $d/dkms.conf
+      dkms add -m cray-cxi-driver -v wc$v
+  done
+  (cd /usr/src/cray-cxi-driver-wcpatched && patch -p1 < $PATCH)
+  for v in stock patched; do
+      dkms build -m cray-cxi-driver -v wc$v -k $(uname -r)
+      zstd -d -f /var/lib/dkms/cray-cxi-driver/wc$v/$(uname -r)/aarch64/module/cxi-user.ko.zst \
+           -o /tmp/cxi-user-$v.ko
+  done
+
+  # the stock rebuild must match the running module
+  modinfo -F srcversion /tmp/cxi-user-stock.ko; cat /sys/module/cxi_user/srcversion
+
+dkms build only builds; nothing is installed.
+
+
+Swap cxi_user (node idle, no /dev/cxi* users)
+-----------------------------------------------
+
+  devs=$(ls /sys/class/cxi)
+  for d in $devs; do systemctl stop cxi_rh@$d; done
+  rmmod cxi_user
+  insmod /tmp/cxi-user-patched.ko
+  for d in $devs; do systemctl start cxi_rh@$d; done
+
+Restore the stock module the same way, with "modprobe cxi-user" instead of
+insmod, or reboot.
+
+
+Test
+----
+
+  cd ../reproducer
+  FORCE_AVOID_WC=0 PHASES="spec" ./run.sh
+  FORCE_AVOID_WC=1 PHASES="spec spectgt read" ./run.sh
+  FORCE_AVOID_WC=0 PHASES="spec" ./run.sh
+
+With force_avoid_wc=1 the driver logs "Broken PCIe write-combine detected
+on this platform ..." for every launch page mapping.
+
+
+Result (GH200, SHS 13.1.0, kernel 6.4.0-150600.23.125-64kb, one module load)
+------------------------------------------------------------------------------
+
+  force_avoid_wc  probe                          pri_mb_xlat_pf_addr_error
+  0               spec, TXQ (cxi2)               9
+  1               spec, TXQ (cxi2)               0
+  1               spec, whole 64K page (cxi1)    0
+  1               spec, TGT queue (cxi0)         0
+  1               read, 8-byte load (cxi3)       1, RTRGT dw_len 2 (8 bytes)
+  0               spec, TXQ (cxi2), again        9
+
+~100k mispredicted attempts per spec probe. With write-combine the same
+8-byte load is reported with dw_len 16 (a 64-byte line fill).
+
+The cost of the device mapping on the low-latency command path was not
+measured. As a rough CPU-side figure, 200k NOOP submissions took 0.035 s
+(write-combine) vs 0.052 s (device).
