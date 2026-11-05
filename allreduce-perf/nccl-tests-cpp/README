@@ -1,0 +1,3 @@
+These tests are taken from https://github.com/NVIDIA/nccl-tests
+and run within a container based on the image from
+docker://jfrog.svc.cscs.ch#reframe-oci/nccl-tests:cuda12.3

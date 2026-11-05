@@ -1,0 +1,94 @@
+#!/bin/bash
+
+# get the current process ID
+pid=$$
+
+# retrieve the CPU affinity mask in hexadecimal format
+affinity_mask=$(taskset -p $pid | awk -F': ' '{print $2}')
+
+# get numerical list (decimal) of numa nodes and cores in the affinity mask
+numa_list=$(hwloc-calc --physical --intersect NUMAnode 0x$affinity_mask)
+cpu_list=$(hwloc-calc --physical --intersect core 0x$affinity_mask)
+cpu_list_short=$(taskset -pc $pid | awk -F': ' '{print $2}')
+
+# calculate number of numa nodes / cpus
+IFS=',' read -r -a numa_array <<< "$numa_list"
+numa_count=${#numa_array[@]}
+IFS=',' read -r -a cpu_array <<< "$cpu_list"
+cpu_count=${#cpu_array[@]}
+
+# each GPU is associated with a NUMA node:
+gpu_list=$numa_list
+gpu_count=$numa_count
+
+# make devices visible: only export devices for which the current process has affinity
+export CUDA_VISIBLE_DEVICES=$gpu_list
+
+# export the nic - doesn't work with pytorch
+#IFS=',' read -r first_node other_nodes <<< "$numa_list"
+#first_nic="cxi${first_node}"
+#export FI_CXI_DEVICE_NAME=$first_nic
+
+# get local and global ranks from either Slurm or OMPI environment variables
+lrank=0
+grank=0
+if [ -z ${OMPI_COMM_WORLD_LOCAL_RANK+x} ]
+then
+    let lrank=$SLURM_LOCALID
+    let grank=$SLURM_PROCID
+
+    # MPICH options
+    # is required for CUDA-aware MPI to work
+    export MPICH_GPU_SUPPORT_ENABLED=1                                                                            
+    # MPICH_GPU_SUPPORT_ENABLED=1 and MPICH_SMP_SINGLE_COPY_MODE=XPMEM are
+    # mutually exclusive, and MPICH will fall back to CMA if GPU support is
+    # enabled.
+    #export MPICH_SMP_SINGLE_COPY_MODE=xpmem
+    export MPICH_SMP_SINGLE_COPY_MODE=CMA
+else
+    let lrank=$OMPI_COMM_WORLD_LOCAL_RANK
+    let grank=$OMPI_COMM_WORLD_RANK
+
+    # OPENMPI options
+    #export OMPI_MCA_btl_ofi_mode=2
+    #export OMPI_MCA_pml_ob1_max_rdma_per_request=1
+fi
+
+# print info about distribution of jobs
+if [[ $grank == 0 ]]
+then
+	echo "Slurm Job Hostlist: $SLURM_JOB_NODELIST"
+fi
+echo "Hostname: $(hostname) Rank: $grank, Local $lrank, GPUs $gpu_list (count=$gpu_count), CPUs $cpu_list_short (count=$cpu_count)"
+
+# export variables for pytorch
+export LOCAL_RANK=${lrank}
+export RANK=${grank}
+export MASTER_ADDR=$(scontrol show hostname $SLURM_NODELIST | head -n1)
+export MASTER_PORT=29500 # default from torch launcher
+export WORLD_SIZE=$SLURM_NTASKS
+export TORCH_CUDA_ARCH_LIST=9.0
+export MAX_JOBS=$cpu_count
+export CXX=`which g++`
+export CC=`which gcc`
+
+# would make the code print out a stacktrace in case of a crash - only works when compiled with -traceback compiler option
+#export NVCOMPILER_TERM=trace
+
+## OpenACC options
+## makes small H2D copies faster
+#export NVCOMPILER_ACC_DEFER_UPLOADS=1
+#export NVCOMPILER_ACC_SYNCHRONOUS=1 
+#export NVCOMPILER_ACC_USE_GRAPH=1
+#export NV_ACC_CUDA_MEMALLOCASYNC=1
+#export NV_ACC_CUDA_MEMALLOCASYNC_POOLSIZE=500000000000
+
+## is required to avoid hangs at scale
+#export FI_MR_CACHE_MONITOR=disabled
+#export FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD=0
+#
+## speeds up (or rather recovers good performance) GPU direct communications over the network. Without it MPI takes 3-5x longer when G2G is enabled
+#export FI_CXI_RX_MATCH_MODE=software
+
+# run the command
+"$@"

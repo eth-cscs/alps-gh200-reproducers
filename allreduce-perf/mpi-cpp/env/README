@@ -1,0 +1,14 @@
+
+
+build instructions for uenv
+
+run on compute node:
+====================
+
+/path/to/stackinator/bin/stack-config -c /path/to/build-cace-config.yaml -r ./recipe -b /dev/shm/<USERNAME>/allreduce -s /path/to/alps-cluster-config/santis -m /user-environment --develop
+
+cd /dev/shm/<USERNAME>/allreduce
+
+env --ignore-environment PATH=/usr/bin:/bin:`pwd`/spack/bin HOME=$HOME https_proxy=$https_proxy http_proxy=$http_proxy no_proxy="$no_proxy" make store.squashfs -j288
+
+cp store.squashfs /this/path/

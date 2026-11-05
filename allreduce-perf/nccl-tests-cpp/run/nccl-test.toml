@@ -1,0 +1,22 @@
+image = "/bret/scratch/cscs/boeschf/alps-gh200-reproducers/allreduce-perf/nccl-tests-cpp/env/nccl-test.sqsh"
+
+mounts = [
+  "/bret:/bret",
+  "/mchstor2:/mchstor2",
+  "/etc/slurm:/etc/slurmi:ro"
+]
+
+
+writable = true
+
+workdir = "/bret/scratch/cscs/boeschf/alps-gh200-reproducers/allreduce-perf/nccl-tests-cpp/run"
+
+[annotations.com.hooks]
+aws_ofi_nccl.enabled = "true"
+aws_ofi_nccl.variant = "cuda12"
+
+[env]
+NVIDIA_DISABLE_REQUIRE = "1"
+#ENROOT_CXI_HOOK = "1"
+#NCCL_NET_PLUGIN = "ofi"
+#NCCL_DEBUG = "INFO"

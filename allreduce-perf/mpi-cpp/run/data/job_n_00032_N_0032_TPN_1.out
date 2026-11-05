@@ -1,0 +1,269 @@
+All nodes and tasks are healthy.
+All ranks passed the checks.
+loading the view [1;36mtest_mpi:default[0m  with activation script [1;33m/user-environment/env/default/activate.sh[0m
+Hostname: nid001168 Rank: 6, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001212 Rank: 19, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001204 Rank: 16, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001150 Rank: 1, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001180 Rank: 9, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001202 Rank: 15, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001200 Rank: 14, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001226 Rank: 22, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001224 Rank: 21, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001208 Rank: 17, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001162 Rank: 4, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001210 Rank: 18, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001230 Rank: 24, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001178 Rank: 8, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001236 Rank: 26, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001184 Rank: 10, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001160 Rank: 3, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001198 Rank: 13, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001170 Rank: 7, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001194 Rank: 12, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001242 Rank: 29, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001164 Rank: 5, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Slurm Job Hostlist: nid[001148,001150,001152,001160,001162,001164,001168,001170,001178,001180,001184,001186,001194,001198,001200,001202,001204,001208,001210,001212,001216,001224,001226,001228,001230,001234,001236,001238,001240,001242,001244,001246]
+Hostname: nid001148 Rank: 0, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001152 Rank: 2, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001244 Rank: 30, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001186 Rank: 11, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001234 Rank: 25, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001238 Rank: 27, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001246 Rank: 31, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001240 Rank: 28, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001228 Rank: 23, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001216 Rank: 20, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+mem_type:   device
+size:       1073741824
+padding:    0
+naive algo: 0
+
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+[-1] time: 0.58153
+[0:0] time:     0.499963  bw:      16.6442
+[0:1] time:     0.462618  bw:      17.9878
+[0:2] time:     0.462398  bw:      17.9964
+[0:3] time:     0.463443  bw:      17.9558
+[0:4] time:     0.464634  bw:      17.9098
+[1:0] time:     0.503132  bw:      16.5394
+[1:1] time:     0.463948  bw:      17.9363
+[1:2] time:      0.46478  bw:      17.9042
+[1:3] time:      0.46367  bw:       17.947
+[1:4] time:      0.46429  bw:      17.9231
+[2:0] time:     0.501071  bw:      16.6074
+[2:1] time:     0.463976  bw:      17.9352
+[2:2] time:     0.463095  bw:      17.9693
+[2:3] time:     0.462912  bw:      17.9764
+[2:4] time:     0.463648  bw:      17.9479
+[3:0] time:     0.502144  bw:      16.5719
+[3:1] time:     0.462679  bw:      17.9855
+[3:2] time:     0.462757  bw:      17.9825
+[3:3] time:     0.462681  bw:      17.9854
+[3:4] time:     0.462708  bw:      17.9844
+[4:0] time:     0.500845  bw:      16.6149
+[4:1] time:     0.462624  bw:      17.9876
+[4:2] time:     0.462749  bw:      17.9828
+[4:3] time:     0.462563  bw:        17.99
+[4:4] time:     0.462508  bw:      17.9921
+[5:0] time:     0.502213  bw:      16.5697
+[5:1] time:     0.462459  bw:       17.994
+[5:2] time:     0.462676  bw:      17.9856
+[5:3] time:     0.462494  bw:      17.9927
+[5:4] time:     0.462506  bw:      17.9922
+[6:0] time:     0.502187  bw:      16.5705
+[6:1] time:     0.462509  bw:      17.9921
+[6:2] time:     0.462469  bw:      17.9937
+[6:3] time:      0.46267  bw:      17.9858
+[6:4] time:     0.462674  bw:      17.9857
+[7:0] time:     0.502464  bw:      16.5614
+[7:1] time:     0.462558  bw:      17.9902
+[7:2] time:     0.462794  bw:       17.981
+[7:3] time:     0.462225  bw:      18.0031
+[7:4] time:     0.462655  bw:      17.9864
+[8:0] time:     0.502819  bw:      16.5497
+[8:1] time:     0.462839  bw:      17.9793
+[8:2] time:     0.462386  bw:      17.9969
+[8:3] time:     0.463002  bw:      17.9729
+[8:4] time:      0.46307  bw:      17.9703
+[9:0] time:     0.502523  bw:      16.5594
+[9:1] time:     0.462744  bw:       17.983
+[9:2] time:     0.462458  bw:      17.9941
+[9:3] time:     0.462465  bw:      17.9938
+[9:4] time:     0.462754  bw:      17.9826
+
+=======================================
+type:        device
+size:    4294967296
+pad:              0
+naive:            0
+time:      0.462927
+time0:     0.501936
+bw:         17.9759
+bw0:        16.5789
+=======================================
+
+Hostname: nid001230 Rank: 24, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001180 Rank: 9, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001194 Rank: 12, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001234 Rank: 25, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001150 Rank: 1, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001160 Rank: 3, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001202 Rank: 15, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001168 Rank: 6, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001186 Rank: 11, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001208 Rank: 17, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001236 Rank: 26, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001216 Rank: 20, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001210 Rank: 18, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001162 Rank: 4, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001246 Rank: 31, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001204 Rank: 16, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001242 Rank: 29, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001164 Rank: 5, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001226 Rank: 22, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001178 Rank: 8, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001228 Rank: 23, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001184 Rank: 10, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001240 Rank: 28, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001170 Rank: 7, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001198 Rank: 13, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001152 Rank: 2, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Slurm Job Hostlist: nid[001148,001150,001152,001160,001162,001164,001168,001170,001178,001180,001184,001186,001194,001198,001200,001202,001204,001208,001210,001212,001216,001224,001226,001228,001230,001234,001236,001238,001240,001242,001244,001246]
+Hostname: nid001148 Rank: 0, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001244 Rank: 30, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001212 Rank: 19, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001200 Rank: 14, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001224 Rank: 21, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Hostname: nid001238 Rank: 27, Local 0, GPUs 0 (count=1), CPUs 0-71 (count=72)
+Found 1 devices for local rank 0 (1) -> setting device = 0
+mem_type:   device
+size:       1073741824
+padding:    1
+naive algo: 0
+
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+Found 1 devices for local rank 0 (1) -> setting device = 0
+[-1] time: 1.62887
+[0:0] time:      1.60726  bw:      5.17745
+[0:1] time:      1.60874  bw:      5.17269
+[0:2] time:      1.60214  bw:      5.19399
+[0:3] time:      1.60215  bw:      5.19396
+[0:4] time:       1.5995  bw:      5.20256
+[1:0] time:      1.64382  bw:       5.0623
+[1:1] time:      1.60188  bw:      5.19484
+[1:2] time:      1.60165  bw:      5.19556
+[1:3] time:      1.60158  bw:      5.19582
+[1:4] time:      1.60398  bw:      5.18804
+[2:0] time:      1.63957  bw:       5.0754
+[2:1] time:      1.60385  bw:      5.18845
+[2:2] time:      1.60312  bw:      5.19082
+[2:3] time:      1.60399  bw:      5.18801
+[2:4] time:      1.60241  bw:      5.19312
+[3:0] time:      1.65108  bw:      5.04002
+[3:1] time:      1.60418  bw:      5.18739
+[3:2] time:      1.60668  bw:      5.17931
+[3:3] time:      1.60335  bw:      5.19009
+[3:4] time:      1.60634  bw:      5.18042
+[4:0] time:      1.65149  bw:      5.03879
+[4:1] time:      1.60741  bw:      5.17697
+[4:2] time:      1.60559  bw:      5.18282
+[4:3] time:      1.60755  bw:      5.17652
+[4:4] time:      1.60587  bw:      5.18194
+[5:0] time:      1.66278  bw:      5.00456
+[5:1] time:      1.60675  bw:      5.17909
+[5:2] time:      1.60822  bw:      5.17435
+[5:3] time:      1.60761  bw:      5.17633
+[5:4] time:      1.60962  bw:      5.16986
+[6:0] time:      1.65353  bw:      5.03258
+[6:1] time:      1.60977  bw:      5.16938
+[6:2] time:      1.60914  bw:       5.1714
+[6:3] time:      1.60987  bw:      5.16905
+[6:4] time:      1.60534  bw:      5.18363
+[7:0] time:      1.66331  bw:      5.00296
+[7:1] time:      1.60931  bw:      5.17086
+[7:2] time:      1.61072  bw:      5.16631
+[7:3] time:      1.60663  bw:      5.17948
+[7:4] time:       1.6088  bw:      5.17248
+[8:0] time:      1.65757  bw:      5.02029
+[8:1] time:       1.6092  bw:       5.1712
+[8:2] time:      1.60459  bw:      5.18606
+[8:3] time:      1.60667  bw:      5.17934
+[8:4] time:      1.60501  bw:      5.18472
+[9:0] time:      1.66225  bw:      5.00617
+[9:1] time:      1.60517  bw:      5.18417
+[9:2] time:      1.60722  bw:      5.17756
+[9:3] time:      1.60508  bw:      5.18447
+[9:4] time:       1.6064  bw:       5.1802
+
+=======================================
+type:        device
+size:    4294967296
+pad:              4
+naive:            0
+time:       1.60583
+time0:      1.64927
+bw:         5.18208
+bw0:        5.04605
+=======================================
+

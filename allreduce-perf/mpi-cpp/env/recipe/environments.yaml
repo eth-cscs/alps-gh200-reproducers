@@ -1,0 +1,26 @@
+test_mpi-env:
+  compiler:
+      - toolchain: gcc
+        spec: gcc
+  mpi:
+      spec: cray-mpich@8.1.29
+      gpu: cuda
+  unify: true
+  specs:
+  - gcc
+  - cray-mpich
+  - aws-ofi-nccl@master
+  - xpmem
+  - cmake
+  - cuda@12.3
+  - ninja
+  - fmt
+  - osu-micro-benchmarks
+  variants:
+  - +mpi
+  - +cuda
+  - cuda_arch=90
+  views:
+    default:
+      link: roots
+
